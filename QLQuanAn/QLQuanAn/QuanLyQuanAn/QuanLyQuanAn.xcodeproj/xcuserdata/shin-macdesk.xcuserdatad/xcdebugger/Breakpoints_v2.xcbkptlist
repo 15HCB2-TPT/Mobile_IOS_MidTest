@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuanLyQuanAn/Controller/Food/Food_ViewController.swift"
+            timestampString = "513360345.181249"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "Food_ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QuanLyQuanAn.Food_ViewController.__deallocating_deinit"
+                  moduleName = "QuanLyQuanAn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shin-macdesk/Desktop/QLQuanAn/QuanLyQuanAn/QuanLyQuanAn/Controller/Food/Food_ViewController.swift"
+                  timestampString = "513360935.082568"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QuanLyQuanAn.Food_ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; QuanLyQuanAn.Food_ViewController"
+                  moduleName = "QuanLyQuanAn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shin-macdesk/Desktop/QLQuanAn/QuanLyQuanAn/QuanLyQuanAn/Controller/Food/Food_ViewController.swift"
+                  timestampString = "513360935.087304"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QuanLyQuanAn.Food_ViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; QuanLyQuanAn.Food_ViewController"
+                  moduleName = "QuanLyQuanAn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shin-macdesk/Desktop/QLQuanAn/QuanLyQuanAn/QuanLyQuanAn/Controller/Food/Food_ViewController.swift"
+                  timestampString = "513360935.092227"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QuanLyQuanAn.Food_ViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;QuanLyQuanAn.Food_ViewController&gt;"
+                  moduleName = "QuanLyQuanAn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shin-macdesk/Desktop/QLQuanAn/QuanLyQuanAn/QuanLyQuanAn/Controller/Food/Food_ViewController.swift"
+                  timestampString = "513360935.097122"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QuanLyQuanAn.Food_ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;QuanLyQuanAn.Food_ViewController&gt;"
+                  moduleName = "QuanLyQuanAn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shin-macdesk/Desktop/QLQuanAn/QuanLyQuanAn/QuanLyQuanAn/Controller/Food/Food_ViewController.swift"
+                  timestampString = "513360935.102043"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuanLyQuanAn/Controller/Food/Food_ViewController.swift"
+            timestampString = "513394661.497541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuanLyQuanAn/Controller/Food/Food_ViewController.swift"
+            timestampString = "513396674.216084"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "pickerView(_:titleForRow:forComponent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

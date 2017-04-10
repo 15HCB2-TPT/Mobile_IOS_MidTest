@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        SeedData.seedCurrency()
+        SeedData.seedFoodType()
+        let b = Database.select(entityName: "FoodType") as! [FoodType]
+        for a in b {
+            print(a.nametype!)
+        }
         return true
     }
 

@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1460DD5E1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1460DD5C1E9B663F00B960E7 /* QuanLyQuanAn.xcdatamodeld */; };
+		14EB3F9D1E9B5BD00071F441 /* SeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB3F9C1E9B5BD00071F441 /* SeedData.swift */; };
 		630E7D031E993BA1006CBBC3 /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E7D021E993BA1006CBBC3 /* Food_ViewController.swift */; };
 		6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAB61E960ED900E0211C /* AppDelegate.swift */; };
 		6318AAC11E960ED900E0211C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAC01E960ED900E0211C /* Assets.xcassets */; };
 		6318AAD11E960F1A00E0211C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAD01E960F1A00E0211C /* ViewController.swift */; };
 		6318AAD41E960F4500E0211C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */; };
 		6318AAD51E960F4500E0211C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAD31E960F4500E0211C /* Main.storyboard */; };
-		6318AAD81E960F6900E0211C /* QuanLyQuanAn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAD61E960F6900E0211C /* QuanLyQuanAn.xcdatamodeld */; };
 		AD553DDD1E977E68009A51CB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDA1E977E68009A51CB /* Database.swift */; };
 		AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */; };
 		AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDC1E977E68009A51CB /* UIPassingData.swift */; };
-		AD553DE11E977ECA009A51CB /* SeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DE01E977ECA009A51CB /* SeedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1460DD5D1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuanLyQuanAn.xcdatamodel; sourceTree = "<group>"; };
+		14EB3F9C1E9B5BD00071F441 /* SeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedData.swift; sourceTree = "<group>"; };
 		630E7D021E993BA1006CBBC3 /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
 		6318AAB31E960ED900E0211C /* QuanLyQuanAn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuanLyQuanAn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6318AAB61E960ED900E0211C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,11 +31,9 @@
 		6318AAD01E960F1A00E0211C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6318AAD31E960F4500E0211C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		6318AAD71E960F6900E0211C /* QuanLyQuanAn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuanLyQuanAn.xcdatamodel; sourceTree = "<group>"; };
 		AD553DDA1E977E68009A51CB /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTypeHelper.swift; sourceTree = "<group>"; };
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
-		AD553DE01E977ECA009A51CB /* SeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +108,7 @@
 				6318AACE1E960F0800E0211C /* View */,
 				6318AACF1E960F0800E0211C /* Model */,
 				6318AAB61E960ED900E0211C /* AppDelegate.swift */,
+				14EB3F9C1E9B5BD00071F441 /* SeedData.swift */,
 				6318AAC01E960ED900E0211C /* Assets.xcassets */,
 				6318AAC51E960ED900E0211C /* Info.plist */,
 			);
@@ -140,7 +141,6 @@
 				AD553DDA1E977E68009A51CB /* Database.swift */,
 				AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */,
 				AD553DDC1E977E68009A51CB /* UIPassingData.swift */,
-				AD553DE01E977ECA009A51CB /* SeedData.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 		6318AACF1E960F0800E0211C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6318AAD61E960F6900E0211C /* QuanLyQuanAn.xcdatamodeld */,
+				1460DD5C1E9B663F00B960E7 /* QuanLyQuanAn.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,11 +237,11 @@
 				6318AAD11E960F1A00E0211C /* ViewController.swift in Sources */,
 				AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */,
 				630E7D031E993BA1006CBBC3 /* Food_ViewController.swift in Sources */,
-				AD553DE11E977ECA009A51CB /* SeedData.swift in Sources */,
 				AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */,
 				6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
-				6318AAD81E960F6900E0211C /* QuanLyQuanAn.xcdatamodeld in Sources */,
+				14EB3F9D1E9B5BD00071F441 /* SeedData.swift in Sources */,
+				1460DD5E1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,12 +393,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6318AAD61E960F6900E0211C /* QuanLyQuanAn.xcdatamodeld */ = {
+		1460DD5C1E9B663F00B960E7 /* QuanLyQuanAn.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6318AAD71E960F6900E0211C /* QuanLyQuanAn.xcdatamodel */,
+				1460DD5D1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodel */,
 			);
-			currentVersion = 6318AAD71E960F6900E0211C /* QuanLyQuanAn.xcdatamodel */;
+			currentVersion = 1460DD5D1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodel */;
 			path = QuanLyQuanAn.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

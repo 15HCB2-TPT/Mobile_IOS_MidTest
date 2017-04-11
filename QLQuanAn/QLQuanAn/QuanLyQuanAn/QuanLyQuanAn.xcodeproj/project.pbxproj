@@ -7,30 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1460DD5E1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1460DD5C1E9B663F00B960E7 /* QuanLyQuanAn.xcdatamodeld */; };
 		14EB3F9D1E9B5BD00071F441 /* SeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB3F9C1E9B5BD00071F441 /* SeedData.swift */; };
-		630E7D031E993BA1006CBBC3 /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E7D021E993BA1006CBBC3 /* Food_ViewController.swift */; };
 		6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAB61E960ED900E0211C /* AppDelegate.swift */; };
 		6318AAC11E960ED900E0211C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAC01E960ED900E0211C /* Assets.xcassets */; };
-		6318AAD11E960F1A00E0211C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAD01E960F1A00E0211C /* ViewController.swift */; };
 		6318AAD41E960F4500E0211C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */; };
-		6318AAD51E960F4500E0211C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAD31E960F4500E0211C /* Main.storyboard */; };
+		63A07DEC1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63A07DEA1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld */; };
+		63BA45291E9D3D8600EE27DC /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA45281E9D3D8600EE27DC /* Food_ViewController.swift */; };
+		63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA452E1E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift */; };
+		63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */; };
+		63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */; };
+		63BA45391E9D3EE600EE27DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BA45381E9D3EE600EE27DC /* Main.storyboard */; };
 		AD553DDD1E977E68009A51CB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDA1E977E68009A51CB /* Database.swift */; };
 		AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */; };
 		AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDC1E977E68009A51CB /* UIPassingData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1460DD5D1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuanLyQuanAn.xcdatamodel; sourceTree = "<group>"; };
 		14EB3F9C1E9B5BD00071F441 /* SeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedData.swift; sourceTree = "<group>"; };
-		630E7D021E993BA1006CBBC3 /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
 		6318AAB31E960ED900E0211C /* QuanLyQuanAn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuanLyQuanAn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6318AAB61E960ED900E0211C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6318AAC01E960ED900E0211C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6318AAC51E960ED900E0211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6318AAD01E960F1A00E0211C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6318AAD31E960F4500E0211C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		63A07DEB1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuanLyQuanAn.xcdatamodel; sourceTree = "<group>"; };
+		63BA45241E9D3C5C00EE27DC /* QuanLyQuanAn 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "QuanLyQuanAn 2.xcdatamodel"; sourceTree = "<group>"; };
+		63BA45281E9D3D8600EE27DC /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
+		63BA452E1E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustom_CollectionViewCell.swift; sourceTree = "<group>"; };
+		63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region_ViewController.swift; sourceTree = "<group>"; };
+		63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRegion_ViewController.swift; sourceTree = "<group>"; };
+		63BA45381E9D3EE600EE27DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AD553DDA1E977E68009A51CB /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTypeHelper.swift; sourceTree = "<group>"; };
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
@@ -47,42 +52,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		630E7CFB1E993B62006CBBC3 /* Food */ = {
-			isa = PBXGroup;
-			children = (
-				630E7D021E993BA1006CBBC3 /* Food_ViewController.swift */,
-			);
-			path = Food;
-			sourceTree = "<group>";
-		};
-		630E7CFC1E993B62006CBBC3 /* Report */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Report;
-			sourceTree = "<group>";
-		};
-		630E7CFD1E993B62006CBBC3 /* Table */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Table;
-			sourceTree = "<group>";
-		};
-		630E7CFE1E993B62006CBBC3 /* Region */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Region;
-			sourceTree = "<group>";
-		};
-		630E7CFF1E993B62006CBBC3 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
 		6318AAAA1E960ED900E0211C = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +71,7 @@
 		6318AAB51E960ED900E0211C /* QuanLyQuanAn */ = {
 			isa = PBXGroup;
 			children = (
-				6318AACB1E960F0800E0211C /* Controller */,
+				63BA45261E9D3D7300EE27DC /* Controller */,
 				6318AACC1E960F0800E0211C /* Resource */,
 				6318AACD1E960F0800E0211C /* Helper */,
 				6318AACE1E960F0800E0211C /* View */,
@@ -113,19 +82,6 @@
 				6318AAC51E960ED900E0211C /* Info.plist */,
 			);
 			path = QuanLyQuanAn;
-			sourceTree = "<group>";
-		};
-		6318AACB1E960F0800E0211C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				630E7CFB1E993B62006CBBC3 /* Food */,
-				630E7CFC1E993B62006CBBC3 /* Report */,
-				630E7CFD1E993B62006CBBC3 /* Table */,
-				630E7CFE1E993B62006CBBC3 /* Region */,
-				630E7CFF1E993B62006CBBC3 /* Setting */,
-				6318AAD01E960F1A00E0211C /* ViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		6318AACC1E960F0800E0211C /* Resource */ = {
@@ -148,8 +104,8 @@
 		6318AACE1E960F0800E0211C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				63BA45381E9D3EE600EE27DC /* Main.storyboard */,
 				6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */,
-				6318AAD31E960F4500E0211C /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,9 +113,60 @@
 		6318AACF1E960F0800E0211C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1460DD5C1E9B663F00B960E7 /* QuanLyQuanAn.xcdatamodeld */,
+				63A07DEA1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		63BA45261E9D3D7300EE27DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63BA452A1E9D3DBC00EE27DC /* Region */,
+				63BA452B1E9D3DBC00EE27DC /* Setting */,
+				63BA452C1E9D3DBC00EE27DC /* Table */,
+				63BA452D1E9D3DBC00EE27DC /* Order */,
+				63BA45271E9D3D7300EE27DC /* Food */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63BA45271E9D3D7300EE27DC /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				63BA45281E9D3D8600EE27DC /* Food_ViewController.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		63BA452A1E9D3DBC00EE27DC /* Region */ = {
+			isa = PBXGroup;
+			children = (
+				63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */,
+				63BA452E1E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift */,
+				63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */,
+			);
+			path = Region;
+			sourceTree = "<group>";
+		};
+		63BA452B1E9D3DBC00EE27DC /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		63BA452C1E9D3DBC00EE27DC /* Table */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		63BA452D1E9D3DBC00EE27DC /* Order */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Order;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6318AAD51E960F4500E0211C /* Main.storyboard in Resources */,
+				63BA45391E9D3EE600EE27DC /* Main.storyboard in Resources */,
 				6318AAD41E960F4500E0211C /* LaunchScreen.storyboard in Resources */,
 				6318AAC11E960ED900E0211C /* Assets.xcassets in Resources */,
 			);
@@ -234,14 +241,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6318AAD11E960F1A00E0211C /* ViewController.swift in Sources */,
 				AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */,
-				630E7D031E993BA1006CBBC3 /* Food_ViewController.swift in Sources */,
+				63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */,
 				AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */,
 				6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */,
+				63BA45291E9D3D8600EE27DC /* Food_ViewController.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
+				63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */,
+				63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */,
 				14EB3F9D1E9B5BD00071F441 /* SeedData.swift in Sources */,
-				1460DD5E1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodeld in Sources */,
+				63A07DEC1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,12 +402,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1460DD5C1E9B663F00B960E7 /* QuanLyQuanAn.xcdatamodeld */ = {
+		63A07DEA1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1460DD5D1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodel */,
+				63BA45241E9D3C5C00EE27DC /* QuanLyQuanAn 2.xcdatamodel */,
+				63A07DEB1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodel */,
 			);
-			currentVersion = 1460DD5D1E9B664000B960E7 /* QuanLyQuanAn.xcdatamodel */;
+			currentVersion = 63A07DEB1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodel */;
 			path = QuanLyQuanAn.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

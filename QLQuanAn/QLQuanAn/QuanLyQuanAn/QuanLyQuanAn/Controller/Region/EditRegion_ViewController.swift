@@ -21,8 +21,6 @@ class EditRegion_ViewController: UIViewController, UINavigationControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         loadRegion()
-
-        // Do any additional setup after loading the view.
     }
     
     //Load region
@@ -53,16 +51,19 @@ class EditRegion_ViewController: UIViewController, UINavigationControllerDelegat
     
     
     @IBAction func saveClick(_ sender: Any) {
-        rg[index].name = txt_nameregion.text
+        if let name = txt_nameregion.text{
+            rg[index].name = name
+        } else{rg[index].name = ""}
+        if let des = txtview_des.text{
+            rg[index].des = des
+        } else{rg[index].des = ""}
         rg[index].image = image.image?.pngRepresentationData
-        rg[index].des = txtview_des.text
         Database.save()
         moveRegion()
     }
 
     @IBAction func btnTrashClicked(_ sender: Any) {
         let refreshAlert = UIAlertController(title: "Xoá", message: "Chắc chắn xoá?", preferredStyle: UIAlertControllerStyle.alert)
-        
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
             Database.delete(object: self.rg[self.index])
             Database.save()
@@ -79,10 +80,9 @@ class EditRegion_ViewController: UIViewController, UINavigationControllerDelegat
         self.dismiss(animated: true, completion: { () -> Void in
             self.image.contentMode = .scaleAspectFit
             self.image.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-            
-            
         })
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewcontroller = segue.destination as! Region_ViewController
         viewcontroller.regions = Database.select(entityName: "Region") as! [Region]
@@ -92,20 +92,10 @@ class EditRegion_ViewController: UIViewController, UINavigationControllerDelegat
     func moveRegion(){
         customdelegate?.reload()
         _ = navigationController?.popViewController(animated: true)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -17,16 +17,23 @@ class AddNewRegion_ViewController: UIViewController, UINavigationControllerDeleg
     var customdelegate:RegionDelegate? = nil
     
     @IBAction func btnSaveClicked(_ sender: Any) {
-        let re: Region = Database.create()
-        re.image = self.imageView.image?.pngRepresentationData
-        if let name = txt_nameregion.text{
-            re.name = name
-        } else {re.name = ""}
-        if let des = txtview_des.text {
-            re.des = des
-        } else {re.des = ""}
-        Database.save()
-        moveRegion()
+        if imageView.image != nil {
+            let re: Region = Database.create()
+            re.image = self.imageView.image?.pngRepresentationData
+            if let name = txt_nameregion.text{
+                re.name = name
+            } else {re.name = ""}
+            if let des = txtview_des.text {
+                re.des = des
+            } else {re.des = ""}
+            Database.save()
+            moveRegion()
+        }
+        else{
+            let refreshAlert = UIAlertController(title: "Lỗi", message: "Bạn chưa chọn hình", preferredStyle: UIAlertControllerStyle.alert)
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(refreshAlert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func btnClicked() {
@@ -51,13 +58,10 @@ class AddNewRegion_ViewController: UIViewController, UINavigationControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,15 +74,4 @@ class AddNewRegion_ViewController: UIViewController, UINavigationControllerDeleg
         customdelegate?.reload()
         _ = navigationController?.popViewController(animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -11,7 +11,9 @@
 		6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAB61E960ED900E0211C /* AppDelegate.swift */; };
 		6318AAC11E960ED900E0211C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAC01E960ED900E0211C /* Assets.xcassets */; };
 		6318AAD41E960F4500E0211C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */; };
-		63A07DEC1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63A07DEA1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld */; };
+		635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635229F91E9E848300468B53 /* AddNewRegion_ViewController.swift */; };
+		635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635229FB1E9E84B600468B53 /* UIImageExt.swift */; };
+		635229FD1E9E85D900468B53 /* QuanLyQuanAn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63A07DEA1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld */; };
 		63BA45291E9D3D8600EE27DC /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA45281E9D3D8600EE27DC /* Food_ViewController.swift */; };
 		63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA452E1E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift */; };
 		63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */; };
@@ -30,6 +32,8 @@
 		6318AAC01E960ED900E0211C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6318AAC51E960ED900E0211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		635229F91E9E848300468B53 /* AddNewRegion_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewRegion_ViewController.swift; sourceTree = "<group>"; };
+		635229FB1E9E84B600468B53 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		63A07DEB1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuanLyQuanAn.xcdatamodel; sourceTree = "<group>"; };
 		63BA45241E9D3C5C00EE27DC /* QuanLyQuanAn 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "QuanLyQuanAn 2.xcdatamodel"; sourceTree = "<group>"; };
 		63BA45281E9D3D8600EE27DC /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 		6318AACD1E960F0800E0211C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				635229FB1E9E84B600468B53 /* UIImageExt.swift */,
 				AD553DDA1E977E68009A51CB /* Database.swift */,
 				AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */,
 				AD553DDC1E977E68009A51CB /* UIPassingData.swift */,
@@ -144,6 +149,7 @@
 		63BA452A1E9D3DBC00EE27DC /* Region */ = {
 			isa = PBXGroup;
 			children = (
+				635229F91E9E848300468B53 /* AddNewRegion_ViewController.swift */,
 				63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */,
 				63BA452E1E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift */,
 				63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */,
@@ -248,13 +254,15 @@
 				63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */,
 				F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */,
 				AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */,
+				635229FD1E9E85D900468B53 /* QuanLyQuanAn.xcdatamodeld in Sources */,
 				6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */,
 				63BA45291E9D3D8600EE27DC /* Food_ViewController.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
+				635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */,
+				635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */,
 				63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */,
 				63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */,
 				14EB3F9D1E9B5BD00071F441 /* SeedData.swift in Sources */,
-				63A07DEC1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +420,7 @@
 				63BA45241E9D3C5C00EE27DC /* QuanLyQuanAn 2.xcdatamodel */,
 				63A07DEB1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodel */,
 			);
-			currentVersion = 63A07DEB1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodel */;
+			currentVersion = 63BA45241E9D3C5C00EE27DC /* QuanLyQuanAn 2.xcdatamodel */;
 			path = QuanLyQuanAn.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

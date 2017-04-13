@@ -10,6 +10,7 @@ import UIKit
 
 class MyCustom_CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var btn_infor: UIButton!
     @IBOutlet weak var image_region: UIImageView!
     @IBOutlet weak var label_nameregion: UILabel!
 }

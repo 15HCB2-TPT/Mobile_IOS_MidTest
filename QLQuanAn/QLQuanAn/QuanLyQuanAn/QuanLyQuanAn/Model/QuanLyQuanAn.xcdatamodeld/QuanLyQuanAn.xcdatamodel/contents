@@ -27,6 +27,7 @@
         <relationship name="order_table" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Table" syncable="YES"/>
     </entity>
     <entity name="Region" representedClassName="Region" syncable="YES" codeGenerationType="class">
+        <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -42,7 +43,7 @@
         <element name="Food" positionX="151" positionY="87" width="128" height="120"/>
         <element name="FoodType" positionX="234" positionY="3" width="128" height="60"/>
         <element name="Order" positionX="-144" positionY="-72" width="128" height="105"/>
-        <element name="Region" positionX="187" positionY="-279" width="128" height="75"/>
+        <element name="Region" positionX="187" positionY="-279" width="128" height="30"/>
         <element name="Table" positionX="52" positionY="-144" width="128" height="105"/>
     </elements>
 </model>

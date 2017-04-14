@@ -9,7 +9,14 @@
 import UIKit
 
 class AddFood_ViewController: UIViewController {
-
+    @IBOutlet weak var btnSave: UIBarButtonItem!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var btnChooseImage: UIButton!
+    @IBOutlet weak var txtNameFood: UITextField!
+    @IBOutlet weak var txtStyleFood: UITextField!
+    @IBOutlet weak var txtPrice: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

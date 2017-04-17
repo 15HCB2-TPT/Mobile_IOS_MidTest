@@ -14,27 +14,62 @@ protocol UIPassingProtocol {
 }
 
 extension UIPassingProtocol {
+    func uiPassedData(data: Any?, identity: Int){
+        print("This func need override!")
+    }
+    
     func sendData(data: Any?, identity: Int) {
         self.uiPassedData(data: data, identity: identity)
     }
 }
 
-class UIPassingData {
-    static func sendData(view: UIPassingProtocol, data: Any?, identity: Int = 0, delay: Double = 0.25){
+private var oldControllerKey: UInt8 = 0
+extension UIViewController: UIPassingProtocol {
+    var _oldController: UIViewController {
+        get { return associatedObject(base: self, key: &oldControllerKey) { return UIViewController() } }
+        set { associateObject(base: self, key: &oldControllerKey, value: newValue) }
+    }
+    
+    private func sendData(to: UIViewController, data: Any?, identity: Int = 0, delay: Double = 0.25){
+        to._oldController = self
         DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
-            view.sendData(data: data, identity: identity)
+            to.sendData(data: data, identity: identity)
         })
     }
     
-    static func sendData(fromController: UIViewController, storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
+    func presentData(storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
         let s = UIStoryboard(name: storyboard, bundle: nil)
         let c = s.instantiateViewController(withIdentifier: controller) 
-        fromController.present(c, animated: true, completion: { () -> Void in
-            do {
-                try UIPassingData.sendData(view: c as! UIPassingProtocol, data: data, identity: identity, delay: delay)
-            } catch _ {
-                print("Can't pass data to \(c)")
-            }
+        self.present(c, animated: true, completion: { () -> Void in
+            self.sendData(to: c, data: data, identity: identity, delay: delay)
+        })
+    }
+    
+    func dismissData(storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
+        self.dismiss(animated: true, completion: { () -> Void in
+            self.sendData(to: self._oldController, data: data, identity: identity, delay: delay)
+        })
+    }
+    
+    func popData(storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
+        self.navigationController?.popViewController(animated: true)
+        self.sendData(to: self._oldController, data: data, identity: identity, delay: delay)
+    }
+}
+
+final class UIPassingData {
+    private static func sendData(from: UIViewController, to: UIViewController, data: Any?, identity: Int = 0, delay: Double = 0.25){
+        to._oldController = from
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+            to.sendData(data: data, identity: identity)
+        })
+    }
+    
+    static func presentData(from: UIViewController, storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
+        let s = UIStoryboard(name: storyboard, bundle: nil)
+        let c = s.instantiateViewController(withIdentifier: controller) 
+        from.present(c, animated: true, completion: { () -> Void in
+            UIPassingData.sendData(from: from, to: c, data: data, identity: identity, delay: delay)
         })
     }
 }

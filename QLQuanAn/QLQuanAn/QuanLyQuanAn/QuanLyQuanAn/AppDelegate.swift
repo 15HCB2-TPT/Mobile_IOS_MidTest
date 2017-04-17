@@ -19,10 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         SeedData.seedCurrency()
         SeedData.seedFoodType()
-        let b = Database.select(entityName: "FoodType") as! [FoodType]
-        for a in b {
-            print(a.nametype!)
-        }
         return true
     }
 

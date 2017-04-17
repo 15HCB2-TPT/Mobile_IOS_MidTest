@@ -29,6 +29,7 @@
 		AD553DDD1E977E68009A51CB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDA1E977E68009A51CB /* Database.swift */; };
 		AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */; };
 		AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDC1E977E68009A51CB /* UIPassingData.swift */; };
+		F0266DE41EA4ADE900341345 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0266DE31EA4ADE900341345 /* Control.swift */; };
 		F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		AD553DDA1E977E68009A51CB /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTypeHelper.swift; sourceTree = "<group>"; };
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
+		F0266DE31EA4ADE900341345 /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFood_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 				AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */,
 				AD553DDC1E977E68009A51CB /* UIPassingData.swift */,
 				14F3396B1EA509B100DD8D0A /* ObjectAssosiation.swift */,
+				F0266DE31EA4ADE900341345 /* Control.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				14072D1F1EA48FC100FFC8B0 /* Table_Main.swift in Sources */,
 				63BA45291E9D3D8600EE27DC /* Food_ViewController.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
+				F0266DE41EA4ADE900341345 /* Control.swift in Sources */,
 				635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */,
 				635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */,
 				14072D251EA4908B00FFC8B0 /* Table_Cell.swift in Sources */,

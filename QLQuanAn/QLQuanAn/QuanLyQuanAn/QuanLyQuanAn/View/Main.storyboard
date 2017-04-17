@@ -855,7 +855,7 @@
         <!--Add New Food-->
         <scene sceneID="wIT-li-Cyr">
             <objects>
-                <viewController title="Add New Food" id="vBs-ye-sbH" customClass="AddFood_ViewController" customModule="QuanLyQuanAn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add New Food" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="vBs-ye-sbH" customClass="AddFood_ViewController" customModule="QuanLyQuanAn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tZu-9X-d7B"/>
                         <viewControllerLayoutGuide type="bottom" id="LtF-Jx-hql"/>
@@ -865,7 +865,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3c-uA-jlJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjv-tW-x0D">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -966,12 +966,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="T3c-uA-jlJ" firstAttribute="top" secondItem="tZu-9X-d7B" secondAttribute="bottom" id="3w5-G6-iyM"/>
                             <constraint firstItem="Bjv-tW-x0D" firstAttribute="height" secondItem="rn8-Mr-fiE" secondAttribute="height" id="IBo-LX-Mqn"/>
                             <constraint firstItem="Bjv-tW-x0D" firstAttribute="width" secondItem="rn8-Mr-fiE" secondAttribute="width" id="K0U-pk-IWU"/>
                             <constraint firstItem="LtF-Jx-hql" firstAttribute="top" secondItem="T3c-uA-jlJ" secondAttribute="bottom" id="Pwh-9p-ewE"/>
                             <constraint firstItem="T3c-uA-jlJ" firstAttribute="leading" secondItem="rn8-Mr-fiE" secondAttribute="leading" id="hak-LL-ZWb"/>
                             <constraint firstAttribute="trailing" secondItem="T3c-uA-jlJ" secondAttribute="trailing" id="oyT-ky-Z2E"/>
-                            <constraint firstItem="T3c-uA-jlJ" firstAttribute="top" secondItem="rn8-Mr-fiE" secondAttribute="top" id="rr6-QS-Ojj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Thêm món ăn" id="Syd-fm-2de">
@@ -989,7 +989,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOE-2g-Q51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-618.75" y="2473.9436619718308"/>
+            <point key="canvasLocation" x="-654" y="2480"/>
         </scene>
         <!--Edit Food-->
         <scene sceneID="KiS-zf-ysz">

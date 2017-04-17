@@ -8,16 +8,20 @@
 
 import UIKit
 
+protocol ReportDelegate:class{
+    func trandata()
+}
+
 class ReportFilter_ViewController: UIViewController {
 
-    @IBAction func reportClicked(_ sender: Any) {
-    }
+    var rl = [ReportItem]()
+
     @IBOutlet weak var report_time: UIView!
     @IBOutlet weak var report_day: UIView!
     @IBOutlet weak var segmented: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        SeedReport()
         // Do any additional setup after loading the view.
     }
 
@@ -33,12 +37,36 @@ class ReportFilter_ViewController: UIViewController {
         default:
             return
         }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func SeedReport(){
+        var r = ReportItem()
+        r.name = "a"
+        r.number = 1
+        rl.append(r)
+        r = ReportItem()
+        r.name = "b"
+        r.number = 2
+        rl.append(r)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "navi_report" {
+            let navi = segue.destination as? UINavigationController
+            let des = navi?.topViewController as! Report_TableViewController
+            des.rl = rl
+        }
+    }
+    
+    @IBAction func reportClicked(_ sender: Any) {
+        
+    }
 
     /*
     // MARK: - Navigation

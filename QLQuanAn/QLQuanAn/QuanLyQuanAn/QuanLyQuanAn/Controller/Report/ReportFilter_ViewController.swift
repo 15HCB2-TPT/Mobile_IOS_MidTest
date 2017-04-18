@@ -24,9 +24,9 @@ class ReportFilter_ViewController: UIViewController, ReportDelegate {
     @IBOutlet weak var segmented: UISegmentedControl!
     
     var rp = [ReportItem]()
-    var _dateday:Date?
-    var _dateX:Date?
-    var _dateY:Date?
+    var _dateday:Date = Date()
+    var _dateX:Date = Date()
+    var _dateY:Date = Date()
     var flag = true
     let datef = DateFormatter()
     
@@ -80,72 +80,73 @@ class ReportFilter_ViewController: UIViewController, ReportDelegate {
             let refreshAlert = UIAlertController(title: "Lỗi", message: "Nhà hàng chưa kinh doanh", preferredStyle: UIAlertControllerStyle.alert)
             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default))
             present(refreshAlert, animated: true, completion: nil)
-            return
-        }
-        if switch_doanhthu.isOn {
-            //report doanh thu
-            let _listdetail = Database.select(entityName: "DetailsOrder") as! [DetailsOrder]
-            var listdetail = [(DetailsOrder, Date)]()
-            for each in _listdetail {
-                listdetail.append((each,convertStringToDate(str: (each.detailsorder_order?.date!)!)))
-            }
-            let listfood = Database.select(entityName: "Food") as! [Food]
-            for i in 0 ... listfood.count {
-                let report = ReportItem()
-                report.name = listfood[i].name!
-                report.number = 0
-                report.money = 0
-                for details in listdetail {
-                    if report_day.isHidden {
-                        if details.1 > _dateX! && details.1 < _dateY! {
-                            if details.0.detailsorder_food == listfood[i] {
-                                report.money = report.money + (details.0.money*details.0.number)
-                            }
-                        }
-                    }
-                    else {
-                        if details.1 == _dateday!{
-                            if details.0.detailsorder_food == listfood[i] {
-                                report.money = report.money + (details.0.money*details.0.number)
-                            }
-                        }
-                    }
-                }
-                rp.append(report)
-            }
         }
         else{
-            //report so luong
-            let _listdetail = Database.select(entityName: "DetailsOrder") as! [DetailsOrder]
-            var listdetail = [(DetailsOrder, Date)]()
-            for each in _listdetail {
-                listdetail.append((each,convertStringToDate(str: (each.detailsorder_order?.date!)!)))
-            }
-            let listfood = Database.select(entityName: "Food") as! [Food]
-            for i in 0 ... listfood.count {
-                let report = ReportItem()
-                report.name = listfood[i].name!
-                report.number = 0
-                report.money = 0
-                for details in listdetail {
-                    if report_day.isHidden {
-                        if details.1 > _dateX! && details.1 < _dateY! {
-                            if details.0.detailsorder_food == listfood[i] {
-                                report.number = report.number + Int32(details.0.number)
+            if switch_doanhthu.isOn {
+                //report doanh thu
+                let _listdetail = Database.select(entityName: "DetailsOrder") as! [DetailsOrder]
+                var listdetail = [(DetailsOrder, Date)]()
+                for each in _listdetail {
+                    listdetail.append((each,convertStringToDate(str: (each.detailsorder_order?.date!)!)))
+                }
+                let listfood = Database.select(entityName: "Food") as! [Food]
+                for i in 0 ... listfood.count {
+                    let report = ReportItem()
+                    report.name = listfood[i].name!
+                    report.number = 0
+                    report.money = 0
+                    for details in listdetail {
+                        if report_day.isHidden {
+                            if details.1 > _dateX && details.1 < _dateY {
+                                if details.0.detailsorder_food == listfood[i] {
+                                    report.money = report.money + (details.0.money*details.0.number)
+                                }
+                            }
+                        }
+                        else {
+                            if details.1 == _dateday{
+                                if details.0.detailsorder_food == listfood[i] {
+                                    report.money = report.money + (details.0.money*details.0.number)
+                                }
                             }
                         }
                     }
-                    else {
-                        if details.1 == _dateday!{
-                            if details.0.detailsorder_food == listfood[i] {
-                                report.number = report.number + Int32(details.0.number)
+                    rp.append(report)
+                }
+            }
+            else{
+                //report so luong
+                let _listdetail = Database.select(entityName: "DetailsOrder") as! [DetailsOrder]
+                var listdetail = [(DetailsOrder, Date)]()
+                for each in _listdetail {
+                    listdetail.append((each,convertStringToDate(str: (each.detailsorder_order?.date!)!)))
+                }
+                let listfood = Database.select(entityName: "Food") as! [Food]
+                for i in 0 ... listfood.count {
+                    let report = ReportItem()
+                    report.name = listfood[i].name!
+                    report.number = 0
+                    report.money = 0
+                    for details in listdetail {
+                        if report_day.isHidden {
+                            if details.1 > _dateX && details.1 < _dateY {
+                                if details.0.detailsorder_food == listfood[i] {
+                                    report.number = report.number + Int32(details.0.number)
+                                }
+                            }
+                        }
+                        else {
+                            if details.1 == _dateday{
+                                if details.0.detailsorder_food == listfood[i] {
+                                    report.number = report.number + Int32(details.0.number)
+                                }
                             }
                         }
                     }
                 }
             }
+            
         }
-        
     }
     //
     
@@ -182,7 +183,20 @@ class ReportFilter_ViewController: UIViewController, ReportDelegate {
     }
     
     @IBAction func reportClicked(_ sender: Any) {
-        requestdata()
+        if (Database.select(entityName: "DetailsOrder") as! [DetailsOrder]).count <= 0 {
+            flag = false
+            let refreshAlert = UIAlertController(title: "Lỗi", message: "Nhà hàng chưa kinh doanh", preferredStyle: UIAlertControllerStyle.alert)
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(refreshAlert, animated: true, completion: nil)
+            return
+        }
+        else{
+            requestdata()
+            let viewController:UIViewController = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "navi_resultreport") as? UINavigationController)!
+            let des = viewController.childViewControllers.first as! Report_TableViewController
+            des.rl = rp
+            self.present(viewController, animated: false, completion: nil)
+        }
     }
 
     /*

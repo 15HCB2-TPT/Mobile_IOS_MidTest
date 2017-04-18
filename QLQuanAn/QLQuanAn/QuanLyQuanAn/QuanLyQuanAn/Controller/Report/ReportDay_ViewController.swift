@@ -8,17 +8,14 @@
 
 import UIKit
 
-protocol DateDelegate:class {
-    func trandate(dateX: Date,dateY: Date)
-}
-class ReportDay_ViewController: UIViewController {
-
+class ReportDay_ViewController: UIViewController{
     @IBOutlet weak var date_day: UIDatePicker!
     var reportdelegate:ReportDelegate?
     
     @IBAction func datePickerChanged(_ sender: Any) {
         reportdelegate?.trandata(dateday: date_day.date)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

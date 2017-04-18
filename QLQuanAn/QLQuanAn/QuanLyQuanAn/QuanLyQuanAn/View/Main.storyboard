@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DI3-Tp-CsJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DI3-Tp-CsJ">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,7 +40,6 @@
                                 <state key="normal" title="Thống kê"/>
                                 <connections>
                                     <action selector="reportClicked:" destination="VcG-qx-kKs" eventType="touchUpInside" id="sNc-uZ-FFV"/>
-                                    <segue destination="OvA-Ri-aMR" kind="show" identifier="navi_report" id="HbA-FE-pH9"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abY-Pw-sto">
@@ -1337,10 +1336,10 @@
             </objects>
             <point key="canvasLocation" x="-1875" y="-238"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Result Report-->
         <scene sceneID="iWU-MC-xbv">
             <objects>
-                <tableViewController id="ufk-hw-caf" customClass="Report_TableViewController" customModule="QuanLyQuanAn" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Result Report" id="ufk-hw-caf" customClass="Report_TableViewController" customModule="QuanLyQuanAn" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6J-2k-rl6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1393,7 +1392,7 @@
                             <outlet property="delegate" destination="ufk-hw-caf" id="q19-G3-sRX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="b85-c3-9PV">
+                    <navigationItem key="navigationItem" title="Thống kê" id="b85-c3-9PV">
                         <barButtonItem key="leftBarButtonItem" title="&lt;Trở về" id="0D3-JL-jlX">
                             <connections>
                                 <action selector="backButton:" destination="ufk-hw-caf" id="CA9-LC-RqI"/>
@@ -1408,10 +1407,10 @@
             </objects>
             <point key="canvasLocation" x="-3249" y="1508"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navi_Result Report-->
         <scene sceneID="h25-e8-EhT">
             <objects>
-                <navigationController id="OvA-Ri-aMR" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navi_resultreport" title="Navi_Result Report" id="OvA-Ri-aMR" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rgf-7I-4bt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

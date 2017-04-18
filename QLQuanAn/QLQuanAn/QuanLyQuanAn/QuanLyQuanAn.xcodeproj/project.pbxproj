@@ -16,7 +16,6 @@
 		635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635229F91E9E848300468B53 /* AddNewRegion_ViewController.swift */; };
 		635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635229FB1E9E84B600468B53 /* UIImageExt.swift */; };
 		635229FD1E9E85D900468B53 /* QuanLyQuanAn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63A07DEA1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld */; };
-		63BA45291E9D3D8600EE27DC /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA45281E9D3D8600EE27DC /* Food_ViewController.swift */; };
 		63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA452E1E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift */; };
 		63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */; };
 		63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */; };
@@ -25,6 +24,8 @@
 		AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */; };
 		AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDC1E977E68009A51CB /* UIPassingData.swift */; };
 		F0266DE41EA4ADE900341345 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0266DE31EA4ADE900341345 /* Control.swift */; };
+		F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0590F041EA53371006057D6 /* Food_TableViewCell.swift */; };
+		F08CC4761EA5BD5900081CE1 /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CC4751EA5BD5900081CE1 /* Food_ViewController.swift */; };
 		F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +42,6 @@
 		635229FB1E9E84B600468B53 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		63A07DEB1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuanLyQuanAn.xcdatamodel; sourceTree = "<group>"; };
 		63BA45241E9D3C5C00EE27DC /* QuanLyQuanAn 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "QuanLyQuanAn 2.xcdatamodel"; sourceTree = "<group>"; };
-		63BA45281E9D3D8600EE27DC /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
 		63BA452E1E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustom_CollectionViewCell.swift; sourceTree = "<group>"; };
 		63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region_ViewController.swift; sourceTree = "<group>"; };
 		63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRegion_ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +50,8 @@
 		AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTypeHelper.swift; sourceTree = "<group>"; };
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
 		F0266DE31EA4ADE900341345 /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		F0590F041EA53371006057D6 /* Food_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_TableViewCell.swift; sourceTree = "<group>"; };
+		F08CC4751EA5BD5900081CE1 /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
 		F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFood_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,8 +159,9 @@
 		63BA45271E9D3D7300EE27DC /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				63BA45281E9D3D8600EE27DC /* Food_ViewController.swift */,
 				F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */,
+				F0590F041EA53371006057D6 /* Food_TableViewCell.swift */,
+				F08CC4751EA5BD5900081CE1 /* Food_ViewController.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -274,15 +277,16 @@
 				635229FD1E9E85D900468B53 /* QuanLyQuanAn.xcdatamodeld in Sources */,
 				6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */,
 				634B53761E9F7D260014B749 /* ReportFilter_ViewController.swift in Sources */,
-				63BA45291E9D3D8600EE27DC /* Food_ViewController.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
 				F0266DE41EA4ADE900341345 /* Control.swift in Sources */,
 				635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */,
+				F08CC4761EA5BD5900081CE1 /* Food_ViewController.swift in Sources */,
 				635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */,
 				63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */,
 				63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */,
 				14EB3F9D1E9B5BD00071F441 /* SeedData.swift in Sources */,
 				634B53781E9F81380014B749 /* ReportResult_ViewController.swift in Sources */,
+				F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

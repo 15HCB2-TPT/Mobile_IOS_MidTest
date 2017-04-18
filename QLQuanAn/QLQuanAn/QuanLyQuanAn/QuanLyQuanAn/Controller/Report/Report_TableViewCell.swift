@@ -10,6 +10,7 @@ import UIKit
 
 class Report_TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var unit: UILabel!
     @IBOutlet weak var number: UILabel!
     @IBOutlet weak var name: UILabel!
     override func awakeFromNib() {

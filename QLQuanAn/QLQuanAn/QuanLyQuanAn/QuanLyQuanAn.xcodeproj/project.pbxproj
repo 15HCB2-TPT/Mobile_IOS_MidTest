@@ -19,8 +19,6 @@
 		633F349B1EA4E648004C648B /* Report_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F34961EA4E648004C648B /* Report_TableViewCell.swift */; };
 		633F349C1EA4E648004C648B /* Report_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F34971EA4E648004C648B /* Report_TableViewController.swift */; };
 		633F349D1EA4E648004C648B /* ReportFilter_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F34981EA4E648004C648B /* ReportFilter_ViewController.swift */; };
-		633F349E1EA4E648004C648B /* ReportItem_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F34991EA4E648004C648B /* ReportItem_TableViewCell.swift */; };
-		633F349F1EA4E648004C648B /* ReportItem_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F349A1EA4E648004C648B /* ReportItem_TableViewController.swift */; };
 		633F34A11EA4E6B4004C648B /* ReportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F34A01EA4E6B4004C648B /* ReportItem.swift */; };
 		635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635229F91E9E848300468B53 /* AddNewRegion_ViewController.swift */; };
 		635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635229FB1E9E84B600468B53 /* UIImageExt.swift */; };
@@ -30,6 +28,8 @@
 		63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */; };
 		63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */; };
 		63BA45391E9D3EE600EE27DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BA45381E9D3EE600EE27DC /* Main.storyboard */; };
+		AD06ECDB1EA5E53D00F550D8 /* ReportDay_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD06ECDA1EA5E53D00F550D8 /* ReportDay_ViewController.swift */; };
+		AD06ECDD1EA5E54F00F550D8 /* ReportTime_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD06ECDC1EA5E54F00F550D8 /* ReportTime_ViewController.swift */; };
 		AD553DDD1E977E68009A51CB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDA1E977E68009A51CB /* Database.swift */; };
 		AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */; };
 		AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDC1E977E68009A51CB /* UIPassingData.swift */; };
@@ -52,8 +52,6 @@
 		633F34961EA4E648004C648B /* Report_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report_TableViewCell.swift; sourceTree = "<group>"; };
 		633F34971EA4E648004C648B /* Report_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report_TableViewController.swift; sourceTree = "<group>"; };
 		633F34981EA4E648004C648B /* ReportFilter_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFilter_ViewController.swift; sourceTree = "<group>"; };
-		633F34991EA4E648004C648B /* ReportItem_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportItem_TableViewCell.swift; sourceTree = "<group>"; };
-		633F349A1EA4E648004C648B /* ReportItem_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportItem_TableViewController.swift; sourceTree = "<group>"; };
 		633F34A01EA4E6B4004C648B /* ReportItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportItem.swift; sourceTree = "<group>"; };
 		635229F91E9E848300468B53 /* AddNewRegion_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewRegion_ViewController.swift; sourceTree = "<group>"; };
 		635229FB1E9E84B600468B53 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
@@ -64,6 +62,8 @@
 		63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region_ViewController.swift; sourceTree = "<group>"; };
 		63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRegion_ViewController.swift; sourceTree = "<group>"; };
 		63BA45381E9D3EE600EE27DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AD06ECDA1EA5E53D00F550D8 /* ReportDay_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDay_ViewController.swift; sourceTree = "<group>"; };
+		AD06ECDC1EA5E54F00F550D8 /* ReportTime_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTime_ViewController.swift; sourceTree = "<group>"; };
 		AD553DDA1E977E68009A51CB /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTypeHelper.swift; sourceTree = "<group>"; };
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 				633F34961EA4E648004C648B /* Report_TableViewCell.swift */,
 				633F34971EA4E648004C648B /* Report_TableViewController.swift */,
 				633F34981EA4E648004C648B /* ReportFilter_ViewController.swift */,
-				633F34991EA4E648004C648B /* ReportItem_TableViewCell.swift */,
-				633F349A1EA4E648004C648B /* ReportItem_TableViewController.swift */,
+				AD06ECDA1EA5E53D00F550D8 /* ReportDay_ViewController.swift */,
+				AD06ECDC1EA5E54F00F550D8 /* ReportTime_ViewController.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -297,15 +297,13 @@
 				633F349D1EA4E648004C648B /* ReportFilter_ViewController.swift in Sources */,
 				AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */,
 				633F34A11EA4E6B4004C648B /* ReportItem.swift in Sources */,
-				633F349F1EA4E648004C648B /* ReportItem_TableViewController.swift in Sources */,
 				63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */,
+				AD06ECDD1EA5E54F00F550D8 /* ReportTime_ViewController.swift in Sources */,
 				F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */,
 				AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */,
 				635229FD1E9E85D900468B53 /* QuanLyQuanAn.xcdatamodeld in Sources */,
-				633F349E1EA4E648004C648B /* ReportItem_TableViewCell.swift in Sources */,
 				6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */,
 				633F349B1EA4E648004C648B /* Report_TableViewCell.swift in Sources */,
-				634B53761E9F7D260014B749 /* ReportFilter_ViewController.swift in Sources */,
 				14072D1F1EA48FC100FFC8B0 /* Table_Main.swift in Sources */,
 				63BA45291E9D3D8600EE27DC /* Food_ViewController.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
@@ -314,13 +312,13 @@
 				635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */,
 				635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */,
 				14072D251EA4908B00FFC8B0 /* Table_Cell.swift in Sources */,
+				AD06ECDB1EA5E53D00F550D8 /* ReportDay_ViewController.swift in Sources */,
 				14072D211EA48FD900FFC8B0 /* Table_Add_Edit.swift in Sources */,
 				146E03E21EA529B5007A06AF /* Table_Call_Food.swift in Sources */,
 				63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */,
 				63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */,
 				14EB3F9D1E9B5BD00071F441 /* SeedData.swift in Sources */,
 				14F3396C1EA509B100DD8D0A /* ObjectAssosiation.swift in Sources */,
-				634B53781E9F81380014B749 /* ReportResult_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

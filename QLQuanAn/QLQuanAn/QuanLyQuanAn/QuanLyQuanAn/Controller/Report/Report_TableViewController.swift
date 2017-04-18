@@ -14,6 +14,7 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
     @IBOutlet var table_reporttype: UITableView!
     var rl = [ReportItem]()
     var delegate:ReportDelegate?
+    var is_doanhthu:Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,17 +44,22 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "custom_reporttype", for: indexPath) as! Report_TableViewCell
         cell.name.text = rl[indexPath.row].name
-        cell.number.text = String(rl[indexPath.row].number)
-        // Configure the cell...
+        if is_doanhthu {
+            cell.number.text = String(rl[indexPath.row].money)
+            cell.unit.text = "USD"
+        }else {
+            cell.number.text = String(rl[indexPath.row].number)
+            cell.unit.text = "phần"
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main",bundle: nil )
-        let newcontroller = storyboard.instantiateViewController(withIdentifier: "navi_detailreport") as! UINavigationController
-        let detailreport = newcontroller.topViewController as! ReportItem_TableViewController
-        detailreport.reportitem = rl[indexPath.row]
-        present(newcontroller, animated: true)
+//        let storyboard = UIStoryboard(name: "Main",bundle: nil )
+//        let newcontroller = storyboard.instantiateViewController(withIdentifier: "navi_detailreport") as! UINavigationController
+//        let detailreport = newcontroller.topViewController as! ReportItem_TableViewController
+//        detailreport.reportitem = rl[indexPath.row]
+//        present(newcontroller, animated: true)
     }
 
     /*

@@ -30,6 +30,7 @@ class Region_ViewController: UIViewController,UICollectionViewDelegate, UICollec
         collectionview.register(MyCustom_CollectionViewCell.self, forCellWithReuseIdentifier: "collectionviewcell")
         collectionview.delegate = self
         collectionview.dataSource = self
+        reload()
     }
 
     override func didReceiveMemoryWarning() {

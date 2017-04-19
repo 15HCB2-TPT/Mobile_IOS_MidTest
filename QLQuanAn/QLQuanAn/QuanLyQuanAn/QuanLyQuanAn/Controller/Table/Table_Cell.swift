@@ -14,7 +14,7 @@ class Table_Cell: UITableViewCell{
     @IBOutlet weak var tableImg: UIImageView!
     @IBOutlet weak var tableInfo: UILabel!
     @IBOutlet weak var areaInfo: UILabel!
-    @IBOutlet weak var btnCall: UIButton!
+    @IBOutlet weak var btnCallPay: UIButton!
     
     // MARK: **** Models ****
     var data: Table!
@@ -26,6 +26,10 @@ class Table_Cell: UITableViewCell{
     }
     
     @IBAction func btnCall_Click(_ sender: Any) {
-        UIPassingData.presentData(from: controller, storyboard: "Main", controller: "tableCallFoodWindow", data: nil, identity: 0)
+        if data.is_empty {
+            UIPassingData.pushData(from: controller, storyboard: "Main", controller: "tableCallFoodWindow", data: nil, identity: 0)
+        } else {
+            
+        }
     }
 }

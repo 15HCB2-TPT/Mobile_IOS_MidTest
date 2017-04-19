@@ -18,25 +18,24 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: **** Models ****
     var tables: [Table]!
     
-    // MARK: **** Storyboard Delegates ****
+    // MARK: ****
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTableView(segmentIndex: 0)
+        loadTableView(segmentIndex: segment.selectedSegmentIndex)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    override func uiPassedData(data: Any?, identity: Int){
+        loadTableView(segmentIndex: segment.selectedSegmentIndex)
+        table.reloadData()
+    }
+    
     // MARK: **** TableView ****
     func loadTableView(segmentIndex: Int){
-        var predicate: NSPredicate
-        if segmentIndex == 0 {
-            predicate = NSPredicate(format: "is_empty = true")
-        } else {
-            predicate = NSPredicate(format: "is_empty = false")
-        }
-        tables = Database.select(predicater: predicate)
+        tables = Database.select(predicater: NSPredicate(format: "is_empty == %i", segmentIndex == 0 ? 1 : 0), sorter: [NSSortDescriptor(key: "table_region.name", ascending: true), NSSortDescriptor(key: "number", ascending: true)])
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,17 +45,19 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: Table_Cell = self.table.dequeueReusableCell(withIdentifier: "table_cell") as! Table_Cell
         let d = tables[indexPath.row]
-        //cell.tableImg = UIImage(
         cell.tableInfo.text = "Mã: \(d.name!) (\(d.number))"
         cell.areaInfo.text = "Khu vực: \(d.table_region?.name! ?? "")"
         cell.data = d
         cell.controller = self
+        if !d.is_empty {
+            cell.btnCallPay.setTitle("Thanh toán", for: .normal)
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if !table.isEditing {
-            presentData(storyboard: "Main", controller: "tableAddEditWindow", data: tables[indexPath.row], identity: 1)
+            pushData(storyboard: "Main", controller: "tableAddEditWindow", data: tables[indexPath.row], identity: 1)
         }
     }
     
@@ -86,7 +87,7 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: **** Button ****
     @IBAction func btnAdd_Click(_ sender: Any) {
-        presentData(storyboard: "Main", controller: "tableAddEditWindow", data: nil, identity: 0)
+        pushData(storyboard: "Main", controller: "tableAddEditWindow", data: nil, identity: 0)
     }
     
     @IBAction func btnEdit_Click(_ sender: Any) {

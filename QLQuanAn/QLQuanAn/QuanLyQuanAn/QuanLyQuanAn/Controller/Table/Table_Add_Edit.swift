@@ -1,5 +1,5 @@
 //
-//  Table_Add.swift
+//  Table_Add_Edit.swift
 //  QuanLyQuanAn
 //
 //  Created by Hiroshi.Kazuo on 4/17/17.
@@ -8,154 +8,127 @@
 
 import UIKit
 
-class Table_Add_Edit: UIViewController/*, UIPickerViewDataSource, UIPickerViewDelegate, UIPassingProtocol*/ {
+class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-//    @IBOutlet weak var tfName: UITextField!
-//    @IBOutlet weak var swSex: UISwitch!
-//    @IBOutlet weak var imgSex: UIImageView!
-//    @IBOutlet weak var dpBirthday: UIDatePicker!
-//    @IBOutlet weak var pickerClasses: UIPickerView!
-//    @IBOutlet weak var tvNotes: UITextView!
-//    @IBOutlet weak var btnAddSave: UIBarButtonItem!
+    // MARK: **** Elements **** 
+    @IBOutlet weak var navigationTitle: UINavigationItem!
+    @IBOutlet weak var btnAddEdit: UIBarButtonItem!
+    @IBOutlet weak var tfName: UITextField!
+    @IBOutlet weak var tfNum: UITextField!
+    @IBOutlet weak var pickerRegions: UIPickerView!
     
-//    var updatedStudent: Student!
-//    var funcAddSave: Bool = true
+    // MARK: **** Models ****
+    var regions: [Region]!
+    var selectedRegion: Region!
+    var funcAddEdit: Bool = true
+    var updatedTable: Table!
     
-    //===== Storyboard Delegates =====
+    // MARK: ****
     override func viewDidLoad() {
         super.viewDidLoad()
-        //seedClassrooms()
+        loadPickerView()
+        tfName.inputAccessoryView = addDoneButton()
+        tfNum.inputAccessoryView  = addDoneButton()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-//    func uiPassedData(data: Any?){
-//        if let st = data as! Student? {
-//            tfName.text = st.name
-//            swSex.isOn = st.sex
-//            if swSex.isOn {
-//                imgSex.image = UIImage(named: "Student Male-48.png")!
-//            } else {
-//                imgSex.image = UIImage(named: "Student Female-48.png")!
-//            }
-//            if let bd = st.bday {
-//                let dateFormatter = DateFormatter()
-//                dateFormatter.dateFormat = "MM-dd-yyyy"
-//                try dpBirthday.date = dateFormatter.date(from: bd)!
-//            }
-//            pickerClasses.selectRow(searchClassroom(name: (st.student_croom?.name)!), inComponent: 0, animated: true)
-//            tvNotes.text = st.notes
-//            //
-//            btnAddSave.title = "Save"
-//            funcAddSave = false
-//            updatedStudent = st
-//        }
-//    }
-//    
-//    //===== PickerView =====
-//    var classrooms: [Classroom]!
-//    var selectedClassroom: Classroom!
-//    
-//    func searchClassroom(name: String) -> Int {
-//        var index = 0
-//        for each in classrooms {
-//            if each.name == name {
-//                return index
-//            }
-//            index = index + 1
-//        }
-//        return 0
-//    }
-//    
-//    func seedClassrooms(){
-//        if Database.isEmpty(entityName: "Classroom") {
-//            Database.clear(entityName: "Classroom")
-//            var seed = [Classroom]()
-//            var tmp: Classroom
-//            for i in 1...12 {
-//                tmp = Database.create()
-//                tmp.name = "\(i)"
-//                seed.append(tmp)
-//            }
-//            Database.save()
-//        }
-//        let sorter = NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))
-//        classrooms = Database.select(predicater: nil, sorter: [sorter])
-//        selectedClassroom = classrooms.first
-//        pickerClasses.selectRow(0, inComponent: 0, animated: true)
-//    }
-//    
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 1
-//    }
-//    
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return classrooms.count
-//    }
-//    
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return classrooms[row].name
-//    }
-//    
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        selectedClassroom = classrooms[row]
-//    }
-//    
-//    //===== Switch =====
-//    @IBAction func swSex_ValueChanged(_ sender: Any) {
-//        if swSex.isOn {
-//            imgSex.image = UIImage(named: "Student Male-48.png")
-//        } else {
-//            imgSex.image = UIImage(named: "Student Female-48.png")
-//        }
-//    }
-//    
-//    //===== Button =====
-//    @IBAction func btnAdd_Click(_ sender: Any) {
-//        //prepare data
-//        guard let name = tfName.text else {
-//            return
-//        }
-//        if name == "" {
-//            let alert = UIAlertController(title: "Alert", message: "Name field can not be empty!", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//            return
-//        }
-//        let sex = swSex.isOn
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "MM-dd-yyyy"
-//        let bday = dateFormatter.string(from: dpBirthday.date)
-//        let croom = selectedClassroom
-//        let notes = tvNotes.text
-//        
-//        //Add or Save
-//        var st: Student
-//        if funcAddSave {
-//            st = Database.create()
-//        } else {
-//            st = updatedStudent
-//        }
-//        st.name = name
-//        st.sex = sex
-//        st.bday = bday
-//        st.notes = notes
-//        st.sortIndex = Int16(Database.count(entityName: "Student"))
-//        st.student_croom = croom
-//        Database.save()
-//        
-//        //alert
-//        if funcAddSave {
-//            let alert = UIAlertController(title: "Notify", message: "You added a new.", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        } else {
-//            let alert = UIAlertController(title: "Notify", message: "The Student updated.", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        }
-//    }
+    override func uiPassedData(data: Any?, identity: Int){
+        if identity == 0 {
+            navigationTitle.title = "Thêm mới"
+            btnAddEdit.title = "Thêm"
+        } else { 
+            if let t = data as! Table? {
+                tfName.text = t.name
+                tfNum.text = "\(t.number)"
+                pickerRegions.selectRow(searchTable(name: t.name!), inComponent: 0, animated: true)
+                //
+                navigationTitle.title = "Cập nhật"
+                btnAddEdit.title = "Lưu"
+                funcAddEdit = false
+                updatedTable = t
+            }
+        }
+    }
+    
+    func checkTableDuplicate(name: String) -> Bool {
+        let p = NSPredicate(format: "name == %@", name)
+        return Database.isExist(entityName: "Table", predicater: p)
+    }
+    
+    // MARK: **** PickerView ****
+    func loadPickerView() {
+        regions = Database.select()
+        selectedRegion = regions.first
+        pickerRegions.selectRow(0, inComponent: 0, animated: true)
+    }
+    
+    func searchTable(name: String) -> Int {
+        var index = 0
+        for each in regions {
+            if each.name == name {
+                return index
+            }
+            index = index + 1
+        }
+        return 0
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return regions.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return regions[row].name
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedRegion = regions[row]
+    }
+
+    // MARK: **** Button ****
+    @IBAction func btnAddEdit_Click(_ sender: Any) {
+        //prepare data
+        let name = tfName.text!
+        let num = Int32(tfNum.text!)
+        
+        //check duplicate
+        if !checkTableDuplicate(name: name) {
+            
+            //Add or Save
+            var t: Table
+            if funcAddEdit {
+                t = Database.create()
+            } else {
+                t = updatedTable
+            }
+            t.name = name
+            t.number = num!
+            t.is_empty = true
+            t.table_region = selectedRegion
+            Database.save()
+            
+            //alert
+            if funcAddEdit {
+                alert(title: "Nhắc nhở", msg: "Đã thêm thành công.", btnTitle: "Hiểu")
+            } else {
+                alert(title: "Nhắc nhở", msg: "Đã cập nhật thành công", btnTitle: "Hiểu")
+            }
+            
+        } else {
+            alert(title: "Nhắc nhở", msg: "Tên bàn đã tồn tại.", btnTitle: "Hiểu")
+        }
+    }
+    
+    @IBAction func btnBack_Click(_ sender: Any) {
+        popData(data: nil, identity: 0)
+    }
+    
 }
 

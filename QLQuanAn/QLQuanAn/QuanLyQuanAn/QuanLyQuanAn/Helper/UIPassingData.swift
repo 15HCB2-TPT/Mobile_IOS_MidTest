@@ -9,67 +9,55 @@
 import Foundation
 import UIKit
 
-protocol UIPassingProtocol {
-    func uiPassedData(data: Any?, identity: Int)
-}
-
-extension UIPassingProtocol {
-    func uiPassedData(data: Any?, identity: Int){
+extension UIViewController {
+    internal func uiPassedData(data: Any?, identity: Int) {
         print("This func need override!")
     }
     
-    func sendData(data: Any?, identity: Int) {
+    private func receiveData(data: Any?, identity: Int) {
         self.uiPassedData(data: data, identity: identity)
     }
-}
-
-private var oldControllerKey: UInt8 = 0
-extension UIViewController: UIPassingProtocol {
-    var _oldController: UIViewController {
-        get { return associatedObject(base: self, key: &oldControllerKey) { return UIViewController() } }
-        set { associateObject(base: self, key: &oldControllerKey, value: newValue) }
+    
+    func sendData(to: UIViewController, data: Any?, identity: Int = 0, delay: Double = 0.25){
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+            to.receiveData(data: data, identity: identity)
+        })
     }
     
-    private func sendData(to: UIViewController, data: Any?, identity: Int = 0, delay: Double = 0.25){
-        to._oldController = self
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
-            to.sendData(data: data, identity: identity)
-        })
+    func pushData(storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
+        let s = UIStoryboard(name: storyboard, bundle: nil)
+        let c = s.instantiateViewController(withIdentifier: controller) 
+        self.navigationController?.pushViewController(c, animated: true)
+        self.sendData(to: c, data: data, identity: identity, delay: delay)
+    }
+    
+    func popData(data: Any?, identity: Int = 0, delay: Double = 0.25) {
+        for controller in (self.navigationController?.viewControllers)! {
+            self.navigationController?.popViewController(animated: true)
+            self.sendData(to: controller, data: data, identity: identity, delay: delay)
+            break
+        }
     }
     
     func presentData(storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
         let s = UIStoryboard(name: storyboard, bundle: nil)
         let c = s.instantiateViewController(withIdentifier: controller) 
-        self.present(c, animated: true, completion: { () -> Void in
+        self.present(c, animated: true, completion: {
             self.sendData(to: c, data: data, identity: identity, delay: delay)
         })
-    }
-    
-    func dismissData(storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
-        self.dismiss(animated: true, completion: { () -> Void in
-            self.sendData(to: self._oldController, data: data, identity: identity, delay: delay)
-        })
-    }
-    
-    func popData(storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
-        self.navigationController?.popViewController(animated: true)
-        self.sendData(to: self._oldController, data: data, identity: identity, delay: delay)
     }
 }
 
 final class UIPassingData {
-    private static func sendData(from: UIViewController, to: UIViewController, data: Any?, identity: Int = 0, delay: Double = 0.25){
-        to._oldController = from
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
-            to.sendData(data: data, identity: identity)
-        })
+    static func pushData(from: UIViewController, storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
+        from.pushData(storyboard: storyboard, controller: controller, data: data, identity: identity, delay: delay)
+    }
+    
+    static func popData(from: UIViewController, data: Any?, identity: Int = 0, delay: Double = 0.25) {
+        from.popData(data: data, identity: identity, delay: delay)
     }
     
     static func presentData(from: UIViewController, storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
-        let s = UIStoryboard(name: storyboard, bundle: nil)
-        let c = s.instantiateViewController(withIdentifier: controller) 
-        from.present(c, animated: true, completion: { () -> Void in
-            UIPassingData.sendData(from: from, to: c, data: data, identity: identity, delay: delay)
-        })
+        from.presentData(storyboard: storyboard, controller: controller, data: data, identity: identity, delay: delay)
     }
 }

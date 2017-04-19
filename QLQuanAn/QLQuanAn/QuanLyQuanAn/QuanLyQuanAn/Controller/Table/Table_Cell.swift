@@ -14,6 +14,7 @@ class Table_Cell: UITableViewCell{
     @IBOutlet weak var tableImg: UIImageView!
     @IBOutlet weak var tableInfo: UILabel!
     @IBOutlet weak var areaInfo: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var btnCallPay: UIButton!
     
     // MARK: **** Models ****

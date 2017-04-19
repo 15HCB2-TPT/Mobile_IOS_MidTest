@@ -8,14 +8,16 @@
 
 import UIKit
 
-class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     // MARK: **** Elements **** 
     @IBOutlet weak var navigationTitle: UINavigationItem!
     @IBOutlet weak var btnAddEdit: UIBarButtonItem!
+    @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfNum: UITextField!
     @IBOutlet weak var pickerRegions: UIPickerView!
+    var imagePicker = UIImagePickerController()
     
     // MARK: **** Models ****
     var regions: [Region]!
@@ -112,6 +114,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             t.number = num!
             t.is_empty = true
             t.table_region = selectedRegion
+            t.img = self.imgView.image?.pngRepresentationData
             Database.save()
             
             //alert
@@ -128,6 +131,25 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func btnBack_Click(_ sender: Any) {
         popData(data: nil, identity: 0)
+    }
+    
+    // MARK: **** Choose img
+    @IBAction func btnImg_Click(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            print("Button capture")
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum;
+            imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        self.dismiss(animated: true, completion: { () -> Void in
+            self.imgView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        })
     }
     
 }

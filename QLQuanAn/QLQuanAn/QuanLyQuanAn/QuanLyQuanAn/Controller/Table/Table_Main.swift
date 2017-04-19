@@ -47,6 +47,7 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let d = tables[indexPath.row]
         cell.tableInfo.text = "Mã: \(d.name!) (\(d.number))"
         cell.areaInfo.text = "Khu vực: \(d.table_region?.name! ?? "")"
+        cell.imgView.image = UIImage(data: d.img! as Data)
         cell.data = d
         cell.controller = self
         if !d.is_empty {

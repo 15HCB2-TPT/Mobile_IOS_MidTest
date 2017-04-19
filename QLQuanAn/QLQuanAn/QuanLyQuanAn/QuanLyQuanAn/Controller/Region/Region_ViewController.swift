@@ -51,7 +51,7 @@ class Region_ViewController: UIViewController,UICollectionViewDelegate, UICollec
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customcell", for: indexPath) as! MyCustom_CollectionViewCell
         cell.label_nameregion.text = regions[indexPath.row].name!
-        do {try cell.image_region.image = UIImage(data: regions[indexPath.row].image! as Data)} catch {}
+        cell.image_region.image = UIImage(data: regions[indexPath.row].image! as Data)
         cell.btn_infor.tag = indexPath.row
         return cell
     }

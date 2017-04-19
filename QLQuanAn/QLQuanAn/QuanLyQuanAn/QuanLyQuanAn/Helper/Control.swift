@@ -17,4 +17,10 @@ extension UIViewController {
         keyboardToolbar.items = [flexBarButton, doneBarButton]
         return keyboardToolbar
     }
+    
+    func alert(title: String, msg: String, btnTitle: String) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: btnTitle, style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }

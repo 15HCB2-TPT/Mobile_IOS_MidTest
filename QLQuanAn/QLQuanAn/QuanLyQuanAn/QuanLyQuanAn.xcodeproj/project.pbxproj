@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14EB3F9D1E9B5BD00071F441 /* SeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB3F9C1E9B5BD00071F441 /* SeedData.swift */; };
+		14072D1F1EA48FC100FFC8B0 /* Table_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072D1E1EA48FC100FFC8B0 /* Table_Main.swift */; };
+		14072D211EA48FD900FFC8B0 /* Table_Add_Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072D201EA48FD900FFC8B0 /* Table_Add_Edit.swift */; };
+		14072D251EA4908B00FFC8B0 /* Table_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072D241EA4908B00FFC8B0 /* Table_Cell.swift */; };
+		146E03E21EA529B5007A06AF /* Table_Call_Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E03E11EA529B5007A06AF /* Table_Call_Food.swift */; };
+		14A3FA421EA71AE7008D0870 /* SeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA411EA71AE7008D0870 /* SeedData.swift */; };
+		14A3FA451EA71BF7008D0870 /* ReportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA431EA71BF7008D0870 /* ReportItem.swift */; };
+		14A3FA461EA71BF7008D0870 /* ReportResult_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA441EA71BF7008D0870 /* ReportResult_ViewController.swift */; };
+		14DA7F211EA71D3D009755AF /* RandomSwift3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA7F201EA71D3D009755AF /* RandomSwift3.swift */; };
 		6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAB61E960ED900E0211C /* AppDelegate.swift */; };
 		6318AAC11E960ED900E0211C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAC01E960ED900E0211C /* Assets.xcassets */; };
 		6318AAD41E960F4500E0211C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */; };
-		634B53761E9F7D260014B749 /* ReportFilter_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B53751E9F7D260014B749 /* ReportFilter_ViewController.swift */; };
-		634B53781E9F81380014B749 /* ReportResult_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B53771E9F81380014B749 /* ReportResult_ViewController.swift */; };
+		633F349B1EA4E648004C648B /* Report_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F34961EA4E648004C648B /* Report_TableViewCell.swift */; };
+		633F349C1EA4E648004C648B /* Report_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F34971EA4E648004C648B /* Report_TableViewController.swift */; };
+		633F349D1EA4E648004C648B /* ReportFilter_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633F34981EA4E648004C648B /* ReportFilter_ViewController.swift */; };
 		635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635229F91E9E848300468B53 /* AddNewRegion_ViewController.swift */; };
 		635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635229FB1E9E84B600468B53 /* UIImageExt.swift */; };
 		635229FD1E9E85D900468B53 /* QuanLyQuanAn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63A07DEA1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld */; };
@@ -20,6 +28,8 @@
 		63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */; };
 		63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */; };
 		63BA45391E9D3EE600EE27DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BA45381E9D3EE600EE27DC /* Main.storyboard */; };
+		AD06ECDB1EA5E53D00F550D8 /* ReportDay_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD06ECDA1EA5E53D00F550D8 /* ReportDay_ViewController.swift */; };
+		AD06ECDD1EA5E54F00F550D8 /* ReportTime_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD06ECDC1EA5E54F00F550D8 /* ReportTime_ViewController.swift */; };
 		AD553DDD1E977E68009A51CB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDA1E977E68009A51CB /* Database.swift */; };
 		AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */; };
 		AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDC1E977E68009A51CB /* UIPassingData.swift */; };
@@ -30,14 +40,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14EB3F9C1E9B5BD00071F441 /* SeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedData.swift; sourceTree = "<group>"; };
+		14072D1E1EA48FC100FFC8B0 /* Table_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Main.swift; sourceTree = "<group>"; };
+		14072D201EA48FD900FFC8B0 /* Table_Add_Edit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Add_Edit.swift; sourceTree = "<group>"; };
+		14072D241EA4908B00FFC8B0 /* Table_Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Cell.swift; sourceTree = "<group>"; };
+		146E03E11EA529B5007A06AF /* Table_Call_Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Call_Food.swift; sourceTree = "<group>"; };
+		14A3FA411EA71AE7008D0870 /* SeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedData.swift; sourceTree = "<group>"; };
+		14A3FA431EA71BF7008D0870 /* ReportItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportItem.swift; sourceTree = "<group>"; };
+		14A3FA441EA71BF7008D0870 /* ReportResult_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportResult_ViewController.swift; sourceTree = "<group>"; };
+		14DA7F201EA71D3D009755AF /* RandomSwift3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomSwift3.swift; sourceTree = "<group>"; };
 		6318AAB31E960ED900E0211C /* QuanLyQuanAn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuanLyQuanAn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6318AAB61E960ED900E0211C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6318AAC01E960ED900E0211C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6318AAC51E960ED900E0211C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		634B53751E9F7D260014B749 /* ReportFilter_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFilter_ViewController.swift; sourceTree = "<group>"; };
-		634B53771E9F81380014B749 /* ReportResult_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportResult_ViewController.swift; sourceTree = "<group>"; };
+		633F34961EA4E648004C648B /* Report_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report_TableViewCell.swift; sourceTree = "<group>"; };
+		633F34971EA4E648004C648B /* Report_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report_TableViewController.swift; sourceTree = "<group>"; };
+		633F34981EA4E648004C648B /* ReportFilter_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFilter_ViewController.swift; sourceTree = "<group>"; };
 		635229F91E9E848300468B53 /* AddNewRegion_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewRegion_ViewController.swift; sourceTree = "<group>"; };
 		635229FB1E9E84B600468B53 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		63A07DEB1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuanLyQuanAn.xcdatamodel; sourceTree = "<group>"; };
@@ -46,6 +64,8 @@
 		63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region_ViewController.swift; sourceTree = "<group>"; };
 		63BA45321E9D3DDE00EE27DC /* EditRegion_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRegion_ViewController.swift; sourceTree = "<group>"; };
 		63BA45381E9D3EE600EE27DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AD06ECDA1EA5E53D00F550D8 /* ReportDay_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDay_ViewController.swift; sourceTree = "<group>"; };
+		AD06ECDC1EA5E54F00F550D8 /* ReportTime_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTime_ViewController.swift; sourceTree = "<group>"; };
 		AD553DDA1E977E68009A51CB /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTypeHelper.swift; sourceTree = "<group>"; };
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
@@ -91,7 +111,6 @@
 				6318AACE1E960F0800E0211C /* View */,
 				6318AACF1E960F0800E0211C /* Model */,
 				6318AAB61E960ED900E0211C /* AppDelegate.swift */,
-				14EB3F9C1E9B5BD00071F441 /* SeedData.swift */,
 				6318AAC01E960ED900E0211C /* Assets.xcassets */,
 				6318AAC51E960ED900E0211C /* Info.plist */,
 			);
@@ -108,6 +127,7 @@
 		6318AACD1E960F0800E0211C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				14DA7F201EA71D3D009755AF /* RandomSwift3.swift */,
 				635229FB1E9E84B600468B53 /* UIImageExt.swift */,
 				AD553DDA1E977E68009A51CB /* Database.swift */,
 				AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */,
@@ -129,6 +149,7 @@
 		6318AACF1E960F0800E0211C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				14A3FA411EA71AE7008D0870 /* SeedData.swift */,
 				63A07DEA1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodeld */,
 			);
 			path = Model;
@@ -137,8 +158,13 @@
 		634B53741E9F7CF50014B749 /* Report */ = {
 			isa = PBXGroup;
 			children = (
-				634B53751E9F7D260014B749 /* ReportFilter_ViewController.swift */,
-				634B53771E9F81380014B749 /* ReportResult_ViewController.swift */,
+				14A3FA431EA71BF7008D0870 /* ReportItem.swift */,
+				14A3FA441EA71BF7008D0870 /* ReportResult_ViewController.swift */,
+				633F34961EA4E648004C648B /* Report_TableViewCell.swift */,
+				633F34971EA4E648004C648B /* Report_TableViewController.swift */,
+				633F34981EA4E648004C648B /* ReportFilter_ViewController.swift */,
+				AD06ECDA1EA5E53D00F550D8 /* ReportDay_ViewController.swift */,
+				AD06ECDC1EA5E54F00F550D8 /* ReportTime_ViewController.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -187,6 +213,10 @@
 		63BA452C1E9D3DBC00EE27DC /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				14072D1E1EA48FC100FFC8B0 /* Table_Main.swift */,
+				14072D201EA48FD900FFC8B0 /* Table_Add_Edit.swift */,
+				14072D241EA4908B00FFC8B0 /* Table_Cell.swift */,
+				146E03E11EA529B5007A06AF /* Table_Call_Food.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -270,22 +300,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633F349D1EA4E648004C648B /* ReportFilter_ViewController.swift in Sources */,
 				AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */,
 				63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */,
+				AD06ECDD1EA5E54F00F550D8 /* ReportTime_ViewController.swift in Sources */,
 				F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */,
 				AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */,
+				14DA7F211EA71D3D009755AF /* RandomSwift3.swift in Sources */,
 				635229FD1E9E85D900468B53 /* QuanLyQuanAn.xcdatamodeld in Sources */,
 				6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */,
-				634B53761E9F7D260014B749 /* ReportFilter_ViewController.swift in Sources */,
+				633F349B1EA4E648004C648B /* Report_TableViewCell.swift in Sources */,
+				14072D1F1EA48FC100FFC8B0 /* Table_Main.swift in Sources */,
+				14A3FA421EA71AE7008D0870 /* SeedData.swift in Sources */,
+				14A3FA451EA71BF7008D0870 /* ReportItem.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
 				F0266DE41EA4ADE900341345 /* Control.swift in Sources */,
+				633F349C1EA4E648004C648B /* Report_TableViewController.swift in Sources */,
 				635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */,
 				F08CC4761EA5BD5900081CE1 /* Food_ViewController.swift in Sources */,
+				14A3FA461EA71BF7008D0870 /* ReportResult_ViewController.swift in Sources */,
 				635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */,
+				14072D251EA4908B00FFC8B0 /* Table_Cell.swift in Sources */,
+				AD06ECDB1EA5E53D00F550D8 /* ReportDay_ViewController.swift in Sources */,
+				14072D211EA48FD900FFC8B0 /* Table_Add_Edit.swift in Sources */,
+				146E03E21EA529B5007A06AF /* Table_Call_Food.swift in Sources */,
 				63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */,
 				63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */,
-				14EB3F9D1E9B5BD00071F441 /* SeedData.swift in Sources */,
-				634B53781E9F81380014B749 /* ReportResult_ViewController.swift in Sources */,
 				F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

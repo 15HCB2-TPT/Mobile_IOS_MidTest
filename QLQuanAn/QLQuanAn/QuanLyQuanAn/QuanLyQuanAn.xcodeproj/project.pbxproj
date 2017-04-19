@@ -37,6 +37,7 @@
 		AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDC1E977E68009A51CB /* UIPassingData.swift */; };
 		F0266DE41EA4ADE900341345 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0266DE31EA4ADE900341345 /* AppExtension.swift */; };
 		F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0590F041EA53371006057D6 /* Food_TableViewCell.swift */; };
+		F0B3ABCF1EA8009700FFFA79 /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */; };
 		F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +75,7 @@
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
 		F0266DE31EA4ADE900341345 /* AppExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
 		F0590F041EA53371006057D6 /* Food_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_TableViewCell.swift; sourceTree = "<group>"; };
-		F08CC4751EA5BD5900081CE1 /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
+		F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
 		F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFood_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,7 +191,7 @@
 			children = (
 				F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */,
 				F0590F041EA53371006057D6 /* Food_TableViewCell.swift */,
-				F08CC4751EA5BD5900081CE1 /* Food_ViewController.swift */,
+				F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -308,6 +309,7 @@
 				633F349D1EA4E648004C648B /* ReportFilter_ViewController.swift in Sources */,
 				AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */,
 				63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */,
+				F0B3ABCF1EA8009700FFFA79 /* Food_ViewController.swift in Sources */,
 				AD06ECDD1EA5E54F00F550D8 /* ReportTime_ViewController.swift in Sources */,
 				F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */,
 				AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */,

@@ -15,7 +15,8 @@ class Table_Cell: UITableViewCell{
     @IBOutlet weak var tableInfo: UILabel!
     @IBOutlet weak var areaInfo: UILabel!
     @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var btnCallPay: UIButton!
+    @IBOutlet weak var btnCall: UIButton!
+    @IBOutlet weak var btnPay: UIButton!
     
     // MARK: **** Models ****
     var data: Table!
@@ -27,10 +28,10 @@ class Table_Cell: UITableViewCell{
     }
     
     @IBAction func btnCall_Click(_ sender: Any) {
-        if data.is_empty {
-            UIPassingData.pushData(from: controller, storyboard: "Main", controller: "tableCallFoodWindow", data: nil, identity: 0)
-        } else {
-            
-        }
+        UIPassingData.pushData(from: controller, storyboard: "Main", controller: "tableCallFoodWindow", data: nil, identity: 0)
+    }
+    
+    @IBAction func btnPay_Click(_ sender: Any) {
+        UIPassingData.pushData(from: controller, storyboard: "Main", controller: "tablePayFoodWindow", data: nil, identity: 0)
     }
 }

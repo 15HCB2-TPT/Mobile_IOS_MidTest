@@ -376,7 +376,7 @@
         <!--Setting-->
         <scene sceneID="lmo-CT-vSg">
             <objects>
-                <viewController title="Setting" id="FtB-Ww-2eb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingWindow" title="Setting" id="FtB-Ww-2eb" customClass="SettingController" customModule="QuanLyQuanAn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wiI-he-YWB"/>
                         <viewControllerLayoutGuide type="bottom" id="X6A-6c-OGs"/>
@@ -399,9 +399,15 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BVr-o4-uyn">
                                 <rect key="frame" x="32" y="125" width="51" height="31"/>
+                                <connections>
+                                    <action selector="vietSwitch:" destination="FtB-Ww-2eb" eventType="valueChanged" id="JFd-6d-wQT"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-qO-DGd">
                                 <rect key="frame" x="32" y="180" width="51" height="31"/>
+                                <connections>
+                                    <action selector="engSwitch:" destination="FtB-Ww-2eb" eventType="valueChanged" id="P5x-2p-xRs"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiếng Anh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xid-m0-jJM">
                                 <rect key="frame" x="105" y="185" width="78" height="21"/>
@@ -409,6 +415,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mky-uA-jty">
+                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="flexibleSpace" id="R6L-0e-0rQ"/>
+                                    <barButtonItem title="Khởi tạo dữ liệu mặc định" id="K6q-Yd-ZZa">
+                                        <connections>
+                                            <action selector="btnSeedData2Test_Click:" destination="FtB-Ww-2eb" id="UYs-3X-P8E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="1wf-PV-1Mo"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -426,6 +445,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cài đặt" id="TXC-UE-8RW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="switchEnglish" destination="4MI-qO-DGd" id="5dx-yS-JB9"/>
+                        <outlet property="switchVietnamese" destination="BVr-o4-uyn" id="UjN-Co-xqO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Cv-tr-Ff9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -856,6 +879,72 @@
             </objects>
             <point key="canvasLocation" x="-620.625" y="-1730.2816901408451"/>
         </scene>
+        <!--Table Pay Food-->
+        <scene sceneID="AOc-f2-Sem">
+            <objects>
+                <viewController storyboardIdentifier="tablePayFoodWindow" title="Table Pay Food" automaticallyAdjustsScrollViewInsets="NO" id="Vyu-Ju-wDM" customClass="Table_Pay_Food" customModule="QuanLyQuanAn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VgM-B2-slN"/>
+                        <viewControllerLayoutGuide type="bottom" id="JTA-EE-w4g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RTZ-Qo-XfS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZX-BK-NvH">
+                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="flexibleSpace" id="hRz-ql-8gK"/>
+                                    <barButtonItem title="Tổng tiền: xxx" id="s2k-wS-b1o">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qNN-XB-ODj">
+                                <rect key="frame" x="0.0" y="108" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ryh-SL-BKh">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ryh-SL-BKh" id="jFp-wm-MHw">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Tw-ro-nSH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem title="Bàn: xxx" id="9Ug-jg-qFw">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="pQN-Sg-WhF"/>
+                                    <barButtonItem title="Ngày: xxx" id="leg-yV-ER5">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Thanh toán" id="ShB-6f-9Yr">
+                        <barButtonItem key="leftBarButtonItem" title="Quay lại" style="plain" id="E8T-3r-y6H">
+                            <connections>
+                                <action selector="btnBack_Click:" destination="Vyu-Ju-wDM" id="MgB-BR-HWT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Hoàn tất" style="plain" id="hgf-Hu-WeI"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBS-mo-yRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781.875" y="-2482.394366197183"/>
+        </scene>
         <!--List Table-->
         <scene sceneID="4Aa-du-2x1">
             <objects>
@@ -868,49 +957,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AGa-f8-gwj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AGa-f8-gwj">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="table_cell" id="Fzc-gx-Lz9" customClass="Table_Cell" customModule="QuanLyQuanAn" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="64"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fzc-gx-Lz9" id="3fL-3W-hVP">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":TableInfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y62-Nw-E5P">
-                                                    <rect key="frame" x="64" y="8" width="246" height="19"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":AreaInfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiD-4T-Taj">
-                                                    <rect key="frame" x="64" y="35" width="246" height="21"/>
+                                                    <rect key="frame" x="80" y="43" width="232" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6Z-dq-S2U">
-                                                    <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                                    <rect key="frame" x="8" y="3" width="64" height="64"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xr5-Dj-DxN">
-                                                    <rect key="frame" x="216" y="8" width="96" height="30"/>
+                                                    <rect key="frame" x="213" y="3" width="99" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Gọi món"/>
                                                     <connections>
                                                         <action selector="btnCall_Click:" destination="Fzc-gx-Lz9" eventType="touchUpInside" id="WoK-s2-A7m"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8l-QX-nfw">
+                                                    <rect key="frame" x="213" y="37" width="99" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Thanh toán">
+                                                        <color key="titleColor" red="0.52228239259491149" green="0.11536179547111763" blue="0.65805132772020725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="btnPay_Click:" destination="Fzc-gx-Lz9" eventType="touchUpInside" id="AmZ-GW-GJr"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":AreaInfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiD-4T-Taj">
+                                                    <rect key="frame" x="80" y="4" width="232" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="areaInfo" destination="AiD-4T-Taj" id="oxT-ME-rRD"/>
-                                            <outlet property="btnCallPay" destination="Xr5-Dj-DxN" id="0Oj-ih-YpB"/>
+                                            <outlet property="btnCall" destination="Xr5-Dj-DxN" id="4Gj-R3-ANr"/>
+                                            <outlet property="btnPay" destination="t8l-QX-nfw" id="5bR-6P-5jt"/>
                                             <outlet property="imgView" destination="M6Z-dq-S2U" id="He7-MM-zvt"/>
                                             <outlet property="tableInfo" destination="y62-Nw-E5P" id="DBb-8F-o2x"/>
                                         </connections>
@@ -954,16 +1054,17 @@
                         <outlet property="table" destination="AGa-f8-gwj" id="FyF-hc-dgH"/>
                         <segue destination="aDy-qQ-cUl" kind="show" identifier="" id="76c-Hs-KGS"/>
                         <segue destination="ZMV-rg-T4D" kind="show" id="zNi-UJ-13c"/>
+                        <segue destination="Vyu-Ju-wDM" kind="show" id="Nl1-XF-XZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zF-oj-5dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781.875" y="-1730.2816901408451"/>
         </scene>
-        <!--Call Food-->
+        <!--Table Call Food-->
         <scene sceneID="THr-FB-MMR">
             <objects>
-                <viewController storyboardIdentifier="tableCallFoodWindow" title="Call Food" automaticallyAdjustsScrollViewInsets="NO" id="ZMV-rg-T4D" customClass="Table_Call_Food" customModule="QuanLyQuanAn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tableCallFoodWindow" title="Table Call Food" automaticallyAdjustsScrollViewInsets="NO" id="ZMV-rg-T4D" customClass="Table_Call_Food" customModule="QuanLyQuanAn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e2W-CV-GgW"/>
                         <viewControllerLayoutGuide type="bottom" id="BW5-fd-hTk"/>
@@ -971,6 +1072,48 @@
                     <view key="view" contentMode="scaleToFill" id="OBa-Av-EJb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-Hh-DbC">
+                                <rect key="frame" x="0.0" y="480" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Bàn: xxx" id="cDy-aq-jXY">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="p2n-Uh-0ox"/>
+                                    <barButtonItem title="Tìm nâng cao" id="LpT-pL-JH7"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uw9-f1-AAF">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" id="itd-dr-R05">
+                                        <searchBar key="customView" contentMode="redraw" text="" placeholder="Từ khoá" id="lNd-GL-WGH">
+                                            <rect key="frame" x="16" y="0.0" width="263" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </barButtonItem>
+                                    <barButtonItem title="Tìm" systemItem="search" id="4Nt-0w-ueq"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Muz-Pc-J8R">
+                                <rect key="frame" x="0.0" y="108" width="320" height="372"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Awq-qU-cnq">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Awq-qU-cnq" id="t7l-nj-u0B">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
@@ -986,7 +1129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbj-BI-v0P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1939" y="-1730"/>
+            <point key="canvasLocation" x="1938.75" y="-1730.2816901408451"/>
         </scene>
         <!--BBQ-->
         <scene sceneID="xnH-va-obr">

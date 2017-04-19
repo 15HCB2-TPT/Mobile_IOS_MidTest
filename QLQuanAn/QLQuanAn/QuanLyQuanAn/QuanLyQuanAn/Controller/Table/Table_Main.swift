@@ -50,9 +50,10 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.imgView.image = UIImage(data: d.img! as Data)
         cell.data = d
         cell.controller = self
-        if !d.is_empty {
-            cell.btnCallPay.setTitle("Thanh toán", for: .normal)
+        if d.is_empty {
+            cell.btnPay.isHidden = true
         }
+        cell.backgroundColor = UIColor(white: indexPath.row % 2 == 0 ? 1 : 0.9, alpha: 1)
         return cell
     }
     

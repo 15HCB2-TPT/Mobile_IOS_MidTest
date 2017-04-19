@@ -150,24 +150,20 @@ class Database {
         }
     }
     
-    static func isExistAndGet<T: NSManagedObject>(predicater: NSPredicate?, getter: inout T?) -> Bool {
-        let results = select(limit: 1, predicater: predicater)
+    static func isExistAndGet<T: NSManagedObject>(predicater: NSPredicate?) -> T? {
+        let results: [T] = select(limit: 1, predicater: predicater)
         if results.count > 0 {
-            getter = results.first as! T?
-            return true
+            return results.first
         }
-        getter = nil
-        return false
+        return nil
     }
     
-    static func isExistAndGet(entityName: String, predicater: NSPredicate?, getter: inout NSManagedObject?) -> Bool {
-        let results = select(entityName: entityName, limit: 1, predicater: predicater)
+    static func isExistAndGet(entityName: String, predicater: NSPredicate?) -> NSManagedObject? {
+        let results: [NSManagedObject] = select(entityName: entityName, limit: 1, predicater: predicater)
         if results.count > 0 {
-            getter = results.first
-            return true
+            return results.first
         }
-        getter = nil
-        return false
+        return nil
     }
     
     static func isExist(entityName: String, predicater: NSPredicate?) -> Bool {

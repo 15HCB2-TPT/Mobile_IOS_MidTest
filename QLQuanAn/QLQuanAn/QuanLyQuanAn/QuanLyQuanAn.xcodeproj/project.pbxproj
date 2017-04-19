@@ -15,6 +15,8 @@
 		14A3FA451EA71BF7008D0870 /* ReportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA431EA71BF7008D0870 /* ReportItem.swift */; };
 		14A3FA461EA71BF7008D0870 /* ReportResult_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA441EA71BF7008D0870 /* ReportResult_ViewController.swift */; };
 		14DA7F211EA71D3D009755AF /* RandomSwift3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA7F201EA71D3D009755AF /* RandomSwift3.swift */; };
+		14E7AE471EA7D4B400E258E4 /* Table_Pay_Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7AE461EA7D4B400E258E4 /* Table_Pay_Food.swift */; };
+		14E7AE491EA7D93E00E258E4 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7AE481EA7D93E00E258E4 /* SettingController.swift */; };
 		6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAB61E960ED900E0211C /* AppDelegate.swift */; };
 		6318AAC11E960ED900E0211C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAC01E960ED900E0211C /* Assets.xcassets */; };
 		6318AAD41E960F4500E0211C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */; };
@@ -33,9 +35,8 @@
 		AD553DDD1E977E68009A51CB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDA1E977E68009A51CB /* Database.swift */; };
 		AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */; };
 		AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDC1E977E68009A51CB /* UIPassingData.swift */; };
-		F0266DE41EA4ADE900341345 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0266DE31EA4ADE900341345 /* Control.swift */; };
+		F0266DE41EA4ADE900341345 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0266DE31EA4ADE900341345 /* AppExtension.swift */; };
 		F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0590F041EA53371006057D6 /* Food_TableViewCell.swift */; };
-		F08CC4761EA5BD5900081CE1 /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08CC4751EA5BD5900081CE1 /* Food_ViewController.swift */; };
 		F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		14A3FA431EA71BF7008D0870 /* ReportItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportItem.swift; sourceTree = "<group>"; };
 		14A3FA441EA71BF7008D0870 /* ReportResult_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportResult_ViewController.swift; sourceTree = "<group>"; };
 		14DA7F201EA71D3D009755AF /* RandomSwift3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomSwift3.swift; sourceTree = "<group>"; };
+		14E7AE461EA7D4B400E258E4 /* Table_Pay_Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Pay_Food.swift; sourceTree = "<group>"; };
+		14E7AE481EA7D93E00E258E4 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingController.swift; path = QuanLyQuanAn/Controller/Table/SettingController.swift; sourceTree = SOURCE_ROOT; };
 		6318AAB31E960ED900E0211C /* QuanLyQuanAn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuanLyQuanAn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6318AAB61E960ED900E0211C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6318AAC01E960ED900E0211C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +72,7 @@
 		AD553DDA1E977E68009A51CB /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTypeHelper.swift; sourceTree = "<group>"; };
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
-		F0266DE31EA4ADE900341345 /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		F0266DE31EA4ADE900341345 /* AppExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
 		F0590F041EA53371006057D6 /* Food_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_TableViewCell.swift; sourceTree = "<group>"; };
 		F08CC4751EA5BD5900081CE1 /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
 		F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFood_ViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +135,7 @@
 				AD553DDA1E977E68009A51CB /* Database.swift */,
 				AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */,
 				AD553DDC1E977E68009A51CB /* UIPassingData.swift */,
-				F0266DE31EA4ADE900341345 /* Control.swift */,
+				F0266DE31EA4ADE900341345 /* AppExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 		63BA452B1E9D3DBC00EE27DC /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				14E7AE481EA7D93E00E258E4 /* SettingController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -217,6 +221,7 @@
 				14072D201EA48FD900FFC8B0 /* Table_Add_Edit.swift */,
 				14072D241EA4908B00FFC8B0 /* Table_Cell.swift */,
 				146E03E11EA529B5007A06AF /* Table_Call_Food.swift */,
+				14E7AE461EA7D4B400E258E4 /* Table_Pay_Food.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -308,18 +313,19 @@
 				AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */,
 				14DA7F211EA71D3D009755AF /* RandomSwift3.swift in Sources */,
 				635229FD1E9E85D900468B53 /* QuanLyQuanAn.xcdatamodeld in Sources */,
+				14E7AE471EA7D4B400E258E4 /* Table_Pay_Food.swift in Sources */,
 				6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */,
 				633F349B1EA4E648004C648B /* Report_TableViewCell.swift in Sources */,
 				14072D1F1EA48FC100FFC8B0 /* Table_Main.swift in Sources */,
-				63BA45291E9D3D8600EE27DC /* Food_ViewController.swift in Sources */,
 				14A3FA421EA71AE7008D0870 /* SeedData.swift in Sources */,
 				14A3FA451EA71BF7008D0870 /* ReportItem.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
-				F0266DE41EA4ADE900341345 /* Control.swift in Sources */,
+				F0266DE41EA4ADE900341345 /* AppExtension.swift in Sources */,
 				633F349C1EA4E648004C648B /* Report_TableViewController.swift in Sources */,
 				635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */,
 				14A3FA461EA71BF7008D0870 /* ReportResult_ViewController.swift in Sources */,
 				635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */,
+				14E7AE491EA7D93E00E258E4 /* SettingController.swift in Sources */,
 				14072D251EA4908B00FFC8B0 /* Table_Cell.swift in Sources */,
 				AD06ECDB1EA5E53D00F550D8 /* ReportDay_ViewController.swift in Sources */,
 				14072D211EA48FD900FFC8B0 /* Table_Add_Edit.swift in Sources */,

@@ -23,4 +23,19 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: btnTitle, style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func conform(title: String, msg: String, btnOKTitle: String, btnCancelTitle: String, handler: ((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: btnOKTitle, style: UIAlertActionStyle.default, handler: handler))
+        alert.addAction(UIAlertAction(title: btnCancelTitle, style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension AppDelegate {
+    static func restart(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let appDelegate  = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = storyboard.instantiateInitialViewController()
+    }
 }

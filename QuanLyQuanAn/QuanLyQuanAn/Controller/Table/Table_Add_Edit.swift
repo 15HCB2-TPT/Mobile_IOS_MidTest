@@ -34,7 +34,6 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         tfName.inputAccessoryView = addDoneButton()
         tfNum.inputAccessoryView  = addDoneButton()
         tfReg.inputAccessoryView  = addDoneButton()
-        tfReg.text = regions.first?.name
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,11 +44,12 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if identity == 0 {
             navigationTitle.title = "Thêm mới"
             btnAddEdit.title = "Thêm"
+            tfReg.text = regions.first?.name
         } else { 
             if let t = data as! Table? {
                 tfName.text = t.name
                 tfNum.text = "\(t.number)"
-                pickerRegions.selectRow(searchTable(name: t.name!), inComponent: 0, animated: true)
+                tfReg.text = t.table_region?.name
                 //
                 navigationTitle.title = "Cập nhật"
                 btnAddEdit.title = "Lưu"
@@ -69,7 +69,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if pickerRegions == nil {
             pickerRegions = UIPickerView()
             pickerRegions.delegate = self
-            pickerRegions.selectRow(pickRegion_tempRow, inComponent: 0, animated: true)
+            pickerRegions.selectRow(searchTable(name: tfReg.text!), inComponent: 0, animated: true)
             tfReg.inputView = pickerRegions
         }
     }

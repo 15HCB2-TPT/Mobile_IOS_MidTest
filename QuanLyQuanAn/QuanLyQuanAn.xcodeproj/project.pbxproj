@@ -11,12 +11,14 @@
 		14072D211EA48FD900FFC8B0 /* Table_Add_Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072D201EA48FD900FFC8B0 /* Table_Add_Edit.swift */; };
 		14072D251EA4908B00FFC8B0 /* Table_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072D241EA4908B00FFC8B0 /* Table_Cell.swift */; };
 		146E03E21EA529B5007A06AF /* Table_Call_Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E03E11EA529B5007A06AF /* Table_Call_Food.swift */; };
+		147D449E1EA8CDCD00BAD4D4 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D449D1EA8CDCD00BAD4D4 /* SettingController.swift */; };
+		147D44A11EA8CDEA00BAD4D4 /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D449F1EA8CDEA00BAD4D4 /* AppConfigs.swift */; };
+		147D44A21EA8CDEA00BAD4D4 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D44A01EA8CDEA00BAD4D4 /* AppData.swift */; };
 		14A3FA421EA71AE7008D0870 /* SeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA411EA71AE7008D0870 /* SeedData.swift */; };
 		14A3FA451EA71BF7008D0870 /* ReportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA431EA71BF7008D0870 /* ReportItem.swift */; };
 		14A3FA461EA71BF7008D0870 /* ReportResult_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA441EA71BF7008D0870 /* ReportResult_ViewController.swift */; };
 		14DA7F211EA71D3D009755AF /* RandomSwift3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA7F201EA71D3D009755AF /* RandomSwift3.swift */; };
 		14E7AE471EA7D4B400E258E4 /* Table_Pay_Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7AE461EA7D4B400E258E4 /* Table_Pay_Food.swift */; };
-		14E7AE491EA7D93E00E258E4 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7AE481EA7D93E00E258E4 /* SettingController.swift */; };
 		6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAB61E960ED900E0211C /* AppDelegate.swift */; };
 		6318AAC11E960ED900E0211C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAC01E960ED900E0211C /* Assets.xcassets */; };
 		6318AAD41E960F4500E0211C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */; };
@@ -46,12 +48,14 @@
 		14072D201EA48FD900FFC8B0 /* Table_Add_Edit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Add_Edit.swift; sourceTree = "<group>"; };
 		14072D241EA4908B00FFC8B0 /* Table_Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Cell.swift; sourceTree = "<group>"; };
 		146E03E11EA529B5007A06AF /* Table_Call_Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Call_Food.swift; sourceTree = "<group>"; };
+		147D449D1EA8CDCD00BAD4D4 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		147D449F1EA8CDEA00BAD4D4 /* AppConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppConfigs.swift; path = Controller/AppConfigs.swift; sourceTree = "<group>"; };
+		147D44A01EA8CDEA00BAD4D4 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppData.swift; path = Controller/AppData.swift; sourceTree = "<group>"; };
 		14A3FA411EA71AE7008D0870 /* SeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedData.swift; sourceTree = "<group>"; };
 		14A3FA431EA71BF7008D0870 /* ReportItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportItem.swift; sourceTree = "<group>"; };
 		14A3FA441EA71BF7008D0870 /* ReportResult_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportResult_ViewController.swift; sourceTree = "<group>"; };
 		14DA7F201EA71D3D009755AF /* RandomSwift3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomSwift3.swift; sourceTree = "<group>"; };
 		14E7AE461EA7D4B400E258E4 /* Table_Pay_Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Pay_Food.swift; sourceTree = "<group>"; };
-		14E7AE481EA7D93E00E258E4 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingController.swift; path = QuanLyQuanAn/Controller/Table/SettingController.swift; sourceTree = SOURCE_ROOT; };
 		6318AAB31E960ED900E0211C /* QuanLyQuanAn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuanLyQuanAn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6318AAB61E960ED900E0211C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6318AAC01E960ED900E0211C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		147D449C1EA8CDCD00BAD4D4 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				147D449D1EA8CDCD00BAD4D4 /* SettingController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		6318AAAA1E960ED900E0211C = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +127,8 @@
 				6318AACE1E960F0800E0211C /* View */,
 				6318AACF1E960F0800E0211C /* Model */,
 				6318AAB61E960ED900E0211C /* AppDelegate.swift */,
+				147D449F1EA8CDEA00BAD4D4 /* AppConfigs.swift */,
+				147D44A01EA8CDEA00BAD4D4 /* AppData.swift */,
 				6318AAC01E960ED900E0211C /* Assets.xcassets */,
 				6318AAC51E960ED900E0211C /* Info.plist */,
 			);
@@ -176,9 +190,9 @@
 		63BA45261E9D3D7300EE27DC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				147D449C1EA8CDCD00BAD4D4 /* Setting */,
 				634B53741E9F7CF50014B749 /* Report */,
 				63BA452A1E9D3DBC00EE27DC /* Region */,
-				63BA452B1E9D3DBC00EE27DC /* Setting */,
 				63BA452C1E9D3DBC00EE27DC /* Table */,
 				63BA452D1E9D3DBC00EE27DC /* Order */,
 				63BA45271E9D3D7300EE27DC /* Food */,
@@ -205,14 +219,6 @@
 				63BA452F1E9D3DD400EE27DC /* Region_ViewController.swift */,
 			);
 			path = Region;
-			sourceTree = "<group>";
-		};
-		63BA452B1E9D3DBC00EE27DC /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				14E7AE481EA7D93E00E258E4 /* SettingController.swift */,
-			);
-			path = Setting;
 			sourceTree = "<group>";
 		};
 		63BA452C1E9D3DBC00EE27DC /* Table */ = {
@@ -313,12 +319,14 @@
 				AD06ECDD1EA5E54F00F550D8 /* ReportTime_ViewController.swift in Sources */,
 				F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */,
 				AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */,
+				147D449E1EA8CDCD00BAD4D4 /* SettingController.swift in Sources */,
 				14DA7F211EA71D3D009755AF /* RandomSwift3.swift in Sources */,
 				635229FD1E9E85D900468B53 /* QuanLyQuanAn.xcdatamodeld in Sources */,
 				14E7AE471EA7D4B400E258E4 /* Table_Pay_Food.swift in Sources */,
 				6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */,
 				633F349B1EA4E648004C648B /* Report_TableViewCell.swift in Sources */,
 				14072D1F1EA48FC100FFC8B0 /* Table_Main.swift in Sources */,
+				147D44A21EA8CDEA00BAD4D4 /* AppData.swift in Sources */,
 				14A3FA421EA71AE7008D0870 /* SeedData.swift in Sources */,
 				14A3FA451EA71BF7008D0870 /* ReportItem.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
@@ -327,8 +335,8 @@
 				635229FA1E9E848300468B53 /* AddNewRegion_ViewController.swift in Sources */,
 				14A3FA461EA71BF7008D0870 /* ReportResult_ViewController.swift in Sources */,
 				635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */,
-				14E7AE491EA7D93E00E258E4 /* SettingController.swift in Sources */,
 				14072D251EA4908B00FFC8B0 /* Table_Cell.swift in Sources */,
+				147D44A11EA8CDEA00BAD4D4 /* AppConfigs.swift in Sources */,
 				AD06ECDB1EA5E53D00F550D8 /* ReportDay_ViewController.swift in Sources */,
 				14072D211EA48FD900FFC8B0 /* Table_Add_Edit.swift in Sources */,
 				146E03E21EA529B5007A06AF /* Table_Call_Food.swift in Sources */,

@@ -58,10 +58,7 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellFood", for: indexPath) as! Food_TableViewCell
-        do {
-            try cell.imgHinh.image = UIImage(data: foods[indexPath.row].image! as Data)
-        }
-        catch {}
+        cell.imgHinh.image = UIImage(data: foods[indexPath.row].image! as Data)
         cell.lblTenMonAn.text = foods[indexPath.row].name!
         cell.lblGia.text = "\(foods[indexPath.row].money)"
         return cell

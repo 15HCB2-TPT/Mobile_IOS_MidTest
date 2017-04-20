@@ -251,7 +251,7 @@
                                 <rect key="frame" x="0.0" y="316" width="320" height="203"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellFood" selectionStyle="default" indentationWidth="10" rowHeight="60" id="QQZ-Hh-WMr" customClass="Food_TableViewCell" customModule="QuanLyQuanAn" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellFood" rowHeight="60" id="QQZ-Hh-WMr" customClass="Food_TableViewCell" customModule="QuanLyQuanAn" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QQZ-Hh-WMr" id="xBj-rY-6U6">
@@ -364,7 +364,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfq-km-TJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="sZP-AV-yjE">
                     <connections>
-                        <outlet property="delegate" destination="dBw-hI-oRt" id="b5b-3d-GlE"/>
                         <outlet property="searchContentsController" destination="dBw-hI-oRt" id="61j-0y-Jcb"/>
                         <outlet property="searchResultsDataSource" destination="dBw-hI-oRt" id="kFs-Ei-MbQ"/>
                         <outlet property="searchResultsDelegate" destination="dBw-hI-oRt" id="rr7-ma-A0r"/>
@@ -1386,9 +1385,6 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="dBw-hI-oRt" id="kO7-0v-LOq"/>
-                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJT-SA-4Cv">
                                         <rect key="frame" x="101" y="13" width="11" height="21"/>

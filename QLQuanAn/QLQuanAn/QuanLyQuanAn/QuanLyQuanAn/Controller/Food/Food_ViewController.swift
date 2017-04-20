@@ -37,8 +37,6 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
         txtTen.inputAccessoryView = addDoneButton()
         txtTu.inputAccessoryView = addDoneButton()
         txtDen.inputAccessoryView = addDoneButton()
-        
-        tblMonAn.delegate = self
         tblMonAn.reloadData()
         
         // Uncomment the following line to preserve selection between presentations
@@ -51,10 +49,6 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

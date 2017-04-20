@@ -17,10 +17,11 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfNum: UITextField!
     @IBOutlet weak var tfReg: UITextField!
+    @IBOutlet weak var swIsDeleted: UISwitch!
     var imagePicker = UIImagePickerController()
     var pickerRegions: UIPickerView!
     
-    // MARK: **** Models ****
+    // MARK: **** Modals ****
     var regions: [Region]!
     var selectedRegion: Region!
     var funcAddEdit: Bool = true
@@ -44,12 +45,16 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if identity == 0 {
             navigationTitle.title = "Thêm mới"
             btnAddEdit.title = "Thêm"
-            tfReg.text = regions.first?.name
         } else { 
             if let t = data as! Table? {
                 tfName.text = t.name
+                tfName.isEnabled = false
                 tfNum.text = "\(t.number)"
                 tfReg.text = t.table_region?.name
+                print(tfReg.text)
+                selectedRegion = regions[searchRegion(name: (t.table_region?.name)!)]
+                swIsDeleted.isOn = t.is_deleted
+                imgView.image = UIImage(data: t.img! as Data)
                 //
                 navigationTitle.title = "Cập nhật"
                 btnAddEdit.title = "Lưu"
@@ -69,7 +74,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if pickerRegions == nil {
             pickerRegions = UIPickerView()
             pickerRegions.delegate = self
-            pickerRegions.selectRow(searchTable(name: tfReg.text!), inComponent: 0, animated: true)
+            pickerRegions.selectRow(searchRegion(name: tfReg.text!), inComponent: 0, animated: true)
             tfReg.inputView = pickerRegions
         }
     }
@@ -77,9 +82,10 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func loadPickerView() {
         regions = Database.select()
         selectedRegion = regions.first
+        tfReg.text = selectedRegion.name
     }
     
-    func searchTable(name: String) -> Int {
+    func searchRegion(name: String) -> Int {
         var index = 0
         for each in regions {
             if each.name == name {
@@ -114,7 +120,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let num = Int32(tfNum.text!)
         
         //check duplicate
-        if !checkTableDuplicate(name: name) {
+        if !checkTableDuplicate(name: name) || !funcAddEdit {
             
             //Add or Save
             var t: Table
@@ -126,6 +132,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             t.name = name
             t.number = num!
             t.is_empty = true
+            t.is_deleted = swIsDeleted.isOn
             t.table_region = selectedRegion
             t.img = self.imgView.image?.pngRepresentationData
             Database.save()
@@ -143,7 +150,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     @IBAction func btnBack_Click(_ sender: Any) {
-        popData(data: nil, identity: 0)
+        popData(data: nil)
     }
     
     // MARK: **** Choose img

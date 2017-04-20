@@ -16,8 +16,7 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var btnEdit: UIBarButtonItem!
     @IBOutlet weak var segment: UISegmentedControl!
     
-    // MARK: **** Models ****
-    //var tables: [Table]!
+    // MARK: **** Modals ****
     var fetchedResultsController: NSFetchedResultsController<Table>!
     
     // MARK: ****
@@ -43,8 +42,8 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: Table_Cell = self.table.dequeueReusableCell(withIdentifier: "table_cell", for: indexPath) as! Table_Cell
         if let d = fetchedResultsController.sections?[indexPath.section].objects?[indexPath.row] as! Table? {
-            cell.tableInfo.text = "Mã: \(d.name!) (\(d.number))"
-            cell.areaInfo.text = "Khu vực: \(d.table_region?.name! ?? "")"
+            cell.name.text = "Mã: \(d.name!)"
+            cell.num.text = "Số chỗ: (\(d.number))"
             cell.imgView.image = UIImage(data: d.img! as Data)
             cell.data = d
             cell.controller = self
@@ -61,24 +60,8 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if !table.isEditing {
-            pushData(storyboard: "Main", controller: "tableAddEditWindow", data: fetchedResultsController.fetchedObjects?[indexPath.row], identity: 1)
+            pushData(storyboard: "Main", controller: "tableAddEditWindow", data: fetchedResultsController.sections?[indexPath.section].objects?[indexPath.row], identity: 1)
         }
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.delete) {
-            Database.delete(object: (fetchedResultsController.fetchedObjects?[indexPath.row])!)
-            Database.save()
-            loadTableView(segmentIndex: segment.selectedSegmentIndex)
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -101,17 +84,6 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: **** Button ****
     @IBAction func btnAdd_Click(_ sender: Any) {
         pushData(storyboard: "Main", controller: "tableAddEditWindow", data: nil, identity: 0)
-    }
-    
-    @IBAction func btnEdit_Click(_ sender: Any) {
-        table.setEditing(!table.isEditing, animated: true)
-        if table.isEditing {
-            self.isEditing = true
-            btnEdit.title = "Dừng"
-        } else {
-            self.isEditing = false
-            btnEdit.title = "Sửa"
-        }
     }
     
 }

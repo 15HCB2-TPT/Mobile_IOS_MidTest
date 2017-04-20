@@ -52,6 +52,9 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 cell.btnPay.isHidden = true
             }
             cell.backgroundColor = UIColor(white: indexPath.row % 2 == 0 ? 1 : 0.9, alpha: 1)
+            if d.is_deleted {
+                cell.backgroundColor = UIColor.init(white: 0, alpha: 0.5)
+            }
         }
         return cell
     }

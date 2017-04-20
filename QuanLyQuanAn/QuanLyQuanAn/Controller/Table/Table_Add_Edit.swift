@@ -16,14 +16,16 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfNum: UITextField!
-    @IBOutlet weak var pickerRegions: UIPickerView!
+    @IBOutlet weak var tfReg: UITextField!
     var imagePicker = UIImagePickerController()
+    var pickerRegions: UIPickerView!
     
     // MARK: **** Models ****
     var regions: [Region]!
     var selectedRegion: Region!
     var funcAddEdit: Bool = true
     var updatedTable: Table!
+    var pickRegion_tempRow: Int = 0
     
     // MARK: ****
     override func viewDidLoad() {
@@ -31,6 +33,8 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         loadPickerView()
         tfName.inputAccessoryView = addDoneButton()
         tfNum.inputAccessoryView  = addDoneButton()
+        tfReg.inputAccessoryView  = addDoneButton()
+        tfReg.text = regions.first?.name
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,11 +64,19 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return Database.isExist(entityName: "Table", predicater: p)
     }
     
-    // MARK: **** PickerView ****
+    // MARK: **** Region Choose ****
+    @IBAction func regionBeginEdit(_ sender: Any) {
+        if pickerRegions == nil {
+            pickerRegions = UIPickerView()
+            pickerRegions.delegate = self
+            pickerRegions.selectRow(pickRegion_tempRow, inComponent: 0, animated: true)
+            tfReg.inputView = pickerRegions
+        }
+    }
+    
     func loadPickerView() {
         regions = Database.select()
         selectedRegion = regions.first
-        pickerRegions.selectRow(0, inComponent: 0, animated: true)
     }
     
     func searchTable(name: String) -> Int {
@@ -92,6 +104,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedRegion = regions[row]
+        tfReg.text = selectedRegion.name
     }
 
     // MARK: **** Button ****

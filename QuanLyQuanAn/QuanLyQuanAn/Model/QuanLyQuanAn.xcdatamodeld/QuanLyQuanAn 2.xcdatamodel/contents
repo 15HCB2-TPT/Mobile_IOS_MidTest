@@ -29,10 +29,12 @@
     <entity name="Region" representedClassName="Region" syncable="YES" codeGenerationType="class">
         <attribute name="des" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="is_deleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Table" representedClassName="Table" syncable="YES" codeGenerationType="class">
         <attribute name="img" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="is_deleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="is_empty" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -44,7 +46,7 @@
         <element name="Food" positionX="151" positionY="87" width="128" height="120"/>
         <element name="FoodType" positionX="234" positionY="3" width="128" height="60"/>
         <element name="Order" positionX="-144" positionY="-72" width="128" height="105"/>
-        <element name="Region" positionX="187" positionY="-279" width="128" height="90"/>
-        <element name="Table" positionX="52" positionY="-144" width="128" height="120"/>
+        <element name="Region" positionX="187" positionY="-279" width="128" height="105"/>
+        <element name="Table" positionX="52" positionY="-144" width="128" height="135"/>
     </elements>
 </model>

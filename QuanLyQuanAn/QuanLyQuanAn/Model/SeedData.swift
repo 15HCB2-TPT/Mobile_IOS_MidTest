@@ -62,6 +62,7 @@ class SeedData {
                 let d: Region = Database.create()
                 d.name = each.0
                 d.des = each.1
+                d.is_deleted = false
                 d.image = UIImage(named: "Partly Cloudy Day Filled-50-SIlver")?.pngRepresentationData
             }
             Database.save()
@@ -79,6 +80,7 @@ class SeedData {
                     d.number = each.1
                     d.table_region = reg
                     d.is_empty = true
+                    d.is_deleted = false
                     d.img = UIImage(named: "Table Filled-50-Silver")?.pngRepresentationData
                 }
                 id += 1

@@ -22,7 +22,11 @@ class Region_ViewController: UIViewController,UICollectionViewDelegate, UICollec
     @IBAction func inforclick(_ sender: Any) {
         index = (sender as! UIButton).tag
     }
-    
+    @IBAction func restore_Clicked(_ sender: Any) {
+        regions[(sender as! UIButton).tag].is_deleted = false
+        Database.save()
+        reload()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //Database.clear(entityName: "Region")
@@ -50,9 +54,18 @@ class Region_ViewController: UIViewController,UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customcell", for: indexPath) as! MyCustom_CollectionViewCell
+        if regions[indexPath.row].is_deleted {
+            cell.viewlayer.layer.opacity = 0.2
+            cell.btn_restore.isHidden = false
+        }
+        else{
+            cell.viewlayer.layer.opacity = 0.0
+            cell.btn_restore.isHidden = true
+        }
         cell.label_nameregion.text = regions[indexPath.row].name!
         cell.image_region.image = UIImage(data: regions[indexPath.row].image! as Data)
         cell.btn_infor.tag = indexPath.row
+        cell.btn_restore.tag = indexPath.row
         return cell
     }
     

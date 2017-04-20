@@ -33,6 +33,9 @@ class EditRegion_ViewController: UIViewController, UINavigationControllerDelegat
         if let des = rg[index].des{
             txtview_des.text = des
         } else{txt_nameregion.text = ""}
+        if rg[index].is_deleted{
+            switch_isuse.isOn=false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +62,7 @@ class EditRegion_ViewController: UIViewController, UINavigationControllerDelegat
             rg[index].des = des
         } else{rg[index].des = ""}
         rg[index].image = image.image?.pngRepresentationData
+        rg[index].is_deleted = !switch_isuse.isOn
         Database.save()
         moveRegion()
     }

@@ -27,6 +27,7 @@ class AddNewRegion_ViewController: UIViewController, UINavigationControllerDeleg
             if let des = txtview_des.text {
                 re.des = des
             } else {re.des = ""}
+            re.is_deleted = !switch_isuse.isOn
             Database.save()
             moveRegion()
         }

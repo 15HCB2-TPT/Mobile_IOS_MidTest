@@ -25,25 +25,17 @@ extension UIViewController {
     }
     
     func pushData(storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {
-        if let navigation = self.navigationController {
-            let s = UIStoryboard(name: storyboard, bundle: nil)
-            let c = s.instantiateViewController(withIdentifier: controller) 
-            navigation.pushViewController(c, animated: true)
-            self.sendData(to: c, data: data, identity: identity, delay: delay)
-        } else {
-            print("Can not push from \(self).")
-        }
+        let s = UIStoryboard(name: storyboard, bundle: nil)
+        let c = s.instantiateViewController(withIdentifier: controller) 
+        self.navigationController?.pushViewController(c, animated: true)
+        self.sendData(to: c, data: data, identity: identity, delay: delay)
     }
     
     func popData(data: Any?, identity: Int = 0, delay: Double = 0.25) {
-        if let navigation = self.navigationController {
-            for controller in navigation.viewControllers {
-                navigation.popViewController(animated: true)
-                self.sendData(to: controller, data: data, identity: identity, delay: delay)
-                break
-            }
-        } else {
-            print("Can not pop from \(self).")
+        for controller in (self.navigationController?.viewControllers)! {
+            self.navigationController?.popViewController(animated: true)
+            self.sendData(to: controller, data: data, identity: identity, delay: delay)
+            break
         }
     }
     

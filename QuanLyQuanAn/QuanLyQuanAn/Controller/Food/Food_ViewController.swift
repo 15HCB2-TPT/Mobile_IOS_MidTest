@@ -37,15 +37,23 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func btnTim_TouchUpInside(_ sender: Any) {
-        if(txtTen.text == "")
-        {
-            if(swtTimNC.isOn) {
-                
+        var conditions: [NSPredicate] = []
+        if(txtTen.text != "") {
+            let conditionName = NSPredicate(format: "name CONTAINS[cd] %@", txtTen.text!)
+            conditions.append(conditionName)
+        }
+        if(swtTimNC.isOn) {
+            if(txtLoaiMonAn.text != "") {
+                let conditionType = NSPredicate(format: "food_type.nametype == %@", txtLoaiMonAn.text!)
+                conditions.append(conditionType)
             }
-            else {
-                tblMonAn.reloadData()
+            if(txtTu.text != "" && txtDen.text != "") {
+                let conditionMoney = NSPredicate(format: "(%f <= money) AND (money <= %f)", Double.init(txtTu.text!)!, Double.init(txtDen.text!)!)
+                conditions.append(conditionMoney)
             }
         }
+        foods = Database.select(entityName: "Food", predicater: NSCompoundPredicate(andPredicateWithSubpredicates: conditions), sorter: [NSSortDescriptor(key: "name", ascending: true)]) as! [Food]
+        tblMonAn.reloadData()
     }
 
     override func viewDidLoad() {
@@ -55,6 +63,7 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
         txtTu.inputAccessoryView = addDoneButton()
         txtDen.inputAccessoryView = addDoneButton()
         
+        tempString = foodType[0].nametype
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.size.width, height: 40.0))
         toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
         let btnHuy = UIBarButtonItem(title: "Huỷ", style: .plain, target: self, action: #selector(Food_ViewController.btnHuy_Touch))

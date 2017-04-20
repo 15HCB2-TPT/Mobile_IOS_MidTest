@@ -11,8 +11,6 @@
 		14072D211EA48FD900FFC8B0 /* Table_Add_Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072D201EA48FD900FFC8B0 /* Table_Add_Edit.swift */; };
 		14072D251EA4908B00FFC8B0 /* Table_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14072D241EA4908B00FFC8B0 /* Table_Cell.swift */; };
 		146E03E21EA529B5007A06AF /* Table_Call_Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E03E11EA529B5007A06AF /* Table_Call_Food.swift */; };
-		1494E5DE1EA8936E007C23AE /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494E5DD1EA8936E007C23AE /* AppConfigs.swift */; };
-		1494E5E01EA8945B007C23AE /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1494E5DF1EA8945B007C23AE /* AppData.swift */; };
 		14A3FA421EA71AE7008D0870 /* SeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA411EA71AE7008D0870 /* SeedData.swift */; };
 		14A3FA451EA71BF7008D0870 /* ReportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA431EA71BF7008D0870 /* ReportItem.swift */; };
 		14A3FA461EA71BF7008D0870 /* ReportResult_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3FA441EA71BF7008D0870 /* ReportResult_ViewController.swift */; };
@@ -48,8 +46,6 @@
 		14072D201EA48FD900FFC8B0 /* Table_Add_Edit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Add_Edit.swift; sourceTree = "<group>"; };
 		14072D241EA4908B00FFC8B0 /* Table_Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Cell.swift; sourceTree = "<group>"; };
 		146E03E11EA529B5007A06AF /* Table_Call_Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Call_Food.swift; sourceTree = "<group>"; };
-		1494E5DD1EA8936E007C23AE /* AppConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
-		1494E5DF1EA8945B007C23AE /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		14A3FA411EA71AE7008D0870 /* SeedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedData.swift; sourceTree = "<group>"; };
 		14A3FA431EA71BF7008D0870 /* ReportItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportItem.swift; sourceTree = "<group>"; };
 		14A3FA441EA71BF7008D0870 /* ReportResult_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportResult_ViewController.swift; sourceTree = "<group>"; };
@@ -119,8 +115,6 @@
 				6318AACE1E960F0800E0211C /* View */,
 				6318AACF1E960F0800E0211C /* Model */,
 				6318AAB61E960ED900E0211C /* AppDelegate.swift */,
-				1494E5DD1EA8936E007C23AE /* AppConfigs.swift */,
-				1494E5DF1EA8945B007C23AE /* AppData.swift */,
 				6318AAC01E960ED900E0211C /* Assets.xcassets */,
 				6318AAC51E960ED900E0211C /* Info.plist */,
 			);
@@ -326,7 +320,6 @@
 				633F349B1EA4E648004C648B /* Report_TableViewCell.swift in Sources */,
 				14072D1F1EA48FC100FFC8B0 /* Table_Main.swift in Sources */,
 				14A3FA421EA71AE7008D0870 /* SeedData.swift in Sources */,
-				1494E5E01EA8945B007C23AE /* AppData.swift in Sources */,
 				14A3FA451EA71BF7008D0870 /* ReportItem.swift in Sources */,
 				AD553DDD1E977E68009A51CB /* Database.swift in Sources */,
 				F0266DE41EA4ADE900341345 /* AppExtension.swift in Sources */,
@@ -336,7 +329,6 @@
 				635229FC1E9E84B600468B53 /* UIImageExt.swift in Sources */,
 				14E7AE491EA7D93E00E258E4 /* SettingController.swift in Sources */,
 				14072D251EA4908B00FFC8B0 /* Table_Cell.swift in Sources */,
-				1494E5DE1EA8936E007C23AE /* AppConfigs.swift in Sources */,
 				AD06ECDB1EA5E53D00F550D8 /* ReportDay_ViewController.swift in Sources */,
 				14072D211EA48FD900FFC8B0 /* Table_Add_Edit.swift in Sources */,
 				146E03E21EA529B5007A06AF /* Table_Call_Food.swift in Sources */,

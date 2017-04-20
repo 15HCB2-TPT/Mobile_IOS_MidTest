@@ -11,22 +11,12 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     var window: UIWindow?
-    
-    func loadCurrency(){
-        let def = UserDefaults.standard
-        let cur = def.string(forKey: AppConfigs.CURRENCY_KEY)
-        if cur == nil || cur == "$" {
-            AppData.AppCurrency = Database.isExistAndGet(predicater: NSPredicate(format: "name == %@", "$"))
-        } else {
-            AppData.AppCurrency = Database.isExistAndGet(predicater: NSPredicate(format: "name == %@", "vnd"))
-        }
-    }
-    
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        loadCurrency()
         return true
     }
 

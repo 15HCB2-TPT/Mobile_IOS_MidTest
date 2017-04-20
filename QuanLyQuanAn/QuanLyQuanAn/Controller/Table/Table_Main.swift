@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -16,7 +17,8 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var segment: UISegmentedControl!
     
     // MARK: **** Models ****
-    var tables: [Table]!
+    //var tables: [Table]!
+    var fetchedResultsController: NSFetchedResultsController<Table>!
     
     // MARK: ****
     override func viewDidLoad() {
@@ -30,16 +32,12 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func uiPassedData(data: Any?, identity: Int){
         loadTableView(segmentIndex: segment.selectedSegmentIndex)
-        table.reloadData()
     }
     
     // MARK: **** TableView ****
     func loadTableView(segmentIndex: Int){
-        tables = Database.select(predicater: NSPredicate(format: "is_empty == %i", segmentIndex == 0 ? 1 : 0), sorter: [NSSortDescriptor(key: "table_region.name", ascending: true), NSSortDescriptor(key: "number", ascending: true)])
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tables.count
+        fetchedResultsController = Database.selectAndGroupBy(groupByColumn: "table_region.name", predicater: NSPredicate(format: "is_empty == %i", segmentIndex == 0 ? 1 : 0), sorter: [NSSortDescriptor(key: "table_region.name", ascending: true), NSSortDescriptor(key: "number", ascending: true)])
+        table.reloadData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,13 +56,12 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 cell.backgroundColor = UIColor.init(white: 0, alpha: 0.5)
             }
         }
-        cell.backgroundColor = UIColor(white: indexPath.row % 2 == 0 ? 1 : 0.9, alpha: 1)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if !table.isEditing {
-            pushData(storyboard: "Main", controller: "tableAddEditWindow", data: tables[indexPath.row], identity: 1)
+            pushData(storyboard: "Main", controller: "tableAddEditWindow", data: fetchedResultsController.fetchedObjects?[indexPath.row], identity: 1)
         }
     }
     
@@ -74,17 +71,26 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
-            //remove Db
-            Database.delete(object: tables[indexPath.row])
+            Database.delete(object: (fetchedResultsController.fetchedObjects?[indexPath.row])!)
             Database.save()
-            //remove UI
-            tables.remove(at: indexPath.row)
-            table.reloadData()
+            loadTableView(segmentIndex: segment.selectedSegmentIndex)
         }
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultsController.sections!.count
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return fetchedResultsController.sections![section].numberOfObjects
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) ->String? {
+        return fetchedResultsController.sections![section].name
     }
     
     // MARK: **** Segmented Control ****

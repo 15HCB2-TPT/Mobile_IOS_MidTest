@@ -389,32 +389,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngôn ngữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV6-M4-RgN">
-                                <rect key="frame" x="32" y="80" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ngôn ngữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV6-M4-RgN">
+                                <rect key="frame" x="16" y="72" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiếng Việt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6r-kc-DMa">
-                                <rect key="frame" x="105" y="130" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiền tệ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJw-ss-cKo">
+                                <rect key="frame" x="16" y="195" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BVr-o4-uyn">
-                                <rect key="frame" x="32" y="125" width="51" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiếng Việt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6r-kc-DMa">
+                                <rect key="frame" x="105" y="106" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiền Việt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtB-CI-v3B">
+                                <rect key="frame" x="105" y="229" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BVr-o4-uyn">
+                                <rect key="frame" x="32" y="101" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="vietSwitch:" destination="FtB-Ww-2eb" eventType="valueChanged" id="JFd-6d-wQT"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-qO-DGd">
-                                <rect key="frame" x="32" y="180" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YLS-uO-dQI">
+                                <rect key="frame" x="32" y="224" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="vndSwitch:" destination="FtB-Ww-2eb" eventType="valueChanged" id="VU3-09-6AO"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="237-Hs-kj5">
+                                <rect key="frame" x="32" y="263" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="dorlarUS_Switch:" destination="FtB-Ww-2eb" eventType="valueChanged" id="VlQ-Yj-3d9"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-qO-DGd">
+                                <rect key="frame" x="32" y="140" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="engSwitch:" destination="FtB-Ww-2eb" eventType="valueChanged" id="P5x-2p-xRs"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiếng Anh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xid-m0-jJM">
-                                <rect key="frame" x="105" y="185" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiếng Anh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xid-m0-jJM">
+                                <rect key="frame" x="105" y="145" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -432,25 +465,22 @@
                                     <barButtonItem systemItem="flexibleSpace" id="1wf-PV-1Mo"/>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đô-la Mỹ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0R-HY-6R9">
+                                <rect key="frame" x="105" y="268" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="xid-m0-jJM" firstAttribute="centerY" secondItem="4MI-qO-DGd" secondAttribute="centerY" id="0sA-Xt-B7u"/>
-                            <constraint firstItem="yV6-M4-RgN" firstAttribute="top" secondItem="wiI-he-YWB" secondAttribute="bottom" constant="16" id="4Kc-fI-J5E"/>
-                            <constraint firstItem="4MI-qO-DGd" firstAttribute="leading" secondItem="wX4-QR-fu2" secondAttribute="leadingMargin" constant="16" id="6se-aq-dAW"/>
-                            <constraint firstItem="yV6-M4-RgN" firstAttribute="leading" secondItem="wX4-QR-fu2" secondAttribute="leadingMargin" constant="16" id="Xf3-dn-KcP"/>
-                            <constraint firstItem="xid-m0-jJM" firstAttribute="leading" secondItem="4MI-qO-DGd" secondAttribute="trailing" constant="24" id="Zhm-CT-GRm"/>
-                            <constraint firstItem="r6r-kc-DMa" firstAttribute="centerY" secondItem="BVr-o4-uyn" secondAttribute="centerY" id="jI9-Ok-98z"/>
-                            <constraint firstItem="4MI-qO-DGd" firstAttribute="top" secondItem="BVr-o4-uyn" secondAttribute="bottom" constant="24" id="jVw-Nt-BLQ"/>
-                            <constraint firstItem="r6r-kc-DMa" firstAttribute="leading" secondItem="BVr-o4-uyn" secondAttribute="trailing" constant="24" id="kcs-NJ-xVJ"/>
-                            <constraint firstItem="BVr-o4-uyn" firstAttribute="leading" secondItem="wX4-QR-fu2" secondAttribute="leadingMargin" constant="16" id="rd3-RC-Df4"/>
-                            <constraint firstItem="BVr-o4-uyn" firstAttribute="top" secondItem="yV6-M4-RgN" secondAttribute="bottom" constant="24" id="zIn-bQ-u1J"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cài đặt" id="TXC-UE-8RW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="switchDolarUS" destination="237-Hs-kj5" id="zpf-oh-6kC"/>
                         <outlet property="switchEnglish" destination="4MI-qO-DGd" id="5dx-yS-JB9"/>
+                        <outlet property="switchVND" destination="YLS-uO-dQI" id="ErO-Si-aAN"/>
                         <outlet property="switchVietnamese" destination="BVr-o4-uyn" id="UjN-Co-xqO"/>
                     </connections>
                 </viewController>
@@ -955,7 +985,7 @@
                                 <action selector="btnBack_Click:" destination="Vyu-Ju-wDM" id="MgB-BR-HWT"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Hoàn tất" style="plain" id="hgf-Hu-WeI"/>
+                        <barButtonItem key="rightBarButtonItem" title="Thanh toán" style="plain" id="hgf-Hu-WeI"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBS-mo-yRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1008,7 +1038,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8l-QX-nfw">
                                                     <rect key="frame" x="211" y="37" width="96" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Thanh toán">
+                                                    <state key="normal" title="Hoá đơn">
                                                         <color key="titleColor" red="0.52228239259491149" green="0.11536179547111763" blue="0.65805132772020725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>

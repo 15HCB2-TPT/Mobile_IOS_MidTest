@@ -11,6 +11,7 @@ import UIKit
 
 class EditRegion_ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     
+    @IBOutlet weak var switch_isuse: UISwitch!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var txt_nameregion: UITextField!
     @IBOutlet weak var txtview_des: UITextView!

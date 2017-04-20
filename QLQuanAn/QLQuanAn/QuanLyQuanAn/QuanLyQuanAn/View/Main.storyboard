@@ -1641,7 +1641,4 @@
         <image name="Settings-50-Silver" width="16" height="16"/>
         <image name="Table Filled-50-Silver" width="16" height="16"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="hEF-Xr-hhA"/>
-    </inferredMetricsTieBreakers>
 </document>

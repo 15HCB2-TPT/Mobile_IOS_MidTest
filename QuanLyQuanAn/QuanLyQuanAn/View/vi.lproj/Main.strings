@@ -1,0 +1,372 @@
+
+/* Class = "UIBarButtonItem"; title = "<Trở về"; ObjectID = "0D3-JL-jlX"; */
+"0D3-JL-jlX.title" = "Quay lại";
+
+/* Class = "UIViewController"; title = "Add New Region"; ObjectID = "0F8-eB-X3s"; */
+"0F8-eB-X3s.title" = "Thêm Khu Vực";
+
+/* Class = "UIButton"; normalTitle = "Lưu"; ObjectID = "0Y6-GE-H0D"; */
+"0Y6-GE-H0D.normalTitle" = "Lưu";
+
+/* Class = "UIBarButtonItem"; title = "Quay lại"; ObjectID = "0zG-QE-7vN"; */
+"0zG-QE-7vN.title" = "Quay lại";
+
+/* Class = "UITabBarItem"; title = "Khu vực"; ObjectID = "1yu-oi-JAn"; */
+"1yu-oi-JAn.title" = "Khu vực";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "27o-Wd-c3B"; */
+"27o-Wd-c3B.text" = "name";
+
+/* Class = "UIButton"; normalTitle = "Tìm"; ObjectID = "2dp-Gt-7Zb"; */
+"2dp-Gt-7Zb.normalTitle" = "Tìm";
+
+/* Class = "UILabel"; text = "Đang sử dụng"; ObjectID = "3Ub-wA-h6j"; */
+"3Ub-wA-h6j.text" = "Đang sử dụng";
+
+/* Class = "UITextField"; placeholder = "Khu vực"; ObjectID = "4FQ-kl-2gX"; */
+"4FQ-kl-2gX.placeholder" = "Khu vực";
+
+/* Class = "UITabBarItem"; title = "Cài đặt"; ObjectID = "5ju-0F-uNP"; */
+"5ju-0F-uNP.title" = "Cài đặt";
+
+/* Class = "UITextField"; placeholder = "Tất cả"; ObjectID = "6TP-6L-iKk"; */
+"6TP-6L-iKk.placeholder" = "Tất cả";
+
+/* Class = "UILabel"; text = "Tên món ăn"; ObjectID = "7f7-VG-tOT"; */
+"7f7-VG-tOT.text" = "Tên món ăn";
+
+/* Class = "UIButton"; normalTitle = "Chọn hình"; ObjectID = "8Rk-md-6Dk"; */
+"8Rk-md-6Dk.normalTitle" = "Chọn hình";
+
+/* Class = "UILabel"; text = "Loại món ăn"; ObjectID = "8a9-23-g6E"; */
+"8a9-23-g6E.text" = "Loại món ăn";
+
+/* Class = "UIBarButtonItem"; title = "Quay lại"; ObjectID = "98j-ln-KIh"; */
+"98j-ln-KIh.title" = "Quay lại";
+
+/* Class = "UIBarButtonItem"; title = "Bàn: xxx"; ObjectID = "9Ug-jg-qFw"; */
+"9Ug-jg-qFw.title" = "Bàn: xxx";
+
+/* Class = "UILabel"; text = ":Mã"; ObjectID = "AiD-4T-Taj"; */
+"AiD-4T-Taj.text" = ":Mã";
+
+/* Class = "UIButton"; normalTitle = "Chọn"; ObjectID = "BHR-0c-JqA"; */
+"BHR-0c-JqA.normalTitle" = "Chọn";
+
+/* Class = "UILabel"; text = "Khoảng giá"; ObjectID = "BeS-kb-YKm"; */
+"BeS-kb-YKm.text" = "Khoảng giá";
+
+/* Class = "UINavigationItem"; title = "Món ăn"; ObjectID = "Cdl-kf-GCt"; */
+"Cdl-kf-GCt.title" = "Món ăn";
+
+/* Class = "UINavigationController"; title = "Navi_Food"; ObjectID = "Cob-uh-3NY"; */
+"Cob-uh-3NY.title" = "Navi_Food";
+
+/* Class = "UIBarButtonItem"; title = "Lưu"; ObjectID = "D2L-qC-cde"; */
+"D2L-qC-cde.title" = "Lưu";
+
+/* Class = "UISegmentedControl"; D5q-95-MrR.segmentTitles[0] = "Trong ngày"; ObjectID = "D5q-95-MrR"; */
+"D5q-95-MrR.segmentTitles[0]" = "Trong ngày";
+
+/* Class = "UISegmentedControl"; D5q-95-MrR.segmentTitles[1] = "Thời gian"; ObjectID = "D5q-95-MrR"; */
+"D5q-95-MrR.segmentTitles[1]" = "Thời gian";
+
+/* Class = "UILabel"; text = "Hình ảnh"; ObjectID = "DCg-zY-HW3"; */
+"DCg-zY-HW3.text" = "Hình ảnh";
+
+/* Class = "UITabBarController"; title = "BBQ"; ObjectID = "DI3-Tp-CsJ"; */
+"DI3-Tp-CsJ.title" = "BBQ";
+
+/* Class = "UITextField"; placeholder = "Số chỗ ngồi"; ObjectID = "Dbx-yb-YXt"; */
+"Dbx-yb-YXt.placeholder" = "Số chỗ ngồi";
+
+/* Class = "UIBarButtonItem"; title = "Quay lại"; ObjectID = "E8T-3r-y6H"; */
+"E8T-3r-y6H.title" = "Quay lại";
+
+/* Class = "UIViewController"; title = "Edit Food"; ObjectID = "Eoa-cX-2C9"; */
+"Eoa-cX-2C9.title" = "Sửa Món Ăn";
+
+/* Class = "UIViewController"; title = "Setting"; ObjectID = "FtB-Ww-2eb"; */
+"FtB-Ww-2eb.title" = "Cài Đặt";
+
+/* Class = "UILabel"; text = "Loại món ăn"; ObjectID = "GEh-xS-kTo"; */
+"GEh-xS-kTo.text" = "Loại món ăn";
+
+/* Class = "UIBarButtonItem"; title = "Thêm"; ObjectID = "GMD-Fb-cjO"; */
+"GMD-Fb-cjO.title" = "Thêm";
+
+/* Class = "UITabBarItem"; title = "Bàn ăn"; ObjectID = "I8q-XT-Avi"; */
+"I8q-XT-Avi.title" = "Bàn ăn";
+
+/* Class = "UITabBarItem"; title = "Món ăn"; ObjectID = "IBl-WA-unk"; */
+"IBl-WA-unk.title" = "Món ăn";
+
+/* Class = "UILabel"; text = "number"; ObjectID = "IIo-jE-TcG"; */
+"IIo-jE-TcG.text" = "Số lượng";
+
+/* Class = "UINavigationItem"; title = "Sửa khu vực"; ObjectID = "IeW-Up-aNg"; */
+"IeW-Up-aNg.title" = "Sửa khu vực";
+
+/* Class = "UIBarButtonItem"; title = "Tổng tiền: xxx"; ObjectID = "IsA-zb-8iu"; */
+"IsA-zb-8iu.title" = "Tổng tiền: xxx";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JCs-dC-PZ0"; */
+"JCs-dC-PZ0.text" = "Label";
+
+/* Class = "UIViewController"; title = "Edit Region"; ObjectID = "Jc0-3f-3pj"; */
+"Jc0-3f-3pj.title" = "Sửa Khu Vực";
+
+/* Class = "UIBarButtonItem"; title = "Khởi tạo dữ liệu mặc định"; ObjectID = "K6q-Yd-ZZa"; */
+"K6q-Yd-ZZa.title" = "Khởi tạo dữ liệu mặc định";
+
+/* Class = "UIButton"; normalTitle = "Chọn hình"; ObjectID = "KHk-rF-Vsw"; */
+"KHk-rF-Vsw.normalTitle" = "Chọn hình";
+
+/* Class = "UIButton"; normalTitle = "Đặt món"; ObjectID = "Lld-ta-h2c"; */
+"Lld-ta-h2c.normalTitle" = "Đặt món";
+
+/* Class = "UIBarButtonItem"; title = "Tìm nâng cao"; ObjectID = "LpT-pL-JH7"; */
+"LpT-pL-JH7.title" = "Tìm nâng cao";
+
+/* Class = "UILabel"; text = "Đô-la Mỹ"; ObjectID = "M0R-HY-6R9"; */
+"M0R-HY-6R9.text" = "Đô-la Mỹ";
+
+/* Class = "UIButton"; normalTitle = "Thống kê"; ObjectID = "MFP-6m-Idl"; */
+"MFP-6m-Idl.normalTitle" = "Thống kê";
+
+/* Class = "UILabel"; text = "Đến ngày"; ObjectID = "MMR-M0-36r"; */
+"MMR-M0-36r.text" = "Đến ngày";
+
+/* Class = "UILabel"; text = "Tên khu vực"; ObjectID = "Mhx-Xc-eWc"; */
+"Mhx-Xc-eWc.text" = "Tên khu vực";
+
+/* Class = "UILabel"; text = "Tên bàn"; ObjectID = "Nh0-QC-lAA"; */
+"Nh0-QC-lAA.text" = "Tên bàn";
+
+/* Class = "UINavigationController"; title = "Navi_Result Report"; ObjectID = "OvA-Ri-aMR"; */
+"OvA-Ri-aMR.title" = "Navi_Result Report";
+
+/* Class = "UINavigationItem"; title = "Gọi món"; ObjectID = "PQt-Au-dix"; */
+"PQt-Au-dix.title" = "Gọi món";
+
+/* Class = "UILabel"; text = ":Giá"; ObjectID = "R9y-o4-lic"; */
+"R9y-o4-lic.text" = ":Giá";
+
+/* Class = "UINavigationController"; title = "Navi_Region"; ObjectID = "RKL-N9-2EC"; */
+"RKL-N9-2EC.title" = "Navi_Region";
+
+/* Class = "UILabel"; text = "Tên khu vực"; ObjectID = "Rwt-mi-fGm"; */
+"Rwt-mi-fGm.text" = "Tên khu vực";
+
+/* Class = "UINavigationItem"; title = "Thêm khu vực"; ObjectID = "SQK-BH-RGc"; */
+"SQK-BH-RGc.title" = "Thêm khu vực";
+
+/* Class = "UINavigationItem"; title = "Thanh toán"; ObjectID = "ShB-6f-9Yr"; */
+"ShB-6f-9Yr.title" = "Thanh toán";
+
+/* Class = "UINavigationItem"; title = "Thêm món ăn"; ObjectID = "Syd-fm-2de"; */
+"Syd-fm-2de.title" = "Thêm món ăn";
+
+/* Class = "UINavigationItem"; title = "Cài đặt"; ObjectID = "TXC-UE-8RW"; */
+"TXC-UE-8RW.title" = "Cài đặt";
+
+/* Class = "UIViewController"; title = "List Table"; ObjectID = "Tls-Za-aDC"; */
+"Tls-Za-aDC.title" = "DS Bàn";
+
+/* Class = "UITextField"; placeholder = "Tên bàn / Mã bàn"; ObjectID = "UEg-6B-hTe"; */
+"UEg-6B-hTe.placeholder" = "Tên bàn / Mã bàn";
+
+/* Class = "UILabel"; text = "Khu vực"; ObjectID = "UNV-B1-uf3"; */
+"UNV-B1-uf3.text" = "Khu vực";
+
+/* Class = "UITextField"; placeholder = "Tất cả"; ObjectID = "Ufe-Jb-UFn"; */
+"Ufe-Jb-UFn.placeholder" = "Tất cả";
+
+/* Class = "UILabel"; text = "Tiền Việt"; ObjectID = "UtB-CI-v3B"; */
+"UtB-CI-v3B.text" = "Tiền Việt";
+
+/* Class = "UIViewController"; title = "Filter Report"; ObjectID = "VcG-qx-kKs"; */
+"VcG-qx-kKs.title" = "Filter Report";
+
+/* Class = "UIViewController"; title = "Table Pay Food"; ObjectID = "Vyu-Ju-wDM"; */
+"Vyu-Ju-wDM.title" = "Table Pay Food";
+
+/* Class = "UILabel"; text = "Sử dụng"; ObjectID = "WBR-oT-zVt"; */
+"WBR-oT-zVt.text" = "Sử dụng";
+
+/* Class = "UIButton"; normalTitle = "Gọi món"; ObjectID = "Xr5-Dj-DxN"; */
+"Xr5-Dj-DxN.normalTitle" = "Gọi món";
+
+/* Class = "UIViewController"; title = "Table Call Food"; ObjectID = "ZMV-rg-T4D"; */
+"ZMV-rg-T4D.title" = "Table Call Food";
+
+/* Class = "UIViewController"; title = "Detail Table"; ObjectID = "aDy-qQ-cUl"; */
+"aDy-qQ-cUl.title" = "Detail Table";
+
+/* Class = "UINavigationItem"; title = "Thống kê"; ObjectID = "b85-c3-9PV"; */
+"b85-c3-9PV.title" = "Thống kê";
+
+/* Class = "UILabel"; text = " "; ObjectID = "bXd-4t-8J7"; */
+"bXd-4t-8J7.text" = " ";
+
+/* Class = "UIBarButtonItem"; title = "Bàn: xxx"; ObjectID = "cDy-aq-jXY"; */
+"cDy-aq-jXY.title" = "Bàn: xxx";
+
+/* Class = "UILabel"; text = "Loại món ăn"; ObjectID = "cch-oz-uwh"; */
+"cch-oz-uwh.text" = "Loại món ăn";
+
+/* Class = "UILabel"; text = "Khoảng giá"; ObjectID = "csg-bQ-VWg"; */
+"csg-bQ-VWg.text" = "Khoảng giá";
+
+/* Class = "UIViewController"; title = "Region"; ObjectID = "d41-M2-bCL"; */
+"d41-M2-bCL.title" = "Region";
+
+/* Class = "UIViewController"; title = "Food"; ObjectID = "dBw-hI-oRt"; */
+"dBw-hI-oRt.title" = "Food";
+
+/* Class = "UIViewController"; title = "Report Day"; ObjectID = "e0K-ac-7fY"; */
+"e0K-ac-7fY.title" = "Report Day";
+
+/* Class = "UIBarButtonItem"; title = "Thêm"; ObjectID = "e0g-YK-Ptc"; */
+"e0g-YK-Ptc.title" = "Thêm";
+
+/* Class = "UILabel"; text = "Từ ngày"; ObjectID = "eX5-A0-G3E"; */
+"eX5-A0-G3E.text" = "Từ ngày";
+
+/* Class = "UIButton"; normalTitle = "Lưu thay đổi"; ObjectID = "eZM-8V-nXe"; */
+"eZM-8V-nXe.normalTitle" = "Lưu thay đổi";
+
+/* Class = "UILabel"; text = "Số lượng"; ObjectID = "es5-RO-vZe"; */
+"es5-RO-vZe.text" = "Số lượng";
+
+/* Class = "UILabel"; text = "Tìm kiếm"; ObjectID = "f0P-yc-oY1"; */
+"f0P-yc-oY1.text" = "Tìm kiếm";
+
+/* Class = "UIBarButtonItem"; title = "<Trở về"; ObjectID = "fwQ-gh-3CZ"; */
+"fwQ-gh-3CZ.title" = "Quay lại";
+
+/* Class = "UILabel"; text = "Số chỗ"; ObjectID = "g4A-1V-KL9"; */
+"g4A-1V-KL9.text" = "Số chỗ";
+
+/* Class = "UILabel"; text = "Giá tiền"; ObjectID = "hV4-rx-BLU"; */
+"hV4-rx-BLU.text" = "Giá tiền";
+
+/* Class = "UIBarButtonItem"; title = "<Trở về"; ObjectID = "hX2-Ih-4J3"; */
+"hX2-Ih-4J3.title" = "Quay lại";
+
+/* Class = "UIBarButtonItem"; title = "Thanh toán"; ObjectID = "hgf-Hu-WeI"; */
+"hgf-Hu-WeI.title" = "Thanh toán";
+
+/* Class = "UITextField"; placeholder = "Số lượng"; ObjectID = "hrA-vh-Osw"; */
+"hrA-vh-Osw.placeholder" = "Số lượng";
+
+/* Class = "UITabBarItem"; title = "Báo cáo"; ObjectID = "iJ3-7l-ZYm"; */
+"iJ3-7l-ZYm.title" = "Báo cáo";
+
+/* Class = "UILabel"; text = "Nâng cao"; ObjectID = "iuZ-D9-U8c"; */
+"iuZ-D9-U8c.text" = "Nâng cao";
+
+/* Class = "UITextField"; placeholder = "Từ"; ObjectID = "jEB-dJ-owm"; */
+"jEB-dJ-owm.placeholder" = "Từ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kIN-8g-aQx"; */
+"kIN-8g-aQx.text" = "Label";
+
+/* Class = "UIViewController"; title = "Report Time"; ObjectID = "kKZ-Zl-4wy"; */
+"kKZ-Zl-4wy.title" = "Report Time";
+
+/* Class = "UIViewController"; title = "CallFood SearchAdv"; ObjectID = "kd2-eo-nT0"; */
+"kd2-eo-nT0.title" = "CallFood SearchAdv";
+
+/* Class = "UINavigationController"; title = "Navi_Table"; ObjectID = "l3z-NN-05L"; */
+"l3z-NN-05L.title" = "Navi_Table";
+
+/* Class = "UILabel"; text = ":Tên món"; ObjectID = "lJC-wR-5qs"; */
+"lJC-wR-5qs.text" = ":Tên món";
+
+/* Class = "UIBarButtonItem"; title = "Ngày: xxx"; ObjectID = "leg-yV-ER5"; */
+"leg-yV-ER5.title" = "Ngày: xxx";
+
+/* Class = "UIBarButtonItem"; title = ":AddEdit"; ObjectID = "me2-eb-Kmb"; */
+"me2-eb-Kmb.title" = ":AddEdit";
+
+/* Class = "UINavigationItem"; title = ":Title"; ObjectID = "nLu-rp-XoU"; */
+"nLu-rp-XoU.title" = ":Title";
+
+/* Class = "UILabel"; text = "Doanh thu"; ObjectID = "oON-zl-BY1"; */
+"oON-zl-BY1.text" = "Doanh thu";
+
+/* Class = "UILabel"; text = "Ngưng sử dụng"; ObjectID = "pg5-eY-1oM"; */
+"pg5-eY-1oM.text" = "Ngưng sử dụng";
+
+/* Class = "UITextField"; placeholder = "Nhập tên món ăn"; ObjectID = "qLT-jK-Qoe"; */
+"qLT-jK-Qoe.placeholder" = "Nhập tên món ăn";
+
+/* Class = "UIBarButtonItem"; title = "Hoàn tất"; ObjectID = "qUo-9w-tvc"; */
+"qUo-9w-tvc.title" = "Hoàn tất";
+
+/* Class = "UILabel"; text = "Ngày thống kê"; ObjectID = "qtJ-xT-ndf"; */
+"qtJ-xT-ndf.text" = "Ngày thống kê";
+
+/* Class = "UILabel"; text = "Tiếng Việt"; ObjectID = "r6r-kc-DMa"; */
+"r6r-kc-DMa.text" = "Tiếng Việt";
+
+/* Class = "UINavigationController"; title = "Navi_Setting"; ObjectID = "rMx-tV-BNX"; */
+"rMx-tV-BNX.title" = "Navi_Setting";
+
+/* Class = "UITextField"; placeholder = "Đến"; ObjectID = "rxG-8V-W74"; */
+"rxG-8V-W74.placeholder" = "Đến";
+
+/* Class = "UIBarButtonItem"; title = "Tổng tiền: xxx"; ObjectID = "s2k-wS-b1o"; */
+"s2k-wS-b1o.title" = "Tổng tiền: xxx";
+
+/* Class = "UILabel"; text = "Đang sử dụng"; ObjectID = "sW1-Hk-LLJ"; */
+"sW1-Hk-LLJ.text" = "Đang sử dụng";
+
+/* Class = "UILabel"; text = ":Tên món"; ObjectID = "t0a-b4-d45"; */
+"t0a-b4-d45.text" = ":Tên món";
+
+/* Class = "UIButton"; normalTitle = "Hoá đơn"; ObjectID = "t8l-QX-nfw"; */
+"t8l-QX-nfw.normalTitle" = "Hoá đơn";
+
+/* Class = "UIBarButtonItem"; title = "Thêm"; ObjectID = "tCv-4s-7QJ"; */
+"tCv-4s-7QJ.title" = "Thêm";
+
+/* Class = "UILabel"; text = ":Đơn giá * Số lượng = Tổng"; ObjectID = "toY-cD-uch"; */
+"toY-cD-uch.text" = ":Đơn giá * Số lượng = Tổng";
+
+/* Class = "UIButton"; normalTitle = "Tải ảnh lên"; ObjectID = "u6s-xH-czg"; */
+"u6s-xH-czg.normalTitle" = "Tải ảnh lên";
+
+/* Class = "UISegmentedControl"; uE9-vV-RKJ.segmentTitles[0] = "Bàn trống"; ObjectID = "uE9-vV-RKJ"; */
+"uE9-vV-RKJ.segmentTitles[0]" = "Bàn trống";
+
+/* Class = "UISegmentedControl"; uE9-vV-RKJ.segmentTitles[1] = "Có người"; ObjectID = "uE9-vV-RKJ"; */
+"uE9-vV-RKJ.segmentTitles[1]" = "Có người";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uEQ-4b-3xe"; */
+"uEQ-4b-3xe.text" = "Label";
+
+/* Class = "UITableViewController"; title = "Result Report"; ObjectID = "ufk-hw-caf"; */
+"ufk-hw-caf.title" = "Result Report";
+
+/* Class = "UITextField"; placeholder = "Từ khoá"; ObjectID = "uuB-Fh-M9v"; */
+"uuB-Fh-M9v.placeholder" = "Từ khoá";
+
+/* Class = "UINavigationItem"; title = "Khu vực"; ObjectID = "uvV-44-3sq"; */
+"uvV-44-3sq.title" = "Khu vực";
+
+/* Class = "UIViewController"; title = "Add New Food"; ObjectID = "vBs-ye-sbH"; */
+"vBs-ye-sbH.title" = "Add New Food";
+
+/* Class = "UILabel"; text = "Tiền tệ"; ObjectID = "vJw-ss-cKo"; */
+"vJw-ss-cKo.text" = "Tiền tệ";
+
+/* Class = "UILabel"; text = "Tiếng Anh"; ObjectID = "xid-m0-jJM"; */
+"xid-m0-jJM.text" = "Tiếng Anh";
+
+/* Class = "UILabel"; text = ":Chỗ"; ObjectID = "y62-Nw-E5P"; */
+"y62-Nw-E5P.text" = ":Chỗ";
+
+/* Class = "UILabel"; text = "Ngôn ngữ"; ObjectID = "yV6-M4-RgN"; */
+"yV6-M4-RgN.text" = "Ngôn ngữ";

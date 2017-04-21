@@ -49,7 +49,7 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
         self.dismiss(animated: true)
     }
     
-    // MARK: - Table view data source
+    // MARK: *** - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -64,12 +64,12 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "custom_reporttype", for: indexPath) as! Report_TableViewCell
-        cell.name.text = rl[indexPath.row].name
+        cell.name.text = temp[indexPath.section][indexPath.row].name
         if is_doanhthu {
-            cell.number.text = String(rl[indexPath.row].money)
-            cell.unit.text = "USD"
+            cell.number.text = String(temp[indexPath.section][indexPath.row].money * (AppData.AppCurrency?.value)!)
+            cell.unit.text = AppData.AppCurrency?.name
         }else {
-            cell.number.text = String(rl[indexPath.row].number)
+            cell.number.text = String(temp[indexPath.section][indexPath.row].number)
             cell.unit.text = "phần"
         }
         return cell
@@ -78,25 +78,4 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) ->String? {
         return temp[section][0].foodtype.nametype!
     }
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-
 }

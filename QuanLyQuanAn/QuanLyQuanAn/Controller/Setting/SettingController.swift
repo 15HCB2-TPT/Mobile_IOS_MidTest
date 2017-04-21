@@ -58,6 +58,8 @@ class SettingController: UIViewController {
         switchDolarUS.isOn = cur == nil || cur == "$"
         if switchDolarUS.isOn {
             dorlarUS_Switch(switchDolarUS)
+        } else /*if switchVND.isOn*/ {
+            vndSwitch(switchVND)
         }
     }
     
@@ -74,7 +76,7 @@ class SettingController: UIViewController {
     func changeCurrency(curID: Int) {
         if curID == 0 {
             AppData.AppCurrency = Database.isExistAndGet(predicater: NSPredicate(format: "name == %@", "vnd"))
-        } else {
+        } else /*if curID == 1*/ {
             AppData.AppCurrency = Database.isExistAndGet(predicater: NSPredicate(format: "name == %@", "$"))
         }
         let def = UserDefaults.standard
@@ -86,8 +88,10 @@ class SettingController: UIViewController {
         func conformOK(act: UIAlertAction) {
             SeedData.seedData()
             AppDelegate.restart()
+            //loadLan()???
+            loadCur()
         }
-        conform(title: "Xác nhận", msg: "Dữ liệu sẽ reset lại tất cả! Bạn có chắc muốn tiếp tục?", btnOKTitle: "Tiếp", btnCancelTitle: "Dừng", handler: conformOK)
+        confirm(title: "Xác nhận", msg: "Dữ liệu sẽ reset lại tất cả! Bạn có chắc muốn tiếp tục?", btnOKTitle: "Tiếp", btnCancelTitle: "Dừng", handler: conformOK)
     }
     
 }

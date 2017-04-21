@@ -26,7 +26,6 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var selectedRegion: Region!
     var funcAddEdit: Bool = true
     var updatedTable: Table!
-    var pickRegion_tempRow: Int = 0
     
     // MARK: ****
     override func viewDidLoad() {
@@ -45,13 +44,14 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if identity == 0 {
             navigationTitle.title = "Thêm mới"
             btnAddEdit.title = "Thêm"
+            funcAddEdit = true
+            updatedTable = nil
         } else { 
             if let t = data as! Table? {
                 tfName.text = t.name
                 tfName.isEnabled = false
                 tfNum.text = "\(t.number)"
                 tfReg.text = t.table_region?.name
-                print(tfReg.text)
                 selectedRegion = regions[searchRegion(name: (t.table_region?.name)!)]
                 swIsDeleted.isOn = t.is_deleted
                 imgView.image = UIImage(data: t.img! as Data)
@@ -156,7 +156,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // MARK: **** Choose img
     @IBAction func btnImg_Click(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-            print("Button capture")
+            //print("Button capture")
             
             imagePicker.delegate = self
             imagePicker.sourceType = .savedPhotosAlbum;

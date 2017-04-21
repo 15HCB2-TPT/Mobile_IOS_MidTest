@@ -8,6 +8,18 @@
 
 import UIKit
 
+struct AppExtension {
+    static func addCancelDoneButton(target: Any?, doneAct: Selector?, cancelAct: Selector?) -> UIToolbar {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneBarButton = UIBarButtonItem(title: "Xong", style: .plain, target: target, action: doneAct)
+        let cancelBarButton = UIBarButtonItem(title: "Huỷ", style: .plain, target: target, action: cancelAct)
+        keyboardToolbar.items = [cancelBarButton, flexBarButton, doneBarButton]
+        return keyboardToolbar
+    }
+}
+
 extension UIViewController {
     func addDoneButton() -> UIToolbar {
         let keyboardToolbar = UIToolbar()
@@ -18,23 +30,13 @@ extension UIViewController {
         return keyboardToolbar
     }
     
-    func addCancelDoneButton(doneAct: Selector?, cancelAct: Selector?) -> UIToolbar {
-        let keyboardToolbar = UIToolbar()
-        keyboardToolbar.sizeToFit()
-        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneBarButton = UIBarButtonItem(title: "Xong", style: .plain, target: view, action: doneAct)
-        let cancelBarButton = UIBarButtonItem(title: "Huỷ", style: .plain, target: view, action: cancelAct)
-        keyboardToolbar.items = [cancelBarButton, flexBarButton, doneBarButton]
-        return keyboardToolbar
-    }
-    
     func alert(title: String, msg: String, btnTitle: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: btnTitle, style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
-    func conform(title: String, msg: String, btnOKTitle: String, btnCancelTitle: String, handler: ((UIAlertAction) -> Void)?) {
+    func confirm(title: String, msg: String, btnOKTitle: String, btnCancelTitle: String, handler: ((UIAlertAction) -> Void)?) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: btnOKTitle, style: UIAlertActionStyle.default, handler: handler))
         alert.addAction(UIAlertAction(title: btnCancelTitle, style: .cancel, handler: nil))

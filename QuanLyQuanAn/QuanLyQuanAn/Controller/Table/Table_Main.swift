@@ -31,11 +31,18 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func uiPassedData(data: Any?, identity: Int){
         loadTableView(segmentIndex: segment.selectedSegmentIndex)
+        if identity == 1 {
+            alert(title: "Thông báo", msg: "Đã lập gọi món thành công!", btnTitle: "Đã biết")
+        } else if identity == 2 {
+            if let t = data as! Order? {
+                alert(title: "Thông báo", msg: "Đã thanh toán thành công hoá đơn cho bàn (\((t.order_table?.name!)!))", btnTitle: "Đã biết")
+            }
+        }
     }
     
     // MARK: **** TableView ****
     func loadTableView(segmentIndex: Int){
-        fetchedResultsController = Database.selectAndGroupBy(groupByColumn: "table_region.name", predicater: NSPredicate(format: "is_empty == %i", segmentIndex == 0 ? 1 : 0), sorter: [NSSortDescriptor(key: "table_region.name", ascending: true), NSSortDescriptor(key: "number", ascending: true)])
+        fetchedResultsController = Database.selectAndGroupBy(groupByColumn: "table_region.name", predicater: NSPredicate(format: "is_empty == %i", segmentIndex == 0 ? 1 : 0), sorter: [NSSortDescriptor(key: "number", ascending: true)])
         table.reloadData()
     }
     
@@ -49,6 +56,8 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
             cell.controller = self
             if d.is_empty {
                 cell.btnPay.isHidden = true
+            } else {
+                cell.btnPay.isHidden = false
             }
             cell.backgroundColor = UIColor(white: indexPath.row % 2 == 0 ? 1 : 0.9, alpha: 1)
             if d.is_deleted {

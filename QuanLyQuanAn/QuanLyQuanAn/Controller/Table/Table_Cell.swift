@@ -20,7 +20,7 @@ class Table_Cell: UITableViewCell{
     
     // MARK: **** Modals ****
     var data: Table!
-    var controller: UIViewController!
+    var controller: Table_Main!
     
     // MARK: **** Handlers ****
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,11 +28,15 @@ class Table_Cell: UITableViewCell{
     }
     
     @IBAction func btnCall_Click(_ sender: Any) {
-        UIPassingData.pushData(from: controller, storyboard: "Main", controller: "tableCallFoodWindow", data: nil, identity: 0)
+        if data.is_empty {
+            UIPassingData.pushData(from: controller, storyboard: "Main", controller: "tableCallFoodWindow", data: data, identity: 1)
+        } else {
+            UIPassingData.pushData(from: controller, storyboard: "Main", controller: "tableCallFoodWindow", data: (data, Database.isExistAndGet(entityName: "Order", predicater: NSPredicate(format: "order_table.name == %@ AND is_paid == %i", data.name!, 0)) as! Order), identity: 2)
+        }
     }
     
     @IBAction func btnPay_Click(_ sender: Any) {
-        UIPassingData.pushData(from: controller, storyboard: "Main", controller: "tablePayFoodWindow", data: nil, identity: 0)
+        UIPassingData.pushData(from: controller, storyboard: "Main", controller: "tablePayFoodWindow", data: Database.isExistAndGet(entityName: "Order", predicater: NSPredicate(format: "order_table.name == %@ AND is_paid == %i", data.name!, 0)) as! Order, identity: 0)
     }
     
 }

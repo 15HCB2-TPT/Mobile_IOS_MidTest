@@ -20,11 +20,16 @@ class Table_Call_Food: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     // MARK: **** Modals ****
     var fetchedResultsController: NSFetchedResultsController<Food>!
+    var calledFoods = [Food: Int]()
+    var curTable: Table!
+    var curOrder: Order!
+    var funcAddEdit = true
     
     // MARK: ****
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTableView()
+        searchBox.inputAccessoryView = addDoneButton()
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,53 +37,82 @@ class Table_Call_Food: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     override func uiPassedData(data: Any?, identity: Int){
-        
+        if identity == 1 {
+            if let t = data as! Table? {
+                tableInfo.title = "Bàn: \(t.name!)"
+                lblTotalMoney.title = "Tổng tiền: \(AppData.CurrencyFormatter(value: 0))"
+                curTable = t
+                curOrder = nil
+                funcAddEdit = true
+            }
+        } else if identity == 2 {
+            if let t = data as! (Table, Order)? {
+                tableInfo.title = "Bàn: \(t.0.name!)"
+                lblTotalMoney.title = "Tổng tiền: \(AppData.CurrencyFormatter(value: t.1.totalmoney))"
+                curTable = t.0
+                curOrder = t.1
+                funcAddEdit = false
+            }
+        } else if identity == 3 {
+            if let t = data as! (String?, Double?, Double?)? {
+                if let temp = TempData.load(fromKey: self.title!) as! ([Food: Int], Table?, Order?, Bool)? {
+                    calledFoods = temp.0
+                    curTable = temp.1
+                    curOrder = temp.2
+                    funcAddEdit = temp.3
+                }
+                //
+                var predicaters = [NSPredicate]()
+                predicaters.append(NSPredicate(format: "is_use == %i", 1))
+                if t.0 != nil {
+                    predicaters.append(NSPredicate(format: "food_type.nametype == %@", t.0!))
+                }
+                if t.1 != nil {
+                    predicaters.append(NSPredicate(format: "money >= %f", t.1! / (AppData.AppCurrency?.value)!))
+                }
+                if t.2 != nil {
+                    predicaters.append(NSPredicate(format: "money <= %f", t.2! / (AppData.AppCurrency?.value)!))
+                }
+                let compound = NSCompoundPredicate(andPredicateWithSubpredicates: predicaters)
+                fetchedResultsController = Database.selectAndGroupBy(groupByColumn: "food_type.nametype", predicater: compound)
+                table.reloadData()
+            }
+        }
     }
     
     // MARK: **** TableView ****
     func loadTableView(){
-//        fetchedResultsController = Database.selectAndGroupBy(groupByColumn: "table_region.name", predicater: NSPredicate(format: "is_empty == %i", segmentIndex == 0 ? 1 : 0), sorter: [NSSortDescriptor(key: "table_region.name", ascending: true), NSSortDescriptor(key: "number", ascending: true)])
+        fetchedResultsController = Database.selectAndGroupBy(groupByColumn: "food_type.nametype", predicater: NSPredicate(format: "is_use == %i", 1))
         table.reloadData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.table.dequeueReusableCell(withIdentifier: "tableCall_cell", for: indexPath) as! Table_Call_Cell
-//        if let d = fetchedResultsController.sections?[indexPath.section].objects?[indexPath.row] as! Table? {
-//            cell.name.text = "Mã: \(d.name!)"
-//            cell.num.text = "Số chỗ: (\(d.number))"
-//            cell.imgView.image = UIImage(data: d.img! as Data)
-//            cell.data = d
-//            cell.controller = self
-//            if d.is_empty {
-//                cell.btnPay.isHidden = true
-//            }
-//            cell.backgroundColor = UIColor(white: indexPath.row % 2 == 0 ? 1 : 0.9, alpha: 1)
-//            if d.is_deleted {
-//                cell.backgroundColor = UIColor.init(white: 0, alpha: 0.5)
-//            }
-//        }
+        if let d = fetchedResultsController.sections?[indexPath.section].objects?[indexPath.row] as! Food? {
+            cell.name.text = d.name
+            cell.price.text = "\(AppData.CurrencyFormatter(value: d.money))"
+            cell.imgFood.image = UIImage(data: d.image! as Data)
+            cell.controller = self
+            cell.data = d
+            if calledFoods.keys.contains(d) {
+                if calledFoods[d]! > 0 {
+                    cell.btnOrder.titleLabel?.text = "(\(calledFoods[d]!)) +"
+                }
+            }
+        }
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        if !table.isEditing {
-//            pushData(storyboard: "Main", controller: "tableAddEditWindow", data: fetchedResultsController.sections?[indexPath.section].objects?[indexPath.row], identity: 1)
-//        }
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-//        return fetchedResultsController.sections!.count
-        return 0
+        return fetchedResultsController.sections!.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return fetchedResultsController.sections![section].numberOfObjects
-        return 0
+        return fetchedResultsController.sections![section].numberOfObjects
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) ->String? {
-//        return fetchedResultsController.sections![section].name
-        return ""
+        return fetchedResultsController.sections![section].name
     }
     
     // MARK: **** Button ****
@@ -87,14 +121,49 @@ class Table_Call_Food: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     @IBAction func btnOK_Click(_ sender: Any) {
-        
+        func done(_: UIAlertAction){
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            var order: Order
+            if funcAddEdit {
+                order = Database.create()
+                order.date = dateFormatter.string(from: Date())
+                order.is_paid = false
+                order.order_table = curTable
+                order.totalmoney = 0
+            } else {
+                order = curOrder
+            }
+            for each in calledFoods {
+                if each.value > 0 {
+                    let detail: DetailsOrder = Database.create()
+                    detail.detailsorder_food = each.key
+                    detail.detailsorder_order = order
+                    detail.money = each.key.money
+                    detail.number = Double(each.value)
+                    order.totalmoney += detail.money * detail.number
+                }
+            }
+            curTable.is_empty = false
+            //
+            Database.save()
+            //
+            popData(data: nil, identity: 1)
+        }
+        confirm(title: "Nhắc nhỡ", msg: "Bạn có muốn gọi những món này?", btnOKTitle: "Vâng", btnCancelTitle: "Không", handler: done)
     }
     
     @IBAction func btnSearch_Click(_ sender: Any) {
+        let predicate1 = NSPredicate(format: "is_use == %i", 1)
+        let predicate2 = NSPredicate(format: "name CONTAINS[cd] %@", searchBox.text!)
+        let compound = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1, predicate2])
         
+        fetchedResultsController = Database.selectAndGroupBy(groupByColumn: "food_type.nametype", predicater: compound)
+        table.reloadData()
     }
     
     @IBAction func btnSearchAdv_Click(_ sender: Any) {
+        TempData.save((calledFoods, curTable, curOrder, funcAddEdit), forKey: self.title!)
         pushData(storyboard: "Main", controller: "tableCallFoodSearchAdvWindow", data: nil)
     }
     

@@ -6,29 +6,27 @@
 //  Copyright © 2017 Hiroshi.Kazuo. All rights reserved.
 //
 //  Supports:
-//    static var MOC: NSManagedObjectContext
-//    static func save()
-//    static func reset()
-//    static func insert<T: NSManagedObject>(object: T)
-//    static func delete<T: NSManagedObject>(object: T)
-//    static func create<T: NSManagedObject>() -> T
-//    static func create(entityName: String) -> NSManagedObject
-//    static func select<T: NSManagedObject>(predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> [T]
-//    static func select(entityName: String, predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> [NSManagedObject]
-//    static func select<T: NSManagedObject>(limit: Int, predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> [T]
-//    static func select(entityName: String, limit: Int, predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> [NSManagedObject]
-//    static func count(entityName: String, predicater: NSPredicate? = nil) -> Int
-//    static func isExistAndGet<T: NSManagedObject>(predicater: NSPredicate?, getter: inout T?) -> Bool
-//    static func isExistAndGet(entityName: String, predicater: NSPredicate?, getter: inout NSManagedObject?) -> Bool
-//    static func isExist(entityName: String, predicater: NSPredicate?) -> Bool
-//    static func isEmpty(entityName: String) -> Bool
-//    static func clear(entityName: String)
+//    static var MOC
+//    static func create
+//      static func insert
+//      static func delete
+//      static func reset
+//      static func clear
+//    static func save
 //
-//  Version 1.3
+//    static func select
+//    static func count
+//    static func isExistAndGet
+//    static func isExist
+//    static func isEmpty
+//    static func selectAndGroupBy
+//
+//  Version 1.4
 //  Change-log:
 //      - 1.1: Remove func seedData.
 //      - 1.2: Remove module Immediate.
-//      - 1.3: Add isEmpty
+//      - 1.3: Add isEmpty.
+//      - 1.4: Add selectAndGroupBy.
 //
 
 import UIKit
@@ -183,8 +181,18 @@ class Database {
     static func selectAndGroupBy<T: NSManagedObject>(groupByColumn: String, predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> NSFetchedResultsController<T> {
         let entityName = GenericTypeHelper<T>.genericName()
         let fetchRequest: NSFetchRequest<T> = NSFetchRequest(entityName: entityName)
+        
+        var sorters = [NSSortDescriptor]()
+        let defaultSorter = NSSortDescriptor(key: groupByColumn, ascending: true)
+        sorters.append(defaultSorter)
+        if sorter != nil {
+            for each in sorter! {
+                sorters.append(each)
+            }
+        }
+        
         fetchRequest.predicate = predicater
-        fetchRequest.sortDescriptors = sorter
+        fetchRequest.sortDescriptors = sorters
 
         let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: MOC, sectionNameKeyPath: groupByColumn, cacheName: nil)
 
@@ -198,10 +206,20 @@ class Database {
        return aFetchedResultsController
     }
     
-    static func select(entityName: String, groupByColumn: String, predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> NSFetchedResultsController<NSManagedObject> {
+    static func selectAndGroupBy(entityName: String, groupByColumn: String, predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> NSFetchedResultsController<NSManagedObject> {
         let fetchRequest: NSFetchRequest<NSManagedObject> = NSFetchRequest(entityName: entityName)
+        
+        var sorters = [NSSortDescriptor]()
+        let defaultSorter = NSSortDescriptor(key: groupByColumn, ascending: true)
+        sorters.append(defaultSorter)
+        if sorter != nil {
+            for each in sorter! {
+                sorters.append(each)
+            }
+        }
+        
         fetchRequest.predicate = predicater
-        fetchRequest.sortDescriptors = sorter
+        fetchRequest.sortDescriptors = sorters
         
         let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: MOC, sectionNameKeyPath: groupByColumn, cacheName: nil)
 
@@ -218,9 +236,19 @@ class Database {
     static func selectAndGroupBy<T: NSManagedObject>(limit: Int, groupByColumn: String, predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> NSFetchedResultsController<T> {
         let entityName = GenericTypeHelper<T>.genericName()
         let fetchRequest: NSFetchRequest<T> = NSFetchRequest(entityName: entityName)
+        
+        var sorters = [NSSortDescriptor]()
+        let defaultSorter = NSSortDescriptor(key: groupByColumn, ascending: true)
+        sorters.append(defaultSorter)
+        if sorter != nil {
+            for each in sorter! {
+                sorters.append(each)
+            }
+        }
+        
         fetchRequest.fetchLimit = limit
         fetchRequest.predicate = predicater
-        fetchRequest.sortDescriptors = sorter
+        fetchRequest.sortDescriptors = sorters
 
         let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: MOC, sectionNameKeyPath: groupByColumn, cacheName: nil)
 
@@ -234,11 +262,21 @@ class Database {
        return aFetchedResultsController
     }
     
-    static func select(entityName: String, limit: Int, groupByColumn: String, predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> NSFetchedResultsController<NSManagedObject> {
+    static func selectAndGroupBy(entityName: String, limit: Int, groupByColumn: String, predicater: NSPredicate? = nil, sorter: [NSSortDescriptor]? = nil) -> NSFetchedResultsController<NSManagedObject> {
         let fetchRequest: NSFetchRequest<NSManagedObject> = NSFetchRequest(entityName: entityName)
+        
+        var sorters = [NSSortDescriptor]()
+        let defaultSorter = NSSortDescriptor(key: groupByColumn, ascending: true)
+        sorters.append(defaultSorter)
+        if sorter != nil {
+            for each in sorter! {
+                sorters.append(each)
+            }
+        }
+        
         fetchRequest.fetchLimit = limit
         fetchRequest.predicate = predicater
-        fetchRequest.sortDescriptors = sorter
+        fetchRequest.sortDescriptors = sorters
         
         let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: MOC, sectionNameKeyPath: groupByColumn, cacheName: nil)
 

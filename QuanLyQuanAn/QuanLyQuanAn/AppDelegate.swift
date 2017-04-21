@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let cur = def.string(forKey: AppConfigs.CURRENCY_KEY)
         if cur == nil || cur == "$" {
             AppData.AppCurrency = Database.isExistAndGet(predicater: NSPredicate(format: "name == %@", "$"))
-        } else {
+        } else /*if cur == "vnd"*/ {
             AppData.AppCurrency = Database.isExistAndGet(predicater: NSPredicate(format: "name == %@", "vnd"))
         }
     }

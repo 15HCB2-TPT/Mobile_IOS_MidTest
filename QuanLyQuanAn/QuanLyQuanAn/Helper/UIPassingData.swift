@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+fileprivate struct VC_addedProps {
+    static var _oldViewController = [UIViewController: UIViewController]()
+}
+
 extension UIViewController {
     internal func uiPassedData(data: Any?, identity: Int) {
         print("This func need override!")
@@ -19,6 +23,7 @@ extension UIViewController {
     }
     
     func sendData(to: UIViewController, data: Any?, identity: Int = 0, delay: Double = 0.25){
+        VC_addedProps._oldViewController.updateValue(self, forKey: to)
         DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
             to.receiveData(data: data, identity: identity)
         })
@@ -37,14 +42,13 @@ extension UIViewController {
     
     func popData(data: Any?, identity: Int = 0, delay: Double = 0.25) {
         if let navigation = self.navigationController {
-            for controller in navigation.viewControllers {
+            if let old = VC_addedProps._oldViewController[self] {
                 navigation.popViewController(animated: true)
-                self.sendData(to: controller, data: data, identity: identity, delay: delay)
-                break
+                self.sendData(to: old, data: data, identity: identity, delay: delay)
+                return
             }
-        } else {
-            print("Can not pop from \(self).")
         }
+        print("Can not pop from \(self).")
     }
     
     func presentData(storyboard: String, controller: String, data: Any?, identity: Int = 0, delay: Double = 0.25) {

@@ -45,11 +45,12 @@ class SeedData {
     
     private static func seedCurrency(){
         //if Database.isEmpty(entityName: "Currency") {
-            let data = [("vnd", 22000.0), ("$", 1.0)]
+            let data = [("vnd", 22000.0, "vi_VN"), ("$", 1.0, "en_US")]
             for each in data {
                 let d: Currency = Database.create()
                 d.name = each.0
                 d.value = each.1
+                d.countryId = each.2
             }
             Database.save()
         //}

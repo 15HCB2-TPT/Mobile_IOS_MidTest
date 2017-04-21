@@ -87,6 +87,9 @@ class Region_ViewController: UIViewController,UICollectionViewDelegate, UICollec
             let des = segue.destination as! AddNewRegion_ViewController
             des.customdelegate = self
         }
+        if segue.identifier == "test"{
+            print("hello")
+        }
     }
     
 

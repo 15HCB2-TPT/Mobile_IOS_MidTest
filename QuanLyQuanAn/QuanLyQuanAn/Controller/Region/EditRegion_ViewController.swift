@@ -11,6 +11,7 @@ import UIKit
 
 class EditRegion_ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     
+    @IBOutlet weak var btn_trash: UIBarButtonItem!
     @IBOutlet weak var switch_isuse: UISwitch!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var txt_nameregion: UITextField!
@@ -67,19 +68,19 @@ class EditRegion_ViewController: UIViewController, UINavigationControllerDelegat
         moveRegion()
     }
 
-    @IBAction func btnTrashClicked(_ sender: Any) {
-        let refreshAlert = UIAlertController(title: "Xoá", message: "Chắc chắn xoá?", preferredStyle: UIAlertControllerStyle.alert)
-        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-            Database.delete(object: self.rg[self.index])
-            Database.save()
-            self.moveRegion()
-        }))
-        
-        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-            
-        }))
-        present(refreshAlert, animated: true, completion: nil)
-    }
+//    @IBAction func btnTrashClicked(_ sender: Any) {
+//        let refreshAlert = UIAlertController(title: "Xoá", message: "Chắc chắn xoá?", preferredStyle: UIAlertControllerStyle.alert)
+//        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+//            Database.delete(object: self.rg[self.index])
+//            Database.save()
+//            self.moveRegion()
+//        }))
+//        
+//        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+//            
+//        }))
+//        present(refreshAlert, animated: true, completion: nil)
+//    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         self.dismiss(animated: true, completion: { () -> Void in

@@ -12,13 +12,34 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
 
 
     @IBOutlet var table_reporttype: UITableView!
+    var sections = Database.select(entityName: "FoodType") as! [FoodType]
     var rl = [ReportItem]()
+    var temp=[[ReportItem]]()
     var delegate:ReportDelegate?
     var is_doanhthu:Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        processSections()
     }
+    
+    func processSections(){
+        for i in 0 ... sections.count - 1{
+            temp.append([ReportItem]())
+            for each in rl {
+                if  each.foodtype == sections[i]{
+                    temp[i].append(each)
+                }
+            }
+        }
+        var test = [[ReportItem]]()
+        for i in 0 ... temp.count - 1 {
+            if temp[i].count > 0 {
+                test.append(temp[i])
+            }
+        }
+        temp = test
+    }	
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,12 +53,12 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return temp.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return rl.count
+        return temp[section].count
     }
 
     
@@ -54,40 +75,9 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let storyboard = UIStoryboard(name: "Main",bundle: nil )
-//        let newcontroller = storyboard.instantiateViewController(withIdentifier: "navi_detailreport") as! UINavigationController
-//        let detailreport = newcontroller.topViewController as! ReportItem_TableViewController
-//        detailreport.reportitem = rl[indexPath.row]
-//        present(newcontroller, animated: true)
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) ->String? {
+        return temp[section][0].foodtype.nametype!
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
 
     /*
     // Override to support conditional rearranging of the table view.

@@ -13,6 +13,7 @@ class ReportItem {
     var number:Int32 = 0
     var money:Double = 0.0
     var date:Date = Date()
+    var foodtype = FoodType()
     func getMoney()->Double{
         return money * Double(number)
     }

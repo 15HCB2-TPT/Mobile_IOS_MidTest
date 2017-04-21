@@ -93,6 +93,7 @@ class ReportFilter_ViewController: UIViewController, ReportDelegate {
                 report.name = listfood[i].name!
                 report.number = 0
                 report.money = 0
+                report.foodtype = listfood[i].food_type!
                 for details in listdetail {
                     //trong khoảng x - y
                     if report_day.isHidden {
@@ -129,6 +130,7 @@ class ReportFilter_ViewController: UIViewController, ReportDelegate {
                 report.name = listfood[i].name!
                 report.number = 0
                 report.money = listfood[i].money
+                report.foodtype = listfood[i].food_type!
                 for details in listdetail {
                     //trong khoảng x-y
                     if report_day.isHidden {

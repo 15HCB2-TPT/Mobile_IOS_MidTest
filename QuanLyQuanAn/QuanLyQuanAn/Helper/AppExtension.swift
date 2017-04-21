@@ -51,3 +51,28 @@ extension AppDelegate {
         appDelegate.window?.rootViewController = storyboard.instantiateInitialViewController()
     }
 }
+
+extension String {
+    var doubleValue: Double {
+        let nf = NumberFormatter()
+        nf.decimalSeparator = "."
+        if let result = nf.number(from: self) {
+            return result.doubleValue
+        } else {
+            nf.decimalSeparator = ","
+            if let result = nf.number(from: self) {
+                return result.doubleValue
+            }
+        }
+        return 0
+    }
+    
+    //load change language
+    func localized(lang:String)->String{
+        let path = Bundle.main.path(forResource: lang, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+    }
+}
+
+

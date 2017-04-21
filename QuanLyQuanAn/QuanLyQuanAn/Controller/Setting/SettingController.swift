@@ -36,14 +36,19 @@ class SettingController: UIViewController {
     @IBAction func vietSwitch(_ sender: Any) {
         switchEnglish.isOn = !switchVietnamese.isOn
         changeLan(lanID: switchVietnamese.isOn ? 0 : 1)
+        switchEnglish.isOn = false
+        _ = "".localized(lang: "vi")
     }
     
     @IBAction func engSwitch(_ sender: Any) {
         //switchVietnamese.isOn = !switchEnglish.isOn
         //changeLan(lanID: switchEnglish.isOn ? 1 : 0)
         if switchEnglish.isOn {
-            alert(title: "Thông báo", msg: "Ngôn ngữ chưa sẵn sáng!", btnTitle: "Đã biết")
-            switchEnglish.isOn = false
+            //alert(title: "Thông báo", msg: "Ngôn ngữ chưa sẵn sáng!", btnTitle: "Đã biết")
+            //switchEnglish.isOn = false
+            _ = "".localized(lang: "en")
+            switchVietnamese.isOn=false
+            //var temp:UserDefaults =
         }
     }
     

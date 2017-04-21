@@ -131,6 +131,11 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         return cell
     }
+    
+    override func uiPassedData(data: Any?, identity: Int) {
+        foods = Database.select(entityName: "Food", predicater: nil, sorter: [NSSortDescriptor(key: "name", ascending: true)]) as! [Food]
+        tblMonAn.reloadData()
+    }
  
     
     /*

@@ -49,21 +49,3 @@ extension AppDelegate {
         appDelegate.window?.rootViewController = storyboard.instantiateInitialViewController()
     }
 }
-
-extension String {
-    var doubleValue: Double {
-        let nf = NumberFormatter()
-        nf.decimalSeparator = "."
-        if let result = nf.number(from: self) {
-            return result.doubleValue
-        } else {
-            nf.decimalSeparator = ","
-            if let result = nf.number(from: self) {
-                return result.doubleValue
-            }
-        }
-        return 0
-    }
-}
-
-

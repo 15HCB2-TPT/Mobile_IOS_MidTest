@@ -58,6 +58,7 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         heightTimNangCao.constant = 0
         txtTen.inputAccessoryView = addDoneButton()
         txtTu.inputAccessoryView = addDoneButton()
@@ -130,6 +131,11 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.lblGia.text = "\(foods[indexPath.row].money)" + " - Ngừng kinh doanh"
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        pushData(storyboard: "Main", controller: "EditFood",  data: foods[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func uiPassedData(data: Any?, identity: Int) {

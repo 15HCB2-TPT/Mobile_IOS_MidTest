@@ -1,14 +1,14 @@
 //
-//  AddFood_ViewController.swift
+//  EditFood_ViewController.swift
 //  QuanLyQuanAn
 //
-//  Created by Phạm Tú on 4/12/17.
+//  Created by Phạm Tú on 4/22/17.
 //  Copyright © 2017 Shin-MacDesk. All rights reserved.
 //
 
 import UIKit
 
-class AddFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class EditFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var btnSave: UIBarButtonItem!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var image: UIImageView!
@@ -18,11 +18,12 @@ class AddFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigati
     @IBOutlet weak var txtPrice: UITextField!
     @IBOutlet weak var swtSuDung: UISwitch!
     
+    var food: Food!
     var foodTypes = Database.select(entityName: "FoodType", predicater: nil, sorter: [NSSortDescriptor(key: "nametype", ascending: true)]) as! [FoodType]
     
     var pckLoaiMonAn: UIPickerView!
-    var tempString: String! = ""
-    var tempRow: Int! = 0
+    var tempString: String!
+    var tempRow: Int!
     
     var imagePicker = UIImagePickerController()
     
@@ -32,17 +33,36 @@ class AddFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigati
         txtNameFood.inputAccessoryView = addDoneButton()
         txtPrice.inputAccessoryView = addDoneButton()
         
-        tempString = foodTypes[0].nametype
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.size.width, height: 44.0))
         toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
-        let btnHuy = UIBarButtonItem(title: "Huỷ", style: .plain, target: self, action: #selector(AddFood_ViewController.btnHuy_Touch))
-        let btnChon = UIBarButtonItem(title: "Chọn", style: .plain, target: self, action: #selector(AddFood_ViewController.btnChon_Touch))
+        let btnHuy = UIBarButtonItem(title: "Huỷ", style: .plain, target: self, action: #selector(EditFood_ViewController.btnHuy_Touch))
+        let btnChon = UIBarButtonItem(title: "Chọn", style: .plain, target: self, action: #selector(EditFood_ViewController.btnChon_Touch))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
         toolBar.setItems([btnHuy,flexSpace,flexSpace,btnChon], animated: true)
         txtStyleFood.inputAccessoryView = toolBar
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func uiPassedData(data: Any?, identity: Int) {
+        food = data as! Food
+        if(food != nil) {
+            image.image = UIImage(data: food.image! as Data)
+            txtNameFood.text = food.name
+            txtStyleFood.text = food.food_type?.nametype
+            tempString = txtStyleFood.text
+            tempRow = foodTypes.index(of: food.food_type!)
+            txtPrice.text = "\(food.money)"
+            swtSuDung.setOn(food.is_use, animated: true)
+        }
     }
     
     func keyboardWillShow(_ notification: Notification) {
@@ -59,15 +79,12 @@ class AddFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigati
         scrollView.contentInset = contentInset
         scrollView.scrollIndicatorInsets = contentInset
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func txtStyleFood_EditingDidBegin(_ sender: Any) {
         pckLoaiMonAn = UIPickerView()
         pckLoaiMonAn.delegate = self
+        
+        
         pckLoaiMonAn.selectRow(tempRow, inComponent: 0, animated: true)
         txtStyleFood.inputView = pckLoaiMonAn
     }
@@ -111,7 +128,7 @@ class AddFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigati
     }
     
     func checkName(name: String) -> Bool {
-        if(Database.select(entityName: "Food", predicater: NSPredicate(format: "name == %@", txtNameFood.text!), sorter: nil) as! [Food]).count > 0 {
+        if(Database.select(entityName: "Food", predicater: NSPredicate(format: "name == %@", txtNameFood.text!), sorter: nil) as! [Food]).count != 1 {
             return false
         }
         return true
@@ -125,7 +142,6 @@ class AddFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigati
                 present(refreshAlert, animated: true, completion: nil)
             }
             else{
-                let food: Food = Database.create()
                 food.image = self.image.image?.pngRepresentationData
                 food.name = txtNameFood.text
                 food.food_type = foodTypes[tempRow]
@@ -141,4 +157,16 @@ class AddFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigati
             present(refreshAlert, animated: true, completion: nil)
         }
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }

@@ -42,6 +42,7 @@
 		ADCAB59A1EAA763F00C44EA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCAB59C1EAA763F00C44EA0 /* Main.storyboard */; };
 		F0266DE41EA4ADE900341345 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0266DE31EA4ADE900341345 /* AppExtension.swift */; };
 		F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0590F041EA53371006057D6 /* Food_TableViewCell.swift */; };
+		F07E765E1EAB553400C0797B /* EditFood_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07E765D1EAB553400C0797B /* EditFood_ViewController.swift */; };
 		F0B3ABCF1EA8009700FFFA79 /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */; };
 		F0BFEBBC1E9DA5400086A766 /* AddFood_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		ADCAB59F1EAA767F00C44EA0 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		F0266DE31EA4ADE900341345 /* AppExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
 		F0590F041EA53371006057D6 /* Food_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_TableViewCell.swift; sourceTree = "<group>"; };
+		F07E765D1EAB553400C0797B /* EditFood_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFood_ViewController.swift; sourceTree = "<group>"; };
 		F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
 		F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFood_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +216,7 @@
 				F0BFEBBB1E9DA5400086A766 /* AddFood_ViewController.swift */,
 				F0590F041EA53371006057D6 /* Food_TableViewCell.swift */,
 				F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */,
+				F07E765D1EAB553400C0797B /* EditFood_ViewController.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07E765E1EAB553400C0797B /* EditFood_ViewController.swift in Sources */,
 				633F349D1EA4E648004C648B /* ReportFilter_ViewController.swift in Sources */,
 				AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */,
 				63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */,

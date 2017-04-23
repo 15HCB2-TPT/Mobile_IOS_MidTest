@@ -118,22 +118,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuanLyQuanAn/Controller/Food/Food_ViewController.swift"
-            timestampString = "513396674.216084"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "btnTim_TouchUpInside(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "QuanLyQuanAn/Controller/Region/Region_ViewController.swift"
             timestampString = "514410391.734847"
             startingColumnNumber = "9223372036854775807"

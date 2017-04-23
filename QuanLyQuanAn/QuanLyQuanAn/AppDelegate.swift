@@ -25,24 +25,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func loadLanguage(){
-
-        print(L102Language.currentAppleLanguage())
-        let language = L102Language.currentAppleLanguage()
-        let path = Bundle.main.path(forResource: language, ofType: "lproj")
-        let bundle = Bundle(path: path!)
-        _ = bundle?.localizedString(forKey: "AppleLanguages", value: language, table: nil)
-        
-        if L102Language.currentAppleLanguage()=="vi" {
-            L102Language.setAppleLAnguageTo(lang: "vi")
+        if L102Language.currentAppleLanguage() == "vi" || L102Language.currentAppleLanguage() == "en" {
+            let language = L102Language.currentAppleLanguage()
+            let path = Bundle.main.path(forResource: language, ofType: "lproj")
+            let bundle = Bundle(path: path!)
+            _ = bundle?.localizedString(forKey: "AppleLanguages", value: language, table: nil)
+            
+            if L102Language.currentAppleLanguage()=="vi" {
+                L102Language.setAppleLAnguageTo(lang: "vi")
+            }
+            else{
+                L102Language.setAppleLAnguageTo(lang: "en")
+            }
         }
         else{
-            L102Language.setAppleLAnguageTo(lang: "en")
+            L102Language.setAppleLAnguageTo(lang: "vi")
+            let language = L102Language.currentAppleLanguage()
+            let path = Bundle.main.path(forResource: language, ofType: "lproj")
+            let bundle = Bundle(path: path!)
+            _ = bundle?.localizedString(forKey: "AppleLanguages", value: language, table: nil)
         }
+        
+        
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         loadCurrency()
+//        let def = UserDefaults.standard
+//        def.removeObject(forKey: AppConfigs.LANGUAGE_KEY)
         loadLanguage()
         return true
     }

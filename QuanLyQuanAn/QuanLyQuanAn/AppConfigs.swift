@@ -7,6 +7,6 @@
 //
 
 struct AppConfigs {
-    static let LANGUAGE_KEY = "lanKey"
+    static let LANGUAGE_KEY = "AppleLanguages"
     static let CURRENCY_KEY = "curKey"
 }

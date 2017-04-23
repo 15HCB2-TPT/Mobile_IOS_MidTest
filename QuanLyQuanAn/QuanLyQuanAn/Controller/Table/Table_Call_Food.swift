@@ -28,6 +28,8 @@ class Table_Call_Food: UIViewController, UITableViewDataSource, UITableViewDeleg
     // MARK: ****
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBox.frame = CGRect(x: 0, y: 0, width: 256, height: searchBox.frame.size.height)
+        searchBox.autoresizingMask = UIViewAutoresizing()
         loadTableView()
         searchBox.inputAccessoryView = addDoneButton()
     }

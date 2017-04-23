@@ -22,6 +22,7 @@
 		14C16D1D1EA8D46C0071662E /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C16D1B1EA8D46C0071662E /* AppData.swift */; };
 		14DA7F211EA71D3D009755AF /* RandomSwift3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA7F201EA71D3D009755AF /* RandomSwift3.swift */; };
 		14E7AE471EA7D4B400E258E4 /* Table_Pay_Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E7AE461EA7D4B400E258E4 /* Table_Pay_Food.swift */; };
+		630C97FE1EABAB3E004179F7 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C97FD1EABAB3E004179F7 /* Language.swift */; };
 		6318AAB71E960ED900E0211C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318AAB61E960ED900E0211C /* AppDelegate.swift */; };
 		6318AAC11E960ED900E0211C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAC01E960ED900E0211C /* Assets.xcassets */; };
 		6318AAD41E960F4500E0211C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6318AAD21E960F4500E0211C /* LaunchScreen.storyboard */; };
@@ -62,6 +63,8 @@
 		14C16D1B1EA8D46C0071662E /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		14DA7F201EA71D3D009755AF /* RandomSwift3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomSwift3.swift; sourceTree = "<group>"; };
 		14E7AE461EA7D4B400E258E4 /* Table_Pay_Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_Pay_Food.swift; sourceTree = "<group>"; };
+		630C97FD1EABAB3E004179F7 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		630C98001EABC64F004179F7 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		6318AAB31E960ED900E0211C /* QuanLyQuanAn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuanLyQuanAn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6318AAB61E960ED900E0211C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6318AAC01E960ED900E0211C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		633F34981EA4E648004C648B /* ReportFilter_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportFilter_ViewController.swift; sourceTree = "<group>"; };
 		635229F91E9E848300468B53 /* AddNewRegion_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewRegion_ViewController.swift; sourceTree = "<group>"; };
 		635229FB1E9E84B600468B53 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
+		638B6E2A1EAC7B4B00F81D80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		63A07DEB1E9D2F6300459A3B /* QuanLyQuanAn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuanLyQuanAn.xcdatamodel; sourceTree = "<group>"; };
 		63BA45241E9D3C5C00EE27DC /* QuanLyQuanAn 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "QuanLyQuanAn 2.xcdatamodel"; sourceTree = "<group>"; };
 		63BA452E1E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustom_CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -83,8 +87,6 @@
 		AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTypeHelper.swift; sourceTree = "<group>"; };
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
 		ADCAB59B1EAA763F00C44EA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ADCAB59E1EAA764C00C44EA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		ADCAB59F1EAA767F00C44EA0 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		F0266DE31EA4ADE900341345 /* AppExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
 		F0590F041EA53371006057D6 /* Food_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_TableViewCell.swift; sourceTree = "<group>"; };
 		F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				AD553DDC1E977E68009A51CB /* UIPassingData.swift */,
 				F0266DE31EA4ADE900341345 /* AppExtension.swift */,
 				149111041EAA71DB008E2039 /* TempData.swift */,
+				630C97FD1EABAB3E004179F7 /* Language.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -292,7 +295,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 6318AAAA1E960ED900E0211C;
@@ -354,6 +356,7 @@
 				14072D211EA48FD900FFC8B0 /* Table_Add_Edit.swift in Sources */,
 				146E03E21EA529B5007A06AF /* Table_Call_Food.swift in Sources */,
 				63BA45331E9D3DDE00EE27DC /* EditRegion_ViewController.swift in Sources */,
+				630C97FE1EABAB3E004179F7 /* Language.swift in Sources */,
 				63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */,
 				F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */,
 				149AC7F71EA90505008D9477 /* Table_Pay_Cell.swift in Sources */,
@@ -367,8 +370,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				ADCAB59B1EAA763F00C44EA0 /* Base */,
-				ADCAB59E1EAA764C00C44EA0 /* en */,
-				ADCAB59F1EAA767F00C44EA0 /* vi */,
+				630C98001EABC64F004179F7 /* vi */,
+				638B6E2A1EAC7B4B00F81D80 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

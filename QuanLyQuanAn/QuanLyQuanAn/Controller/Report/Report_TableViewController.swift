@@ -66,8 +66,9 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "custom_reporttype", for: indexPath) as! Report_TableViewCell
         cell.name.text = temp[indexPath.section][indexPath.row].name
         if is_doanhthu {
-            cell.number.text = String(temp[indexPath.section][indexPath.row].money * (AppData.AppCurrency?.value)!)
-            cell.unit.text = AppData.AppCurrency?.name
+            cell.number.text = AppData.CurrencyFormatter(value: temp[indexPath.section][indexPath.row].money)
+                //String(temp[indexPath.section][indexPath.row].money * (AppData.AppCurrency?.value)!)
+            //cell.unit.text = AppData.AppCurrency?.name
         }else {
             cell.number.text = String(temp[indexPath.section][indexPath.row].number)
             cell.unit.text = "phần"

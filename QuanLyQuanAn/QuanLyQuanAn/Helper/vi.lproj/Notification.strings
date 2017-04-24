@@ -1,0 +1,52 @@
+/* 
+  Notification.strings
+  QuanLyQuanAn
+
+  Created by Shin-Mac on 4/24/17.
+  Copyright © 2017 Shin-MacDesk. All rights reserved.
+*/
+
+"ConfirmSeedData" = "Dữ liệu sẽ reset lại tất cả! Bạn có chắc muốn tiếp tục?";
+
+"Next" = "Tiếp";
+
+"Stop" = "Dừng";
+
+"Unit" = "Phần";
+
+"Alert" = "Nhắc nhở";
+
+"AddComplete" = "Đã thêm thành công";
+
+"UpdateComplete" = "Đã cập nhật thành công";
+
+"Understand" = "Hiểu";
+
+"Notice" = "Thông báo";
+
+"AddOrderComplete" = "Đã lập hóa đơn thành công";
+
+"PayBillComplete" = "Đã thanh toán thành công hóa đơn cho bàn";
+
+"IDTable" = "Mã:";
+
+"Slots" = "Số chỗ:";
+
+"Can't order this food for this table" = "Không thể gọi món cho bàn này";
+
+"Do you want order these food?" = "Bạn có muốn gọi những món này";
+
+"Do you want pay the bill for table ";
+
+"Yes" = "Đồng ý";
+
+"No" = "Không";
+
+"Error" = "Lỗi";
+
+"Food Name was existed!" = "Tên món ăn đã tồn tại";
+
+"Please insert more info" = "Vui lòng nhập đầy đủ thông tin";
+
+
+

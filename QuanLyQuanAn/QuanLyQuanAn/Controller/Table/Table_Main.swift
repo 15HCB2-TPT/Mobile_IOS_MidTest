@@ -32,7 +32,7 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func uiPassedData(data: Any?, identity: Int){
         loadTableView(segmentIndex: segment.selectedSegmentIndex)
         if identity == 1 {
-            alert(title: "Thông báo", msg: "Đã lập gọi món thành công!", btnTitle: "Đã biết")
+            alert(title: "Thông báo", msg: "Đã lập hóa đơn thành công!", btnTitle: "Đã biết")
         } else if identity == 2 {
             if let t = data as! Order? {
                 alert(title: "Thông báo", msg: "Đã thanh toán thành công hoá đơn cho bàn (\((t.order_table?.name!)!))", btnTitle: "Đã biết")

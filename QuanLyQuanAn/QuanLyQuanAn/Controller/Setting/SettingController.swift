@@ -44,41 +44,26 @@ class SettingController: UIViewController {
     @IBAction func vietSwitch(_ sender: Any) {
         switchEnglish.isOn = !switchVietnamese.isOn
         changeLan(lanID: switchVietnamese.isOn ? 0 : 1)
-        //switchEnglish.isOn = false
     }
     
     @IBAction func engSwitch(_ sender: Any) {
         switchVietnamese.isOn = !switchEnglish.isOn
         changeLan(lanID: switchEnglish.isOn ? 1 : 0)
-        if switchEnglish.isOn {
-            //alert(title: "Thông báo", msg: "Ngôn ngữ chưa sẵn sáng!", btnTitle: "Đã biết")
-            //switchEnglish.isOn = false
-            switchVietnamese.isOn=false
-            //var temp:UserDefaults =
-        }
     }
     
     func changeLan(lanID: Int) {
         if lanID == 0 {
-            let refreshAlert = UIAlertController(title: "Thong bao", message: "Doi ngon ngu?", preferredStyle: UIAlertControllerStyle.alert)
-            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            func done(_: UIAlertAction){
                 L102Language.setAppleLAnguageTo(lang: "vi")
-            }))
-    
-            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-    
-            }))
-            present(refreshAlert, animated: true, completion: nil)
+                alert(title: "Notice", msg: "Changing Language Completed!. Please restart application!", btnTitle: "Ok")
+            }
+            confirm(title: "Notice", msg: "Are you sure change language this app?", btnOKTitle: "Yes", btnCancelTitle: "No", handler: done)
         } else {
-            let refreshAlert = UIAlertController(title: "Thong bao", message: "Doi ngon ngu?", preferredStyle: UIAlertControllerStyle.alert)
-            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            func done(_: UIAlertAction){
                 L102Language.setAppleLAnguageTo(lang: "en")
-            }))
-            
-            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-                
-            }))
-            present(refreshAlert, animated: true, completion: nil)
+                alert(title: "Thông báo", msg: "Đổi ngôn ngữ thành công. Xin hãy khởi động lại ứng dụng!", btnTitle: "Đã biết")
+            }
+            confirm(title: "Thông báo", msg: "Bạn có muốn thay đổi ngôn ngữ?", btnOKTitle: "Vâng", btnCancelTitle: "Không", handler: done)
         }
     }
     
@@ -116,13 +101,13 @@ class SettingController: UIViewController {
     
     // MARK: **** Seed Data to Test ****
     @IBAction func btnSeedData2Test_Click(_ sender: Any) {
-        func conformOK(act: UIAlertAction) {
+        func confirmOK(act: UIAlertAction) {
             SeedData.seedData()
             AppDelegate.restart()
             loadLan()
             loadCur()
         }
-        confirm(title: "Xác nhận", msg: "Dữ liệu sẽ reset lại tất cả! Bạn có chắc muốn tiếp tục?", btnOKTitle: "Tiếp", btnCancelTitle: "Dừng", handler: conformOK)
+        confirm(title: "Xác nhận", msg: "Dữ liệu sẽ reset lại tất cả! Bạn có chắc muốn tiếp tục?", btnOKTitle: "Tiếp", btnCancelTitle: "Dừng", handler: confirmOK)
     }
     
 }

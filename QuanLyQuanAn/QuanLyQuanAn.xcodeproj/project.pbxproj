@@ -40,6 +40,7 @@
 		AD553DDD1E977E68009A51CB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDA1E977E68009A51CB /* Database.swift */; };
 		AD553DDE1E977E68009A51CB /* GenericTypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */; };
 		AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD553DDC1E977E68009A51CB /* UIPassingData.swift */; };
+		ADC3B9D61EADBDB500C2AC24 /* Notification.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADC3B9D81EADBDB500C2AC24 /* Notification.strings */; };
 		ADCAB59A1EAA763F00C44EA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCAB59C1EAA763F00C44EA0 /* Main.storyboard */; };
 		F0266DE41EA4ADE900341345 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0266DE31EA4ADE900341345 /* AppExtension.swift */; };
 		F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0590F041EA53371006057D6 /* Food_TableViewCell.swift */; };
@@ -87,6 +88,8 @@
 		AD553DDA1E977E68009A51CB /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		AD553DDB1E977E68009A51CB /* GenericTypeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTypeHelper.swift; sourceTree = "<group>"; };
 		AD553DDC1E977E68009A51CB /* UIPassingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPassingData.swift; sourceTree = "<group>"; };
+		ADC3B9D71EADBDB500C2AC24 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Notification.strings; sourceTree = "<group>"; };
+		ADC3B9D91EADBDB900C2AC24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Notification.strings; sourceTree = "<group>"; };
 		ADCAB59B1EAA763F00C44EA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0266DE31EA4ADE900341345 /* AppExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
 		F0590F041EA53371006057D6 /* Food_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_TableViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 				F0266DE31EA4ADE900341345 /* AppExtension.swift */,
 				149111041EAA71DB008E2039 /* TempData.swift */,
 				630C97FD1EABAB3E004179F7 /* Language.swift */,
+				ADC3B9D81EADBDB500C2AC24 /* Notification.strings */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -299,6 +303,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				en,
 			);
 			mainGroup = 6318AAAA1E960ED900E0211C;
 			productRefGroup = 6318AAB41E960ED900E0211C /* Products */;
@@ -318,6 +323,7 @@
 				ADCAB59A1EAA763F00C44EA0 /* Main.storyboard in Resources */,
 				6318AAD41E960F4500E0211C /* LaunchScreen.storyboard in Resources */,
 				6318AAC11E960ED900E0211C /* Assets.xcassets in Resources */,
+				ADC3B9D61EADBDB500C2AC24 /* Notification.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +376,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		ADC3B9D81EADBDB500C2AC24 /* Notification.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADC3B9D71EADBDB500C2AC24 /* vi */,
+				ADC3B9D91EADBDB900C2AC24 /* en */,
+			);
+			name = Notification.strings;
+			sourceTree = "<group>";
+		};
 		ADCAB59C1EAA763F00C44EA0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

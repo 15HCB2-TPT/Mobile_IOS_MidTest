@@ -107,7 +107,7 @@ class SettingController: UIViewController {
             }
             AppDelegate.restart()
         }
-        confirm(title: "Xác nhận", msg: "Dữ liệu sẽ reset lại tất cả! Bạn có chắc muốn tiếp tục?", btnOKTitle: "Tiếp", btnCancelTitle: "Dừng", handler: confirmOK)
+        confirm(title: "Xác nhận".localized(lang: L102Language.currentAppleLanguage()), msg: "ConfirmSeedData".localized(lang: L102Language.currentAppleLanguage()), btnOKTitle: "Tiếp".localized(lang: L102Language.currentAppleLanguage()), btnCancelTitle: "Stop".localized(lang: L102Language.currentAppleLanguage()), handler: confirmOK)
     }
     
 }

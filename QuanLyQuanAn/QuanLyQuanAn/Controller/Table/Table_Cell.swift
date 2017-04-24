@@ -29,7 +29,7 @@ class Table_Cell: UITableViewCell{
     
     @IBAction func btnCall_Click(_ sender: Any) {
         if data.is_deleted {
-            controller.alert(title: "Thông báo", msg: "Không thể gọi món cho bàn này!", btnTitle: "Tiếp tục")
+            controller.alert(title: "Alert".localized(lang: L102Language.currentAppleLanguage()), msg: "Can't order this food for this table".localized(lang: L102Language.currentAppleLanguage()), btnTitle: "Next".localized(lang: L102Language.currentAppleLanguage()))
             return
         }
         if data.is_empty {

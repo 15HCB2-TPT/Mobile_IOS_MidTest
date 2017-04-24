@@ -67,8 +67,8 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tempString = foodType.first?.nametype
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.size.width, height: 40.0))
         toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
-        let btnHuy = UIBarButtonItem(title: "Huỷ", style: .plain, target: self, action: #selector(Food_ViewController.btnHuy_Touch))
-        let btnChon = UIBarButtonItem(title: "Chọn", style: .plain, target: self, action: #selector(Food_ViewController.btnChon_Touch))
+        let btnHuy = UIBarButtonItem(title: "Cancel".localized(lang: L102Language.currentAppleLanguage()), style: .plain, target: self, action: #selector(Food_ViewController.btnHuy_Touch))
+        let btnChon = UIBarButtonItem(title: "Choose".localized(lang: L102Language.currentAppleLanguage()), style: .plain, target: self, action: #selector(Food_ViewController.btnChon_Touch))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
         toolBar.setItems([btnHuy,flexSpace,flexSpace,btnChon], animated: true)
         txtLoaiMonAn.inputAccessoryView = toolBar

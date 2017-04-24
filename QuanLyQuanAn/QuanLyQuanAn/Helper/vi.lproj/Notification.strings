@@ -2,13 +2,14 @@
   Notification.strings
   QuanLyQuanAn
 
-  Created by Shin-Mac on 4/24/17.
+  Created by Shin-MacDesk on 4/24/17.
   Copyright © 2017 Shin-MacDesk. All rights reserved.
 */
-
 "ConfirmSeedData" = "Dữ liệu sẽ reset lại tất cả! Bạn có chắc muốn tiếp tục?";
 
 "Next" = "Tiếp";
+
+"Choose" = "Chọn";
 
 "Stop" = "Dừng";
 
@@ -34,9 +35,9 @@
 
 "Can't order this food for this table" = "Không thể gọi món cho bàn này";
 
-"Do you want order these food?" = "Bạn có muốn gọi những món này";
+"Do you want order these food?" = "Bạn có muốn gọi những món này?";
 
-"Do you want pay the bill for table ";
+"Do you want pay the bill for table" = "Bạn muốn thanh toán hóa đơn cho bàn";
 
 "Yes" = "Đồng ý";
 
@@ -48,5 +49,20 @@
 
 "Please insert more info" = "Vui lòng nhập đầy đủ thông tin";
 
+"Confirm" = "Xác nhận";
 
+"TableNameIsExisted"= "Tên bàn đã tồn tại";
 
+"Cancel" = "Hủy";
+
+"OK" = "Đồng ý";
+
+"Do you want order more food?" = "Bạn có muốn gọi thêm món cho bàn này?";
+
+"Total Money" = "Tổng tiền";
+
+"Table:" = "Bàn:";
+
+"Done" = "Xong";
+
+"Date:" = "Ngày:";

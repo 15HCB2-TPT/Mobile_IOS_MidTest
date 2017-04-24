@@ -71,7 +71,7 @@ class Report_TableViewController: UITableViewController,UINavigationControllerDe
             //cell.unit.text = AppData.AppCurrency?.name
         }else {
             cell.number.text = String(temp[indexPath.section][indexPath.row].number)
-            cell.unit.text = "phần"
+            cell.unit.text = "Unit".localized(lang: L102Language.currentAppleLanguage())
         }
         return cell
     }

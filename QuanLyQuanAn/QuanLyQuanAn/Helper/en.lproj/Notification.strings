@@ -1,7 +1,68 @@
-/* 
-  Notification.strings
-  QuanLyQuanAn
+/*
+ Notification.strings
+ QuanLyQuanAn
+ 
+ Created by Shin-Mac on 4/24/17.
+ Copyright © 2017 Shin-MacDesk. All rights reserved.
+ */
+"ConfirmSeedData" = "Confirm Seed Data";
 
-  Created by Shin-Mac on 4/24/17.
-  Copyright © 2017 Shin-MacDesk. All rights reserved.
-*/
+"Next" = "Next";
+
+"Choose" = "Choose";
+
+"Stop" = "Stop";
+
+"Unit" = "Unit";
+
+"Alert" = "Alert";
+
+"AddComplete" = "Add Complete";
+
+"UpdateComplete" = "Update Complete";
+
+"Understand" = "Understand";
+
+"Notice" = "Notice";
+
+"AddOrderComplete" = "Add Order Complete";
+
+"PayBillComplete" = "Pay Bill Complete";
+
+"IDTable" = "ID:";
+
+"Slots" = "Slots:";
+
+"Can't order this food for this table" = "Can't order this food for this table";
+
+"Do you want order these food?" = "Do you want order these food?";
+
+"Do you want pay the bill for table"= "Do you want pay the bill for table";
+
+"Yes" = "Yes";
+
+"No" = "No";
+
+"Error" = "Error";
+
+"Food Name was existed!" = "Food Name was existed!";
+
+"Please insert more info" = "Please insert more info";
+
+"Confirm" = "Confirm";
+
+"TableNameIsExisted"= "Table Name Is Existed";
+
+"Cancel" = "Cancel";
+
+"OK" = "OK";
+
+"Do you want order more food?" = "Do you want order more food?";
+
+"Total Money" = "Total Money";
+
+"Table:" = "Table:";
+
+"Done" = "Done";
+
+"Date:" = "Date:";

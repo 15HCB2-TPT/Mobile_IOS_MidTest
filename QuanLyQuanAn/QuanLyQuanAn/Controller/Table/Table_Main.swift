@@ -31,10 +31,10 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func uiPassedData(data: Any?, identity: Int){
         //loadTableView(segmentIndex: segment.selectedSegmentIndex)
         if identity == 1 {
-            alert(title: "Thông báo", msg: "Đã lập hóa đơn thành công!", btnTitle: "Đã biết")
+            alert(title: "Alert".localized(lang: L102Language.currentAppleLanguage()), msg: "AddOrderComplete".localized(lang: L102Language.currentAppleLanguage()), btnTitle: "Understand".localized(lang: L102Language.currentAppleLanguage()))
         } else if identity == 2 {
             if let t = data as! Order? {
-                alert(title: "Thông báo", msg: "Đã thanh toán thành công hoá đơn cho bàn (\((t.order_table?.name!)!))", btnTitle: "Đã biết")
+                alert(title: "Alert".localized(lang: L102Language.currentAppleLanguage()), msg: "PayBillComplete".localized(lang: L102Language.currentAppleLanguage())+" (\((t.order_table?.name!)!))", btnTitle: "Understand".localized(lang: L102Language.currentAppleLanguage()))
             }
         }
     }

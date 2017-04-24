@@ -30,13 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let path = Bundle.main.path(forResource: language, ofType: "lproj")
             let bundle = Bundle(path: path!)
             _ = bundle?.localizedString(forKey: "AppleLanguages", value: language, table: nil)
-            
-            if L102Language.currentAppleLanguage()=="vi" {
-                L102Language.setAppleLAnguageTo(lang: "vi")
-            }
-            else{
-                L102Language.setAppleLAnguageTo(lang: "en")
-            }
+
         }
         else{
             L102Language.setAppleLAnguageTo(lang: "vi")

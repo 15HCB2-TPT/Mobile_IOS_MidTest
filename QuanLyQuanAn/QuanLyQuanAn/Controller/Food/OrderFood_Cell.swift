@@ -27,9 +27,9 @@ class OrderFood_Cell: UITableViewCell{
                 detail.money = controller.curFood.money
                 detail.number = Double(controller.tfNum.text!)!
                 order.totalmoney += detail.money * detail.number
-                controller.alert(title: "Thông báo", msg: "Đã thêm món thành công!", btnTitle: "Đã biết")
+                controller.alert(title: "Notice".localized(lang: L102Language.currentAppleLanguage()), msg: "AddComplete".localized(lang: L102Language.currentAppleLanguage()), btnTitle: "Understand".localized(lang: L102Language.currentAppleLanguage()))
             }
-            controller.confirm(title: "Thông báo", msg: "Bạn có muốn gọi thêm món cho bàn này?", btnOKTitle: "Vâng", btnCancelTitle: "Không", handler: done)
+            controller.confirm(title: "Notice".localized(lang: L102Language.currentAppleLanguage()), msg: "Do you want order more food?".localized(lang: L102Language.currentAppleLanguage()), btnOKTitle: "Yes".localized(lang: L102Language.currentAppleLanguage()), btnCancelTitle: "No".localized(lang: L102Language.currentAppleLanguage()), handler: done)
         }
     }
     

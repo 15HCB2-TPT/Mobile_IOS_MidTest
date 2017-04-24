@@ -35,7 +35,7 @@ class Table_Call_Cell: UITableViewCell{
             for each in controller.calledFoods {
                 sum += each.key.money * Double(each.value)
             }
-            controller.lblTotalMoney.title = "Tổng tiền: \(AppData.CurrencyFormatter(value: sum))"
+            controller.lblTotalMoney.title = "Total Money".localized(lang: L102Language.currentAppleLanguage()) + ": \(AppData.CurrencyFormatter(value: sum))"
 //            if num == 0 {
 //                btnOrder.titleLabel?.text = "Đặt món"
 //            } else {

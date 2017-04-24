@@ -41,16 +41,16 @@ class Table_Call_Food: UIViewController, UITableViewDataSource, UITableViewDeleg
     override func uiPassedData(data: Any?, identity: Int){
         if identity == 1 {
             if let t = data as! Table? {
-                tableInfo.title = "Bàn: \(t.name!)"
-                lblTotalMoney.title = "Tổng tiền: \(AppData.CurrencyFormatter(value: 0))"
+                tableInfo.title = "Table:".localized(lang: L102Language.currentAppleLanguage())+" \(t.name!)"
+                lblTotalMoney.title = "Total Money".localized(lang: L102Language.currentAppleLanguage())+": \(AppData.CurrencyFormatter(value: 0))"
                 curTable = t
                 curOrder = nil
                 funcAddEdit = true
             }
         } else if identity == 2 {
             if let t = data as! (Table, Order)? {
-                tableInfo.title = "Bàn: \(t.0.name!)"
-                lblTotalMoney.title = "Tổng tiền: \(AppData.CurrencyFormatter(value: t.1.totalmoney))"
+                tableInfo.title = "Table:".localized(lang: L102Language.currentAppleLanguage())+" \(t.0.name!)"
+                lblTotalMoney.title = "Total Money".localized(lang: L102Language.currentAppleLanguage())+": \(AppData.CurrencyFormatter(value: t.1.totalmoney))"
                 curTable = t.0
                 curOrder = t.1
                 funcAddEdit = false
@@ -152,7 +152,7 @@ class Table_Call_Food: UIViewController, UITableViewDataSource, UITableViewDeleg
             //
             popData(data: nil, identity: 1)
         }
-        confirm(title: "Nhắc nhỡ", msg: "Bạn có muốn gọi những món này?", btnOKTitle: "Vâng", btnCancelTitle: "Không", handler: done)
+        confirm(title: "Alert".localized(lang: L102Language.currentAppleLanguage()), msg: "Do you want order these food?".localized(lang: L102Language.currentAppleLanguage()), btnOKTitle: "Yes".localized(lang: L102Language.currentAppleLanguage()), btnCancelTitle: "No".localized(lang: L102Language.currentAppleLanguage()), handler: done)
     }
     
     @IBAction func btnSearch_Click(_ sender: Any) {

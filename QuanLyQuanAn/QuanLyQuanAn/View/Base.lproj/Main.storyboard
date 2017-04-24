@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DI3-Tp-CsJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DI3-Tp-CsJ">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12078"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -399,14 +399,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ngôn ngữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV6-M4-RgN">
-                                <rect key="frame" x="16" y="72" width="76" height="21"/>
+                                <rect key="frame" x="16" y="72" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiền tệ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJw-ss-cKo">
-                                <rect key="frame" x="16" y="195" width="53" height="21"/>
+                                <rect key="frame" x="16" y="195" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -669,7 +669,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đang sử dụng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW1-Hk-LLJ">
-                                <rect key="frame" x="152" y="143" width="91" height="17"/>
+                                <rect key="frame" x="152" y="143" width="160" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -701,6 +701,7 @@
                             <constraint firstItem="bub-Ry-gY8" firstAttribute="leading" secondItem="WOx-Dd-ZfV" secondAttribute="leading" constant="16" id="YGz-Ch-c99"/>
                             <constraint firstItem="Mhx-Xc-eWc" firstAttribute="top" secondItem="ZNE-qR-lrJ" secondAttribute="bottom" constant="16" id="cPB-Gy-ZHW"/>
                             <constraint firstAttribute="trailing" secondItem="Mhx-Xc-eWc" secondAttribute="trailing" id="fhz-uU-xhH"/>
+                            <constraint firstAttribute="trailing" secondItem="sW1-Hk-LLJ" secondAttribute="trailing" constant="8" id="kDA-ol-Rob"/>
                             <constraint firstItem="ZnX-cg-xbf" firstAttribute="top" secondItem="KHk-rF-Vsw" secondAttribute="bottom" constant="10" id="l9o-wP-pUk"/>
                             <constraint firstItem="lwe-JF-zMx" firstAttribute="top" secondItem="sW1-Hk-LLJ" secondAttribute="bottom" constant="8" id="m9c-9D-1dW"/>
                             <constraint firstItem="ZnX-cg-xbf" firstAttribute="leading" secondItem="WOx-Dd-ZfV" secondAttribute="leading" id="qBZ-9A-yd4"/>
@@ -778,8 +779,8 @@
                                 <items>
                                     <barButtonItem systemItem="flexibleSpace" id="qc4-zM-2uq"/>
                                     <barButtonItem style="plain" id="qvB-O7-a8l">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eZM-8V-nXe">
-                                            <rect key="frame" x="219" y="7" width="85" height="30"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eZM-8V-nXe">
+                                            <rect key="frame" x="154" y="7" width="150" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Lưu thay đổi"/>
                                             <connections>
@@ -1042,7 +1043,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZyD-uG-771">
-                                                    <rect key="frame" x="8" y="1" width="48" height="48"/>
+                                                    <rect key="frame" x="8" y="0.0" width="48" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":Tên món" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJC-wR-5qs">
@@ -1267,7 +1268,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6Z-dq-S2U">
-                                                    <rect key="frame" x="8" y="9" width="48" height="46"/>
+                                                    <rect key="frame" x="8" y="8" width="48" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xr5-Dj-DxN">
@@ -1373,7 +1374,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-xY-4eU">
-                                                    <rect key="frame" x="8" y="7" width="48" height="48"/>
+                                                    <rect key="frame" x="8" y="6" width="48" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":Tên món" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0a-b4-d45">

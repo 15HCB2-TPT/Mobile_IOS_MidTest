@@ -34,9 +34,9 @@ class Table_Pay_Food: UIViewController, UITableViewDataSource, UITableViewDelega
     override func uiPassedData(data: Any?, identity: Int){
         if let t = data as! Order? {
             curOrder = t
-            tableInfo.title = "Bàn: \((t.order_table?.name!)!)"
-            dateInfo.title = "Ngày: \(t.date!)"
-            sumOrder.title = "Tổng tiền: \(AppData.CurrencyFormatter(value: t.totalmoney))"
+            tableInfo.title = "Table:".localized(lang: L102Language.currentAppleLanguage())+" \((t.order_table?.name!)!)"
+            dateInfo.title = "Date:".localized(lang: L102Language.currentAppleLanguage())+" \(t.date!)"
+            sumOrder.title = "Total Money".localized(lang: L102Language.currentAppleLanguage())+": \(AppData.CurrencyFormatter(value: t.totalmoney))"
             //loadTableView()
         }
     }
@@ -44,6 +44,7 @@ class Table_Pay_Food: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: **** TableView ****
     func loadTableView(){
         let predicate1 = NSPredicate(format: "detailsorder_order.is_paid == %i", 0)
+        //Bill click
         let predicate2 = NSPredicate(format: "detailsorder_order.order_table.name = %@", (curOrder.order_table?.name)!)
         let compound = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1, predicate2])
         
@@ -95,7 +96,7 @@ class Table_Pay_Food: UIViewController, UITableViewDataSource, UITableViewDelega
             //
             popData(data: curOrder, identity: 2)
         }
-        confirm(title: "Nhắc nhỡ", msg: "Bạn muốn thanh toán hoá đơn cho bàn (\((curOrder.order_table?.name!)!))?", btnOKTitle: "Vâng", btnCancelTitle: "Không", handler: done)
+        confirm(title: "Alert".localized(lang: L102Language.currentAppleLanguage()), msg: "Do you ưant pay the bill for table"+" (\((curOrder.order_table?.name!)!))?", btnOKTitle: "Yes".localized(lang: L102Language.currentAppleLanguage()), btnCancelTitle: "No".localized(lang: L102Language.currentAppleLanguage()), handler: done)
     }
     
 }

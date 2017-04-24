@@ -35,8 +35,8 @@ class EditFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigat
         
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.size.width, height: 44.0))
         toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
-        let btnHuy = UIBarButtonItem(title: "Huỷ", style: .plain, target: self, action: #selector(EditFood_ViewController.btnHuy_Touch))
-        let btnChon = UIBarButtonItem(title: "Chọn", style: .plain, target: self, action: #selector(EditFood_ViewController.btnChon_Touch))
+        let btnHuy = UIBarButtonItem(title: "Cancel".localized(lang: L102Language.currentAppleLanguage()), style: .plain, target: self, action: #selector(EditFood_ViewController.btnHuy_Touch))
+        let btnChon = UIBarButtonItem(title: "Choose".localized(lang: L102Language.currentAppleLanguage()), style: .plain, target: self, action: #selector(EditFood_ViewController.btnChon_Touch))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
         toolBar.setItems([btnHuy,flexSpace,flexSpace,btnChon], animated: true)
         txtStyleFood.inputAccessoryView = toolBar
@@ -135,7 +135,7 @@ class EditFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigat
     @IBAction func btnSave_Touch(_ sender: Any) {
         if (image.image != nil && txtNameFood.text != "" && txtStyleFood.text != "" && txtPrice.text != "") {
             if(checkName(name: txtNameFood.text!) == false) {
-                let refreshAlert = UIAlertController(title: "Lỗi", message: "Tên món ăn đã tồn tại.", preferredStyle: UIAlertControllerStyle.alert)
+                let refreshAlert = UIAlertController(title: "Error".localized(lang: L102Language.currentAppleLanguage()), message: "Food Name was existed!".localized(lang: L102Language.currentAppleLanguage()), preferredStyle: UIAlertControllerStyle.alert)
                 refreshAlert.addAction(UIAlertAction(title: "OK", style: .default))
                 present(refreshAlert, animated: true, completion: nil)
             }
@@ -150,8 +150,8 @@ class EditFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigat
             }
         }
         else {
-            let refreshAlert = UIAlertController(title: "Lỗi", message: "Vui lòng nhập đầy đủ thông tin.", preferredStyle: UIAlertControllerStyle.alert)
-            refreshAlert.addAction(UIAlertAction(title: "OK", style: .default))
+            let refreshAlert = UIAlertController(title: "Error".localized(lang: L102Language.currentAppleLanguage()), message: "Please insert more info".localized(lang: L102Language.currentAppleLanguage()), preferredStyle: UIAlertControllerStyle.alert)
+            refreshAlert.addAction(UIAlertAction(title: "OK".localized(lang: L102Language.currentAppleLanguage()), style: .default))
             present(refreshAlert, animated: true, completion: nil)
         }
     }

@@ -116,6 +116,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // MARK: **** Button ****
     @IBAction func btnAddEdit_Click(_ sender: Any) {
         //prepare data
+        //
         let name = tfName.text!
         let num = Int32(tfNum.text!)
         
@@ -139,13 +140,13 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             
             //alert
             if funcAddEdit {
-                alert(title: "Nhắc nhở", msg: "Đã thêm thành công.", btnTitle: "Hiểu")
+                alert(title: "Alert".localized(lang: L102Language.currentAppleLanguage()), msg: "AddComplete".localized(lang: L102Language.currentAppleLanguage()), btnTitle: "Understand".localized(lang: L102Language.currentAppleLanguage()))
             } else {
-                alert(title: "Nhắc nhở", msg: "Đã cập nhật thành công", btnTitle: "Hiểu")
+                alert(title: "Alert".localized(lang: L102Language.currentAppleLanguage()), msg: "UpdateComplete".localized(lang: L102Language.currentAppleLanguage()), btnTitle: "Understand".localized(lang: L102Language.currentAppleLanguage()))
             }
             
         } else {
-            alert(title: "Nhắc nhở", msg: "Tên bàn đã tồn tại.", btnTitle: "Hiểu")
+            alert(title: "Alert".localized(lang: L102Language.currentAppleLanguage()), msg: "TableNameIsExisted".localized(lang: L102Language.currentAppleLanguage()), btnTitle: "Understand".localized(lang: L102Language.currentAppleLanguage()))
         }
     }
     

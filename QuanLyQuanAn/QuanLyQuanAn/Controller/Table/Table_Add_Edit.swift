@@ -117,8 +117,14 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func btnAddEdit_Click(_ sender: Any) {
         //prepare data
         //
-        let name = tfName.text!
-        let num = Int32(tfNum.text!)
+        guard let name = tfName.text else {
+            alert(title: "Thông báo", msg: "Tên không được phép bỏ trống.", btnTitle: "Đã hiểu")
+            return
+        }
+        guard let num = Int32(tfNum.text!) else {
+            alert(title: "Thông báo", msg: "Nên điền số chỗ ngồi của bàn.", btnTitle: "Đã hiểu")
+            return
+        }
         
         //check duplicate
         if !checkTableDuplicate(name: name) || !funcAddEdit {
@@ -131,7 +137,7 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 t = updatedTable
             }
             t.name = name
-            t.number = num!
+            t.number = num
             t.is_empty = true
             t.is_deleted = swIsDeleted.isOn
             t.table_region = selectedRegion

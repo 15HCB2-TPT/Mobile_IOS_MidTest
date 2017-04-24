@@ -24,7 +24,7 @@ class Table_Pay_Food: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: ****
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTableView()
+        //loadTableView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,14 +37,13 @@ class Table_Pay_Food: UIViewController, UITableViewDataSource, UITableViewDelega
             tableInfo.title = "Table:".localized(lang: L102Language.currentAppleLanguage())+" \((t.order_table?.name!)!)"
             dateInfo.title = "Date:".localized(lang: L102Language.currentAppleLanguage())+" \(t.date!)"
             sumOrder.title = "Total Money".localized(lang: L102Language.currentAppleLanguage())+": \(AppData.CurrencyFormatter(value: t.totalmoney))"
-            //loadTableView()
+            loadTableView()
         }
     }
     
     // MARK: **** TableView ****
     func loadTableView(){
         let predicate1 = NSPredicate(format: "detailsorder_order.is_paid == %i", 0)
-        //Bill click
         let predicate2 = NSPredicate(format: "detailsorder_order.order_table.name = %@", (curOrder.order_table?.name)!)
         let compound = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1, predicate2])
         

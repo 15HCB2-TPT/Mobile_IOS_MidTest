@@ -48,7 +48,7 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 conditions.append(conditionType)
             }
             if(txtTu.text != "" && txtDen.text != "") {
-                let conditionMoney = NSPredicate(format: "(%f <= money) AND (money <= %f)", Double.init(txtTu.text!)!, Double.init(txtDen.text!)!)
+                let conditionMoney = NSPredicate(format: "(%f <= money) AND (money <= %f)", Double.init(txtTu.text!)! / (AppData.AppCurrency?.value)!, Double.init(txtDen.text!)! / (AppData.AppCurrency?.value)!)
                 conditions.append(conditionMoney)
             }
         }
@@ -64,7 +64,7 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
         txtTu.inputAccessoryView = addDoneButton()
         txtDen.inputAccessoryView = addDoneButton()
         
-        tempString = foodType[0].nametype
+        tempString = foodType.first?.nametype
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.size.width, height: 40.0))
         toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
         let btnHuy = UIBarButtonItem(title: "Huỷ", style: .plain, target: self, action: #selector(Food_ViewController.btnHuy_Touch))
@@ -122,13 +122,13 @@ class Food_ViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellFood", for: indexPath) as! Food_TableViewCell
-        cell.imgHinh.image = UIImage(data: foods[indexPath.row].image! as Data)
-        cell.lblTenMonAn.text = foods[indexPath.row].name!
-        if(foods[indexPath.row].is_use == true) {
-            cell.lblGia.text = "\(foods[indexPath.row].money)"
-        }
-        else {
-            cell.lblGia.text = "\(foods[indexPath.row].money)" + " - Ngừng kinh doanh"
+        if (foods[indexPath.row] as Food?) != nil {
+            cell.imgHinh.image = UIImage(data: foods[indexPath.row].image! as Data)
+            cell.lblTenMonAn.text = foods[indexPath.row].name!
+            cell.data = foods[indexPath.row]
+            cell.controller = self
+            cell.lblGia.text = "\(AppData.CurrencyFormatter(value: foods[indexPath.row].money))\(!foods[indexPath.row].is_use ? " - Ngừng kinh doanh" : "")"
+            cell.btnCall.isHidden = !foods[indexPath.row].is_use
         }
         return cell
     }

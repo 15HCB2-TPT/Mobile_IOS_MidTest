@@ -13,7 +13,6 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: **** Elements ****
     @IBOutlet weak var table: UITableView!
-    @IBOutlet weak var btnEdit: UIBarButtonItem!
     @IBOutlet weak var segment: UISegmentedControl!
     
     // MARK: **** Modals ****
@@ -30,7 +29,7 @@ class Table_Main: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func uiPassedData(data: Any?, identity: Int){
-        loadTableView(segmentIndex: segment.selectedSegmentIndex)
+        //loadTableView(segmentIndex: segment.selectedSegmentIndex)
         if identity == 1 {
             alert(title: "Thông báo", msg: "Đã lập hóa đơn thành công!", btnTitle: "Đã biết")
         } else if identity == 2 {

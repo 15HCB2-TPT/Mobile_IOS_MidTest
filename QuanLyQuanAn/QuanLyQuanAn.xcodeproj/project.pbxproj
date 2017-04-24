@@ -43,6 +43,8 @@
 		ADC3B9D61EADBDB500C2AC24 /* Notification.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADC3B9D81EADBDB500C2AC24 /* Notification.strings */; };
 		ADCAB59A1EAA763F00C44EA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCAB59C1EAA763F00C44EA0 /* Main.storyboard */; };
 		F0266DE41EA4ADE900341345 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0266DE31EA4ADE900341345 /* AppExtension.swift */; };
+		F029DE381EADE03700DBC419 /* OrderFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = F029DE371EADE03700DBC419 /* OrderFood.swift */; };
+		F029DE3A1EADE05D00DBC419 /* OrderFood_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F029DE391EADE05D00DBC419 /* OrderFood_Cell.swift */; };
 		F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0590F041EA53371006057D6 /* Food_TableViewCell.swift */; };
 		F07E765E1EAB553400C0797B /* EditFood_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07E765D1EAB553400C0797B /* EditFood_ViewController.swift */; };
 		F0B3ABCF1EA8009700FFFA79 /* Food_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */; };
@@ -92,6 +94,8 @@
 		ADC3B9D91EADBDB900C2AC24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Notification.strings; sourceTree = "<group>"; };
 		ADCAB59B1EAA763F00C44EA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0266DE31EA4ADE900341345 /* AppExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
+		F029DE371EADE03700DBC419 /* OrderFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderFood.swift; sourceTree = "<group>"; };
+		F029DE391EADE05D00DBC419 /* OrderFood_Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderFood_Cell.swift; sourceTree = "<group>"; };
 		F0590F041EA53371006057D6 /* Food_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_TableViewCell.swift; sourceTree = "<group>"; };
 		F07E765D1EAB553400C0797B /* EditFood_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFood_ViewController.swift; sourceTree = "<group>"; };
 		F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_ViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 				F0590F041EA53371006057D6 /* Food_TableViewCell.swift */,
 				F0B3ABCE1EA8009700FFFA79 /* Food_ViewController.swift */,
 				F07E765D1EAB553400C0797B /* EditFood_ViewController.swift */,
+				F029DE371EADE03700DBC419 /* OrderFood.swift */,
+				F029DE391EADE05D00DBC419 /* OrderFood_Cell.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				633F349D1EA4E648004C648B /* ReportFilter_ViewController.swift in Sources */,
 				AD553DDF1E977E68009A51CB /* UIPassingData.swift in Sources */,
 				63BA45301E9D3DD400EE27DC /* MyCustom_CollectionViewCell.swift in Sources */,
+				F029DE3A1EADE05D00DBC419 /* OrderFood_Cell.swift in Sources */,
 				F0B3ABCF1EA8009700FFFA79 /* Food_ViewController.swift in Sources */,
 				149AC7F91EA9051A008D9477 /* Table_Call_Cell.swift in Sources */,
 				AD06ECDD1EA5E54F00F550D8 /* ReportTime_ViewController.swift in Sources */,
@@ -370,6 +377,7 @@
 				63BA45311E9D3DD400EE27DC /* Region_ViewController.swift in Sources */,
 				F0590F051EA53371006057D6 /* Food_TableViewCell.swift in Sources */,
 				149AC7F71EA90505008D9477 /* Table_Pay_Cell.swift in Sources */,
+				F029DE381EADE03700DBC419 /* OrderFood.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,9 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //SeedData.clearData()
+        if UserDefaults.standard.object(forKey: "seedFirst") == nil {
+            UserDefaults.standard.set(0, forKey: "seedFirst")
+            SeedData.seedData()
+        }
         loadCurrency()
-//        let def = UserDefaults.standard
-//        def.removeObject(forKey: AppConfigs.LANGUAGE_KEY)
         loadLanguage()
         return true
     }

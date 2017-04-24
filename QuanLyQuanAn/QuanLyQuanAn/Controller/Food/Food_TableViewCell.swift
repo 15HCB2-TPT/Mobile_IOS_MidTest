@@ -12,6 +12,10 @@ class Food_TableViewCell: UITableViewCell {
     @IBOutlet weak var imgHinh: UIImageView!
     @IBOutlet weak var lblTenMonAn: UILabel!
     @IBOutlet weak var lblGia: UILabel!
+    @IBOutlet weak var btnCall: UIButton!
+    
+    var data: Food!
+    var controller: Food_ViewController!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,4 +28,8 @@ class Food_TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func btnCall_Click(_ sender: Any) {
+        UIPassingData.pushData(from: controller, storyboard: "Main", controller: "orderFood", data: data)
+    }
+    
 }

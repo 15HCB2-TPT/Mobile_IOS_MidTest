@@ -100,12 +100,12 @@ class SettingController: UIViewController {
     }
     
     // MARK: **** Seed Data to Test ****
-    @IBAction func btnSeedData2Test_Click(_ sender: Any) {
+    @IBAction func btnRestart_Click(_ sender: Any) {
         func confirmOK(act: UIAlertAction) {
-            SeedData.seedData()
+            for each in UserDefaults.standard.dictionaryRepresentation().keys{
+                UserDefaults.standard.removeObject(forKey: each)
+            }
             AppDelegate.restart()
-            loadLan()
-            loadCur()
         }
         confirm(title: "Xác nhận", msg: "Dữ liệu sẽ reset lại tất cả! Bạn có chắc muốn tiếp tục?", btnOKTitle: "Tiếp", btnCancelTitle: "Dừng", handler: confirmOK)
     }

@@ -21,7 +21,7 @@ class SeedData {
         seedDetailsOrder()
     }
     
-    private static func clearData(){
+    static func clearData(){
         Database.clear(entityName: "DetailsOrder")
         Database.clear(entityName: "Order")
         Database.clear(entityName: "Food")

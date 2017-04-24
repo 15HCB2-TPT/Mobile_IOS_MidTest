@@ -60,7 +60,7 @@ class EditFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigat
             txtStyleFood.text = food.food_type?.nametype
             tempString = txtStyleFood.text
             tempRow = foodTypes.index(of: food.food_type!)
-            txtPrice.text = "\(food.money)"
+            txtPrice.text = "\(AppData.CurrencyFormatterBack(value: AppData.CurrencyFormatter(value: food.money)))"
             swtSuDung.setOn(food.is_use, animated: true)
         }
     }
@@ -83,8 +83,6 @@ class EditFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigat
     @IBAction func txtStyleFood_EditingDidBegin(_ sender: Any) {
         pckLoaiMonAn = UIPickerView()
         pckLoaiMonAn.delegate = self
-        
-        
         pckLoaiMonAn.selectRow(tempRow, inComponent: 0, animated: true)
         txtStyleFood.inputView = pckLoaiMonAn
     }
@@ -145,7 +143,7 @@ class EditFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigat
                 food.image = self.image.image?.pngRepresentationData
                 food.name = txtNameFood.text
                 food.food_type = foodTypes[tempRow]
-                food.money = (txtPrice.text?.doubleValue)!
+                food.money = (txtPrice.text?.doubleValue)! / (AppData.AppCurrency?.value)!
                 food.is_use = swtSuDung.isOn
                 Database.save()
                 pushData(storyboard: "Main", controller: "ListFood", data: nil)

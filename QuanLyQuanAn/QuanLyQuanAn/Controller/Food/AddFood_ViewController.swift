@@ -129,7 +129,7 @@ class AddFood_ViewController: UIViewController, UIPickerViewDelegate, UINavigati
                 food.image = self.image.image?.pngRepresentationData
                 food.name = txtNameFood.text
                 food.food_type = foodTypes[tempRow]
-                food.money = (txtPrice.text?.doubleValue)!
+                food.money = (txtPrice.text?.doubleValue)! / (AppData.AppCurrency?.value)!
                 food.is_use = swtSuDung.isOn
                 Database.save()
                 pushData(storyboard: "Main", controller: "ListFood", data: nil)

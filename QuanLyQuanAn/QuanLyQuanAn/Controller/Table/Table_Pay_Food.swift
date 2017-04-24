@@ -24,6 +24,7 @@ class Table_Pay_Food: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: ****
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadTableView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,7 +37,7 @@ class Table_Pay_Food: UIViewController, UITableViewDataSource, UITableViewDelega
             tableInfo.title = "Bàn: \((t.order_table?.name!)!)"
             dateInfo.title = "Ngày: \(t.date!)"
             sumOrder.title = "Tổng tiền: \(AppData.CurrencyFormatter(value: t.totalmoney))"
-            loadTableView()
+            //loadTableView()
         }
     }
     

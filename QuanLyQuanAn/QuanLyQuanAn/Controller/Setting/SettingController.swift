@@ -102,12 +102,13 @@ class SettingController: UIViewController {
     // MARK: **** Seed Data to Test ****
     @IBAction func btnRestart_Click(_ sender: Any) {
         func confirmOK(act: UIAlertAction) {
-            for each in UserDefaults.standard.dictionaryRepresentation().keys{
-                UserDefaults.standard.removeObject(forKey: each)
-            }
+//            for each in UserDefaults.standard.dictionaryRepresentation().keys{
+//                UserDefaults.standard.removeObject(forKey: each)
+//            }
+            SeedData.seedData()
             AppDelegate.restart()
         }
-        confirm(title: "Xác nhận".localized(lang: L102Language.currentAppleLanguage()), msg: "ConfirmSeedData".localized(lang: L102Language.currentAppleLanguage()), btnOKTitle: "Tiếp".localized(lang: L102Language.currentAppleLanguage()), btnCancelTitle: "Stop".localized(lang: L102Language.currentAppleLanguage()), handler: confirmOK)
+        confirm(title: "Confirm".localized(lang: L102Language.currentAppleLanguage()), msg: "ConfirmSeedData".localized(lang: L102Language.currentAppleLanguage()), btnOKTitle: "Next".localized(lang: L102Language.currentAppleLanguage()), btnCancelTitle: "Stop".localized(lang: L102Language.currentAppleLanguage()), handler: confirmOK)
     }
     
 }

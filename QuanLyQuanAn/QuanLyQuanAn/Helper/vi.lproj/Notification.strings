@@ -66,3 +66,7 @@
 "Done" = "Xong";
 
 "Date:" = "Ngày:";
+
+"Name can't empty" = "Tên không được bỏ trống";
+
+"Please insert slot number of table" = "Hãy điền số chỗ ngồi";

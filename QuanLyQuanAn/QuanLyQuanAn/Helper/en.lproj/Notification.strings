@@ -66,3 +66,7 @@
 "Done" = "Done";
 
 "Date:" = "Date:";
+
+"Name can't empty" = "Name can't empty";
+
+"Please insert slot number of table" = "Please insert slot number of table";

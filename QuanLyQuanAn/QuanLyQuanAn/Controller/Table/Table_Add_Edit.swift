@@ -118,11 +118,11 @@ class Table_Add_Edit: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         //prepare data
         //
         guard let name = tfName.text else {
-            alert(title: "Thông báo", msg: "Tên không được phép bỏ trống.", btnTitle: "Đã hiểu")
+            alert(title: "Notice".localized(lang: L102Language.currentAppleLanguage()), msg: "Name can't empty".localized(lang: L102Language.currentAppleLanguage()), btnTitle: "Understand".localized(lang: L102Language.currentAppleLanguage()))
             return
         }
         guard let num = Int32(tfNum.text!) else {
-            alert(title: "Thông báo", msg: "Nên điền số chỗ ngồi của bàn.", btnTitle: "Đã hiểu")
+            alert(title: "Notice".localized(lang: L102Language.currentAppleLanguage()), msg: "Please insert slot number of table".localized(lang: L102Language.currentAppleLanguage()), btnTitle: "Understand".localized(lang: L102Language.currentAppleLanguage()))
             return
         }
         
